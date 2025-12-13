@@ -149,3 +149,56 @@ class KalshiClient:
         )
         response.raise_for_status()
         return response.json()
+
+    def sell_order(self, ticker: str, side: str, count: int, price: int = None):
+        """
+        Sell/exit a position.
+        
+        To exit a NO position, you sell NO contracts.
+        If price is None, uses market order (takes best available).
+        """
+        import requests
+        path = "/trade-api/v2/portfolio/orders"
+        headers = self._sign_request("POST", path)
+
+        order_data = {
+            "ticker": ticker,
+            "action": "sell",  # SELL instead of buy
+            "side": side,
+            "count": count,
+            "type": "market" if price is None else "limit"
+        }
+
+        # Add price if limit order
+        if price is not None:
+            if side == "yes":
+                order_data["yes_price"] = price
+            else:
+                order_data["no_price"] = price
+
+        response = requests.post(
+            self.base_url + "/portfolio/orders",
+            headers=headers,
+            json=order_data
+        )
+        response.raise_for_status()
+        return response.json()
+
+    def get_positions(self, ticker: str = None):
+        """Get current positions"""
+        import requests
+        path = "/trade-api/v2/portfolio/positions"
+        headers = self._sign_request("GET", path)
+
+        params = {}
+        if ticker:
+            params['ticker'] = ticker
+
+        response = requests.get(
+            self.base_url + "/portfolio/positions",
+            headers=headers,
+            params=params
+        )
+        response.raise_for_status()
+        return response.json()
+

@@ -1,0 +1,39 @@
+{
+  "btc_price": 90402.765,
+  "settlement_time": "11:38 PM ET",
+  "minutes_to_settlement": 21,
+  "open_positions": [],
+  "total_exposure": 0,
+  "fair_values": [],
+  "hourly_summary": {
+    "trades": 5,
+    "avg_edge": 7.417240536971791
+  },
+  "closed_trades": [
+    {
+      "ticker": "KXBTCD-25DEC1300-T90499.99",
+      "contracts": 10,
+      "price": 85,
+      "edge": 0.9300000000000008,
+      "closed": "04:36:58"
+    },
+    {
+      "ticker": "KXBTCD-25DEC1223-T90499.99",
+      "contracts": 10,
+      "price": 88,
+      "edge": 0.9300000000000008,
+      "closed": "03:50:28"
+    }
+  ],
+  "pnl": {
+    "realized": 106.78000000000004,
+    "unrealized": 0,
+    "total": 106.78000000000004,
+    "settled_trades": 96,
+    "wins": 96,
+    "losses": 0,
+    "win_rate": 100.0,
+    "total_fees": 8.020000000000005
+  },
+  "last_updated": "2025-12-12T22:38:53.173506"
+}
