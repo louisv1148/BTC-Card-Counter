@@ -245,14 +245,14 @@
             </div>
 
             <div class="card">
-                <div class="card-title">Win Rate</div>
-                <div class="card-value" id="win-rate">0%</div>
+                <div class="card-title">Fees Paid</div>
+                <div class="card-value" id="total-fees">$0.00</div>
                 <div class="card-subtitle">
-                    <span id="wins">0</span>W / <span id="losses">0</span>L
-                    (<span id="settled-trades">0</span> settled)
+                    Closed trades: <span id="closed-trades">0</span>
                 </div>
             </div>
         </div>
+
 
         <div class="table-container">
             <h2 style="margin-bottom: 16px; font-size: 18px;">📦 Open Positions</h2>
@@ -264,17 +264,18 @@
                         <th>Entry</th>
                         <th>Current Bid</th>
                         <th>Current Ask</th>
-                        <th>Edge</th>
                         <th>Strike</th>
                         <th>P&L</th>
                         <th>Opened</th>
                     </tr>
                 </thead>
+
                 <tbody id="positions-body">
                     <tr>
-                        <td colspan="9" class="empty-state">No open positions</td>
+                        <td colspan="8" class="empty-state">No open positions</td>
                     </tr>
                 </tbody>
+
             </table>
         </div>
 
@@ -347,7 +348,7 @@
             // Update positions table
             const positionsBody = document.getElementById('positions-body');
             if (data.open_positions.length === 0) {
-                positionsBody.innerHTML = '<tr><td colspan="9" class="empty-state">No open positions</td></tr>';
+                positionsBody.innerHTML = '<tr><td colspan="8" class="empty-state">No open positions</td></tr>';
             } else {
                 positionsBody.innerHTML = data.open_positions.map(pos => {
                     const pnlClass = pos.unrealized_pnl >= 0 ? 'positive' : 'negative';
@@ -359,7 +360,6 @@
                             <td>${pos.price_cents}¢</td>
                             <td>${pos.current_bid > 0 ? pos.current_bid + '¢' : '-'}</td>
                             <td>${pos.current_ask > 0 ? pos.current_ask + '¢' : '-'}</td>
-                            <td><span class="badge badge-green">${pos.edge.toFixed(1)}%</span></td>
                             <td>$${pos.strike.toLocaleString()}</td>
                             <td><span class="${pnlClass}">${pnlSign}$${pos.unrealized_pnl.toFixed(2)}</span></td>
                             <td>${pos.opened}</td>
@@ -367,6 +367,7 @@
                     `;
                 }).join('');
             }
+
 
             // Update fair values table
             const fairValuesBody = document.getElementById('fair-values-body');
@@ -414,11 +415,10 @@
 
                 document.getElementById('realized-pnl').textContent = `$${data.pnl.realized.toFixed(2)}`;
                 document.getElementById('unrealized-pnl').textContent = `$${data.pnl.unrealized.toFixed(2)}`;
-                document.getElementById('win-rate').textContent = `${data.pnl.win_rate.toFixed(1)}%`;
-                document.getElementById('wins').textContent = data.pnl.wins;
-                document.getElementById('losses').textContent = data.pnl.losses;
-                document.getElementById('settled-trades').textContent = data.pnl.settled_trades;
+                document.getElementById('total-fees').textContent = `$${data.pnl.total_fees.toFixed(2)}`;
+                document.getElementById('closed-trades').textContent = data.pnl.closed_trades;
             }
+
 
             // Update timestamp
             document.getElementById('last-update').textContent = new Date().toLocaleTimeString();

@@ -237,75 +237,45 @@ def generate_status():
         })
     
     # Calculate P&L (for dry-run mode)
-    # Realized P&L: Closed positions where contract settled
+    # Get all closed positions (opened then liquidated)
     cursor.execute("""
         SELECT 
+            t_open.id,
             t_open.ticker,
             t_open.contracts,
             t_open.price_cents as entry_price,
-            t_close.price_cents as exit_price,
-            po.actual_outcome,
-            po.settlement_btc_price,
-            t_open.strike_price
+            t_close.price_cents as exit_price
         FROM trades t_open
-        JOIN trades t_close ON t_open.ticker = t_close.ticker AND t_close.action = 'liquidate'
-        LEFT JOIN price_observations po ON t_open.ticker = po.ticker AND po.actual_outcome IS NOT NULL
+        JOIN trades t_close ON t_open.ticker = t_close.ticker 
+            AND t_close.action = 'liquidate'
+            AND t_close.id > t_open.id
         WHERE t_open.action = 'open'
+        GROUP BY t_open.id
     """)
     
     realized_pnl = 0
-
-    settled_count = 0
-    wins = 0
-    losses = 0
+    closed_count = 0
     total_fees_paid = 0
     
     for row in cursor.fetchall():
-        ticker, contracts, entry_price, exit_price, outcome, settlement_price, strike = row
+        open_id, ticker, contracts, entry_price, exit_price = row
         
-        # Cost to enter (what we paid)
-        cost = contracts * entry_price / 100
-        
-        # Entry fee
-        entry_fee = calculate_kalshi_fee(contracts, entry_price)
-        total_fees_paid += entry_fee
-        
-        # If settled, calculate actual P&L
-        if outcome:
-            if outcome == 'NO_WIN':
-                # We won - get $1 per contract
-                payout = contracts * 1.00
-                # Exit fee (selling at 100¢)
-                exit_fee = calculate_kalshi_fee(contracts, 100)
-                total_fees_paid += exit_fee
-                # Net profit = payout - cost - fees
-                net_profit = payout - cost - entry_fee - exit_fee
-                realized_pnl += net_profit
-                wins += 1
-            else:  # NO_LOSE
-                # We lost - lose cost + entry fee
-                realized_pnl -= (cost + entry_fee)
-                losses += 1
-            settled_count += 1
-        else:
-            # Position closed but not settled yet
-            # Estimate based on exit price
-            if exit_price:
-                proceeds = contracts * exit_price / 100
-                exit_fee = calculate_kalshi_fee(contracts, exit_price)
-                total_fees_paid += exit_fee
-                realized_pnl += (proceeds - cost - entry_fee - exit_fee)
-
-    
-    # Unrealized P&L: Open positions (estimate current value)
-    unrealized_pnl = 0
-    for pos in open_positions:
         # Cost to enter
-        cost = pos['contracts'] * pos['price_cents'] / 100
-        # Current value (simplified - assume we could sell at same price)
-        # In reality would need current market price
-        current_value = cost  # Conservative estimate
-        unrealized_pnl += (current_value - cost)
+        cost = contracts * entry_price / 100
+        entry_fee = calculate_kalshi_fee(contracts, entry_price)
+        
+        # Proceeds from exit
+        proceeds = contracts * exit_price / 100
+        exit_fee = calculate_kalshi_fee(contracts, exit_price)
+        
+        # Net P&L = proceeds - cost - fees
+        position_pnl = proceeds - cost - entry_fee - exit_fee
+        realized_pnl += position_pnl
+        total_fees_paid += entry_fee + exit_fee
+        closed_count += 1
+    
+    # Unrealized P&L from open positions
+    unrealized_pnl = sum(pos['unrealized_pnl'] for pos in open_positions)
     
     # Total P&L
     total_pnl = realized_pnl + unrealized_pnl
@@ -314,12 +284,10 @@ def generate_status():
         'realized': realized_pnl,
         'unrealized': unrealized_pnl,
         'total': total_pnl,
-        'settled_trades': settled_count,
-        'wins': wins,
-        'losses': losses,
-        'win_rate': (wins / settled_count * 100) if settled_count > 0 else 0,
+        'closed_trades': closed_count,
         'total_fees': total_fees_paid
     }
+
 
     
     conn.close()

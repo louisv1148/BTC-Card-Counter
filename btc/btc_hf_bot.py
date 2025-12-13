@@ -52,8 +52,12 @@ except ImportError:
 # Edge threshold - only trade if NET edge (after fees) shows this % edge
 MIN_EDGE_PCT = 10.0
 
-# Exit threshold - sell when edge drops to this level
+# Exit threshold - sell when edge drops to this level AND we're losing
 EXIT_EDGE_PCT = 1.0
+
+# Profit target - take profit when unrealized gain exceeds this % of entry cost
+# This prevents holding winners until they become losers
+PROFIT_TARGET_PCT = 5.0
 
 # Kalshi trading fee rate (7% of potential payout, per Kalshi docs)
 # Fee formula: ceil(0.07 × contracts × price_cents × (1 - price_cents/100))
@@ -504,6 +508,21 @@ class HFTradingBot:
         fee_pct = KALSHI_FEE_RATE * (1 - price_cents / 100) * 100
         return fee_pct
     
+    def calculate_kalshi_fee(self, contracts: int, price_cents: int) -> float:
+        """
+        Calculate exact Kalshi fee in dollars.
+        
+        Formula: ceil(0.07 × contracts × price × (1 - price/100))
+        Returns fee in dollars.
+        """
+        if price_cents <= 0 or price_cents >= 100:
+            return 0.0
+        
+        import math
+        price = price_cents / 100
+        fee_cents = math.ceil(KALSHI_FEE_RATE * contracts * price_cents * (1 - price))
+        return fee_cents / 100
+    
     def calculate_net_edge(self, gross_edge_pct: float, price_cents: int) -> float:
         """
         Calculate net edge after accounting for Kalshi trading fees.
@@ -853,17 +872,68 @@ class HFTradingBot:
                             remaining_exposure -= contracts * no_ask / 100
 
         
-        # Check for exits - FIXED: iterate over COPY to avoid modifying during iteration
+        # Check for exits using TWO-TIER strategy
+        # 1. PROFIT TARGET: Take profit when up 5%+ of entry cost
+        # 2. STOP LOSS: Only exit on low edge if we're already losing
         for pos in list(self.position_tracker.get_all_positions()):
-            if pos.last_edge <= EXIT_EDGE_PCT:
-                print(f"\n  🔴 EXIT {pos.ticker}: edge dropped to {pos.last_edge:.1f}% (<= {EXIT_EDGE_PCT}%)")
-                order_id = self.execute_trade(
-                    pos.ticker, pos.contracts, int(pos.avg_price_cents),
-                    TradeAction.LIQUIDATE, btc_price, pos.strike_price,
-                    0, pos.last_edge
-                )
-                if order_id:
-                    self.position_tracker.close_position(pos.ticker)
+            # Calculate unrealized P&L
+            entry_cost = pos.total_cost()
+            entry_fee = self.calculate_kalshi_fee(pos.contracts, int(pos.avg_price_cents))
+            
+            # Try to get current market bid for this position
+            current_bid = None
+            for market in all_markets:
+                if market.get('ticker') == pos.ticker:
+                    current_bid = market.get('no_bid', 0)
+                    break
+            
+            if current_bid and current_bid > 0:
+                # Calculate what we'd get if we sold now
+                proceeds = pos.contracts * current_bid / 100
+                exit_fee = self.calculate_kalshi_fee(pos.contracts, current_bid)
+                unrealized_pnl = proceeds - entry_cost - entry_fee - exit_fee
+                unrealized_pct = (unrealized_pnl / entry_cost) * 100 if entry_cost > 0 else 0
+                
+                # EXIT CONDITION 1: Profit target hit
+                if unrealized_pct >= PROFIT_TARGET_PCT:
+                    print(f"\n  💰 PROFIT TARGET {pos.ticker}: +${unrealized_pnl:.2f} ({unrealized_pct:.1f}%)")
+                    order_id = self.execute_trade(
+                        pos.ticker, pos.contracts, current_bid,
+                        TradeAction.LIQUIDATE, btc_price, pos.strike_price,
+                        0, pos.last_edge
+                    )
+                    if order_id:
+                        self.position_tracker.close_position(pos.ticker)
+                    continue
+                
+                # EXIT CONDITION 2: Edge dropped AND we're losing
+                if pos.last_edge <= EXIT_EDGE_PCT and unrealized_pnl < 0:
+                    print(f"\n  🔴 STOP LOSS {pos.ticker}: edge {pos.last_edge:.1f}% AND P&L ${unrealized_pnl:.2f}")
+                    order_id = self.execute_trade(
+                        pos.ticker, pos.contracts, current_bid,
+                        TradeAction.LIQUIDATE, btc_price, pos.strike_price,
+                        0, pos.last_edge
+                    )
+                    if order_id:
+                        self.position_tracker.close_position(pos.ticker)
+                    continue
+                    
+                # Holding - show status
+                status = "📈" if unrealized_pnl >= 0 else "📉"
+                print(f"  {status} HOLD {pos.ticker}: edge {pos.last_edge:.1f}%, P&L ${unrealized_pnl:.2f} ({unrealized_pct:.1f}%)")
+                
+            else:
+                # No bid available - fall back to edge-only logic
+                if pos.last_edge <= EXIT_EDGE_PCT:
+                    print(f"\n  🔴 EXIT {pos.ticker}: edge dropped to {pos.last_edge:.1f}% (no bid available)")
+                    order_id = self.execute_trade(
+                        pos.ticker, pos.contracts, int(pos.avg_price_cents),
+                        TradeAction.LIQUIDATE, btc_price, pos.strike_price,
+                        0, pos.last_edge
+                    )
+                    if order_id:
+                        self.position_tracker.close_position(pos.ticker)
+
         
         # Summary
         positions = self.position_tracker.get_all_positions()
@@ -880,8 +950,10 @@ class HFTradingBot:
         mode = "DRY-RUN 🧪" if self.dry_run else "LIVE 🔴"
         print(f"\n{'#'*70}")
         print(f"# BTC High-Frequency Trading Bot - {mode}")
-        print(f"# Edge threshold: {MIN_EDGE_PCT}% | Exit at: {EXIT_EDGE_PCT}%")
+        print(f"# Edge threshold: {MIN_EDGE_PCT}% | Profit target: {PROFIT_TARGET_PCT}%")
+        print(f"# Stop loss: edge < {EXIT_EDGE_PCT}% AND losing")
         print(f"# Kelly: {KELLY_FRACTION*100}% | Max contracts/trade: {MAX_CONTRACTS}")
+
         print(f"# Max exposure: {MAX_EXPOSURE_FRACTION*100}% of bankroll")
         print(f"# Max slippage: {MAX_SLIPPAGE_CENTS}¢ spread")
         print(f"# Refresh: {self.refresh_interval}s | Cutoff: {TRADING_CUTOFF_MINUTES} min")
