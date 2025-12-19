@@ -68,21 +68,36 @@ def generate_status():
     minutes_to_settlement = int((next_hour - et_time).total_seconds() / 60)
 
     
-    # Get open positions with current market data
-    # Need to handle same ticker being traded multiple times
-    # An open is "still open" if there's no liquidate with higher ID for same ticker
+    # Get current hour pattern for filtering (only show current hour's positions)
+    next_hour_dt = et_time + timedelta(hours=1)
+    year = next_hour_dt.strftime('%y')
+    month = next_hour_dt.strftime('%b').upper()
+    day = next_hour_dt.strftime('%d')
+    hour = next_hour_dt.strftime('%H')
+    current_event_prefix = f"KXBTCD-{year}{month}{day}{hour}"  # e.g., KXBTCD-25DEC1912
+    
+    # Get open positions for CURRENT HOUR only
+    # Aggregate all open + add actions for each ticker (weighted avg price)
+    # A position is "still open" if the ticker has no liquidate action
     cursor.execute("""
-        SELECT t1.id, t1.ticker, t1.contracts, t1.price_cents, t1.edge_pct, t1.strike_price, t1.timestamp
-        FROM trades t1
-        WHERE t1.action = 'open'
-        AND NOT EXISTS (
-            SELECT 1 FROM trades t2 
-            WHERE t2.ticker = t1.ticker 
-            AND t2.action = 'liquidate' 
-            AND t2.id > t1.id
+        SELECT 
+            ticker,
+            SUM(contracts) as total_contracts,
+            SUM(contracts * price_cents) / SUM(contracts) as avg_price_cents,
+            MAX(edge_pct) as edge_pct,
+            MAX(strike_price) as strike_price,
+            MIN(timestamp) as first_open_time
+        FROM trades
+        WHERE action IN ('open', 'add')
+        AND ticker LIKE ?
+        AND ticker NOT IN (
+            SELECT DISTINCT ticker FROM trades WHERE action = 'liquidate'
         )
-        ORDER BY t1.timestamp DESC
-    """)
+        GROUP BY ticker
+        ORDER BY first_open_time DESC
+    """, (current_event_prefix + '%',))
+
+
 
     
     # Fetch current market data for open positions
@@ -119,7 +134,8 @@ def generate_status():
     open_positions = []
     total_exposure = 0
     for row in rows:  # Use rows we already fetched
-        trade_id, ticker, contracts, entry_price, edge, strike, ts = row
+        # Columns: ticker, total_contracts, avg_price_cents, edge_pct, strike_price, first_open_time
+        ticker, contracts, entry_price, edge, strike, ts = row
 
         exposure = contracts * entry_price / 100
         total_exposure += exposure

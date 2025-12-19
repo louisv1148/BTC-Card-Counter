@@ -74,7 +74,8 @@ KELLY_FRACTION = 0.25
 MAX_CONTRACTS = 10
 
 # Maximum total exposure - never risk more than this fraction of bankroll
-MAX_EXPOSURE_FRACTION = 0.50  # 50% of balance max across all positions
+MAX_EXPOSURE_FRACTION = 1.00  # 100% of balance max across all positions
+
 
 # Minimum edge increase (percentage points) to add to existing position
 EDGE_INCREASE_THRESHOLD = 5.0

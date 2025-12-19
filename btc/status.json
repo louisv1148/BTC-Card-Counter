@@ -1,8 +1,8 @@
 {
-  "btc_price": 88370.265,
-  "volatility": 0.0757,
+  "btc_price": 88620.42,
+  "volatility": 0.0622,
   "settlement_time": "12:00 PM ET",
-  "minutes_to_settlement": 48,
+  "minutes_to_settlement": 28,
   "open_positions": [
     {
       "ticker": "KXBTCD-25DEC1912-T88999.99",
@@ -24,79 +24,84 @@
       "edge": 10.229416886947533,
       "strike": 88749.99,
       "opened": "12/19 16:00",
-      "exit_price": 72,
-      "model_fair": 99,
-      "unrealized_pnl": -1.3400000000000005,
-      "pnl_pct": -21.50882825040129,
-      "status": "ACTIVE"
-    },
-    {
-      "ticker": "KXBTCD-25DEC1912-T88499.99",
-      "contracts": 10,
-      "price_cents": 82,
-      "edge": 16.46337749491791,
-      "strike": 88499.99,
-      "opened": "12/19 16:00",
-      "exit_price": 55,
-      "model_fair": 86,
-      "unrealized_pnl": -2.9899999999999993,
-      "pnl_pct": -36.46341463414633,
+      "exit_price": 63,
+      "model_fair": 95,
+      "unrealized_pnl": -1.9900000000000002,
+      "pnl_pct": -31.942215088282506,
       "status": "ACTIVE"
     }
   ],
-  "total_exposure": 23.33,
+  "total_exposure": 15.13,
   "fair_values": [
     {
-      "strike": 88499.99,
-      "bps_above": 14.679711552297123,
-      "no_bid": 55,
-      "no_ask": 57,
-      "model_fair": 86,
-      "edge": 26.07272040810408,
-      "ticker": "KXBTCD-25DEC1912-T88499.99"
-    },
-    {
       "strike": 88749.99,
-      "bps_above": 42.96977043126506,
-      "no_bid": 72,
-      "no_ask": 75,
-      "model_fair": 99,
-      "edge": 23.17459913418591,
+      "bps_above": 14.62078378775535,
+      "no_bid": 63,
+      "no_ask": 66,
+      "model_fair": 95,
+      "edge": 27.352644228326334,
       "ticker": "KXBTCD-25DEC1912-T88749.99"
     },
     {
       "strike": 88999.99,
-      "bps_above": 71.25982931023302,
+      "bps_above": 42.830986357321144,
       "no_bid": 84,
       "no_ask": 86,
       "model_fair": 99,
-      "edge": 13.019992871636191,
+      "edge": 13.019976690464166,
       "ticker": "KXBTCD-25DEC1912-T88999.99"
     },
     {
       "strike": 89249.99,
-      "bps_above": 99.54988818920094,
-      "no_bid": 91,
-      "no_ask": 94,
+      "bps_above": 71.04118892688695,
+      "no_bid": 93,
+      "no_ask": 95,
       "model_fair": 100,
-      "edge": 5.5800000000000045,
+      "edge": 4.650000000000004,
       "ticker": "KXBTCD-25DEC1912-T89249.99"
     },
     {
       "strike": 89499.99,
-      "bps_above": 127.8399470681689,
-      "no_bid": 94,
-      "no_ask": 96,
+      "bps_above": 99.25139149645273,
+      "no_bid": 97,
+      "no_ask": 98,
       "model_fair": 100,
-      "edge": 3.7200000000000033,
+      "edge": 1.8600000000000017,
       "ticker": "KXBTCD-25DEC1912-T89499.99"
+    },
+    {
+      "strike": 89749.99,
+      "bps_above": 127.46159406601853,
+      "no_bid": 98,
+      "no_ask": 100,
+      "model_fair": 100,
+      "edge": 0.0,
+      "ticker": "KXBTCD-25DEC1912-T89749.99"
     }
   ],
   "hourly_summary": {
-    "trades": 123,
-    "avg_edge": 15.457865463565042
+    "trades": 139,
+    "avg_edge": 16.38393863697555
   },
   "closed_trades": [
+    {
+      "ticker": "KXBTCD-25DEC1912-T88499.99",
+      "contracts": 117,
+      "entry_price": 82,
+      "exit_price": 45,
+      "pnl": -46.53,
+      "pnl_pct": -48.49906191369606,
+      "closed": "11:31:56"
+    },
+    {
+      "ticker": "KXBTCD-25DEC1912-T88249.99",
+      "contracts": 10,
+      "entry_price": 51,
+      "exit_price": 45,
+      "pnl": -0.9599999999999995,
+      "pnl_pct": -18.823529411764696,
+      "closed": "11:21:33"
+    },
     {
       "ticker": "KXBTCD-25DEC1912-T88249.99",
       "contracts": 10,
@@ -450,11 +455,11 @@
     }
   ],
   "pnl": {
-    "realized": 19.940000000000023,
-    "unrealized": -5.0,
-    "total": 14.940000000000023,
-    "closed_trades": 117,
-    "total_fees": 21.099999999999984
+    "realized": 14.190000000000024,
+    "unrealized": -2.66,
+    "total": 11.530000000000024,
+    "closed_trades": 119,
+    "total_fees": 21.749999999999982
   },
-  "last_updated": "2025-12-19T10:12:32.879736"
+  "last_updated": "2025-12-19T10:32:56.472574"
 }
