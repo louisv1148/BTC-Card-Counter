@@ -76,39 +76,41 @@ def generate_status():
     hour = next_hour_dt.strftime('%H')
     current_event_prefix = f"KXBTCD-{year}{month}{day}{hour}"  # e.g., KXBTCD-25DEC1912
     
-    # Get open positions for CURRENT HOUR only
-    # Aggregate all open + add actions for each ticker (weighted avg price)
-    # A position is "still open" if the ticker has no liquidate action
-    cursor.execute("""
-        SELECT 
-            ticker,
-            SUM(contracts) as total_contracts,
-            SUM(contracts * price_cents) / SUM(contracts) as avg_price_cents,
-            MAX(edge_pct) as edge_pct,
-            MAX(strike_price) as strike_price,
-            MIN(timestamp) as first_open_time
-        FROM trades
-        WHERE action IN ('open', 'add')
-        AND ticker LIKE ?
-        AND ticker NOT IN (
-            SELECT DISTINCT ticker FROM trades WHERE action = 'liquidate'
+    # Read positions from DynamoDB (source of truth - bot's position tracker)
+    # This is more reliable than SQLite which has complex open/add/liquidate sequences
+    rows = []
+    try:
+        import boto3
+        dynamodb = boto3.resource('dynamodb')
+        table = dynamodb.Table('BTCHFPositions-DryRun')
+        resp = table.scan(
+            FilterExpression='begins_with(pk, :prefix)',
+            ExpressionAttributeValues={':prefix': 'POS#'}
         )
-        GROUP BY ticker
-        ORDER BY first_open_time DESC
-    """, (current_event_prefix + '%',))
+        for item in resp.get('Items', []):
+            ticker = item.get('ticker', '')
+            if ticker.startswith(current_event_prefix):
+                rows.append((
+                    ticker,
+                    int(item.get('contracts', 0)),
+                    float(item.get('avg_price_cents', 0)),
+                    float(item.get('last_edge', 0)),
+                    float(item.get('strike_price', 0)),
+                    item.get('opened_at', '')
+                ))
+    except Exception as e:
+        print(f"[WARNING] Could not read from DynamoDB: {e}")
 
 
 
     
     # Fetch current market data for open positions
-    # Need to fetch from EACH position's specific event, not just current hour
     current_market_data = {}
     events_fetched = set()
     
-    # First pass: identify all events we need to fetch
-    rows = cursor.fetchall()
+    # First pass: identify all events we need to fetch from our DynamoDB rows
     for row in rows:
-        ticker = row[1]  # row[0] is ID, row[1] is ticker
+        ticker = row[0]  # ticker is first element
 
         # Extract event ticker from position ticker (e.g., KXBTCD-25DEC1410-T89249.99 -> KXBTCD-25DEC1410)
         parts = ticker.rsplit('-', 1)
@@ -133,9 +135,10 @@ def generate_status():
                     pass    
     open_positions = []
     total_exposure = 0
-    for row in rows:  # Use rows we already fetched
-        # Columns: ticker, total_contracts, avg_price_cents, edge_pct, strike_price, first_open_time
+    for row in rows:
+        # Columns from DynamoDB: ticker, contracts, avg_price_cents, last_edge, strike_price, opened_at
         ticker, contracts, entry_price, edge, strike, ts = row
+
 
         exposure = contracts * entry_price / 100
         total_exposure += exposure

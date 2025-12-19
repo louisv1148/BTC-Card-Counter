@@ -76,6 +76,9 @@ MAX_CONTRACTS = 10
 # Maximum total exposure - never risk more than this fraction of bankroll
 MAX_EXPOSURE_FRACTION = 1.00  # 100% of balance max across all positions
 
+# Maximum per-position exposure - half Kelly (0.5 * 0.25 = 12.5% of bankroll per position)
+MAX_POSITION_FRACTION = 0.125  # 12.5% of bankroll max per single ticker
+
 
 # Minimum edge increase (percentage points) to add to existing position
 EDGE_INCREASE_THRESHOLD = 5.0
@@ -290,16 +293,25 @@ class PositionTracker:
     def get_position(self, ticker: str) -> Optional[Position]:
         return self.positions.get(ticker)
     
-    def can_add_to_position(self, ticker: str, current_edge: float, current_price: int = 0, model_prob: float = 0) -> bool:
+    def can_add_to_position(self, ticker: str, current_edge: float, current_price: int = 0, model_prob: float = 0, bankroll: float = 0) -> bool:
         """Check if we can add to an existing position.
         
         Allow adding if:
+        0. Position hasn't reached max exposure (half Kelly)
         1. Edge increased by 5pp (original rule), OR
         2. Edge still high (>10%) AND price dropped at least 5¢ AND model says 95%+ (averaging down)
         """
         pos = self.positions.get(ticker)
         if not pos:
             return True  # No existing position, can open new
+        
+        # Rule 0: Check per-position max exposure (half Kelly)
+        if bankroll > 0:
+            max_position = bankroll * MAX_POSITION_FRACTION
+            current_exposure = pos.total_cost()
+            if current_exposure >= max_position:
+                print(f"  🚫 POSITION MAX: ${current_exposure:.2f} >= ${max_position:.2f} (half Kelly) - skip add")
+                return False
         
         # Rule 1: Edge increased significantly
         edge_increase = current_edge - pos.last_edge
@@ -318,6 +330,7 @@ class PositionTracker:
         
         print(f"  ⏸️ Edge increase {edge_increase:.1f}pp < {EDGE_INCREASE_THRESHOLD}pp - skip add")
         return False
+
 
 
     
@@ -910,8 +923,9 @@ class HFTradingBot:
 
                 
                 if self.position_tracker.has_position(ticker):
-                    # Check add rules (5pp increase OR average down with 95%+ model)
-                    if self.position_tracker.can_add_to_position(ticker, net_edge, no_ask, model_prob):
+                    # Check add rules (5pp increase OR average down with 95%+ model, AND within half Kelly)
+                    if self.position_tracker.can_add_to_position(ticker, net_edge, no_ask, model_prob, bankroll):
+
 
                         contracts = self.calculate_kelly_contracts(model_prob, no_ask, remaining_exposure)
                         if contracts > 0:
