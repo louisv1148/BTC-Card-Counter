@@ -12,6 +12,23 @@ from zoneinfo import ZoneInfo
 
 DB_PATH = "hf_trades.db"
 OUTPUT_FILE = "status.json"
+VOL_TABLE = "BTCPriceHistory"
+
+def get_volatility():
+    """Fetch volatility from DynamoDB (same as bot)."""
+    try:
+        import boto3
+        dynamodb = boto3.resource('dynamodb')
+        table = dynamodb.Table(VOL_TABLE)
+        
+        response = table.get_item(Key={'pk': 'VOL', 'sk': 'LATEST'})
+        item = response.get('Item')
+        
+        if item:
+            return float(item.get('vol_15m_std', 0.02))
+    except Exception as e:
+        pass  # Silently fall back to default
+    return 0.02  # Default 2% if DynamoDB unavailable
 
 def calculate_kalshi_fee_pct(price_cents):
     """Calculate fee as percentage of cost"""
@@ -34,6 +51,9 @@ def generate_status():
     """Generate status JSON file"""
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
+    
+    # Get current volatility from DynamoDB
+    vol_std = get_volatility()
     
     # Get latest BTC price
     cursor.execute("SELECT btc_price FROM price_observations ORDER BY timestamp DESC LIMIT 1")
@@ -109,6 +129,30 @@ def generate_status():
         current_bid = current_data.get('no_bid', 0)
         current_ask = current_data.get('no_ask', 0)
         
+        # Calculate model fair value using dynamic volatility from DynamoDB
+        import math
+        vol = vol_std  # Use dynamic volatility fetched from DynamoDB
+
+
+        minutes_left = 60 - datetime.now(et_tz).minute
+        if minutes_left > 0 and vol > 0:
+            vol_scaled = vol * math.sqrt(minutes_left / 15)
+            price_diff_pct = (strike - btc_price) / btc_price * 100 if btc_price > 0 else 0
+            std_devs = price_diff_pct / vol_scaled if vol_scaled > 0 else 0
+            # Simplified normal CDF
+            if std_devs < -6:
+                model_fair = 0
+            elif std_devs > 6:
+                model_fair = 100
+            else:
+                t = 1 / (1 + 0.2316419 * abs(std_devs))
+                d = 0.3989423 * math.exp(-std_devs * std_devs / 2)
+                p = d * t * (0.3193815 + t * (-0.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274))))
+                prob = 1 - p if std_devs > 0 else p
+                model_fair = int(prob * 100)
+        else:
+            model_fair = 50  # Default
+        
         # Calculate unrealized P&L
         cost = contracts * entry_price / 100
         entry_fee = calculate_kalshi_fee(contracts, entry_price)
@@ -141,12 +185,13 @@ def generate_status():
             'edge': edge,
             'strike': strike,
             'opened': datetime.fromisoformat(ts).strftime("%m/%d %H:%M"),
-            'current_bid': current_bid,
-            'current_ask': current_ask,
+            'exit_price': current_bid,  # Price to exit now (bid)
+            'model_fair': model_fair,   # Model's fair value
             'unrealized_pnl': unrealized_pnl,
             'pnl_pct': pnl_pct,
             'status': 'EXPIRED' if is_expired else 'ACTIVE'
         })
+
 
 
 
@@ -169,8 +214,7 @@ def generate_status():
         if response.status_code == 200:
             markets = response.json().get('markets', [])
             
-            # Use default volatility for model calculation (simplified for dashboard)
-            vol_std = 0.02  # 2% default volatility
+            # vol_std already fetched from DynamoDB at top of function
 
             
             # Calculate minutes to settlement
@@ -367,6 +411,7 @@ def generate_status():
     
     data = {
         'btc_price': btc_price,
+        'volatility': vol_std,  # 15-minute volatility from DynamoDB
         'settlement_time': next_hour.strftime("%I:%M %p ET"),
         'minutes_to_settlement': minutes_to_settlement,
         'open_positions': open_positions,
@@ -377,6 +422,7 @@ def generate_status():
         'pnl': pnl_data,
         'last_updated': datetime.now().isoformat()
     }
+
 
 
     

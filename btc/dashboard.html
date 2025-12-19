@@ -222,10 +222,11 @@
             </div>
 
             <div class="card">
-                <div class="card-title">Hourly Trades</div>
-                <div class="card-value" id="hourly-trades">0</div>
-                <div class="card-subtitle">Avg Edge: <span id="avg-edge">0%</span></div>
+                <div class="card-title">Volatility (15m)</div>
+                <div class="card-value" id="volatility">0%</div>
+                <div class="card-subtitle">Model input</div>
             </div>
+
 
             <div class="card">
                 <div class="card-title">Opportunities</div>
@@ -262,8 +263,8 @@
                         <th>Ticker</th>
                         <th>Qty</th>
                         <th>Entry</th>
-                        <th>Bid</th>
-                        <th>Ask</th>
+                        <th>Fair Value</th>
+                        <th>Exit Price</th>
                         <th>Strike</th>
                         <th>P&L</th>
                         <th>Status</th>
@@ -287,6 +288,7 @@
                     <tr>
                         <th>Strike</th>
                         <th>NO Fair</th>
+                        <th>NO Bid</th>
                         <th>NO Ask</th>
                         <th>Edge</th>
                         <th>Bet</th>
@@ -294,7 +296,7 @@
                 </thead>
                 <tbody id="fair-values-body">
                     <tr>
-                        <td colspan="5" class="empty-state">Loading...</td>
+                        <td colspan="6" class="empty-state">Loading...</td>
                     </tr>
                 </tbody>
             </table>
@@ -344,8 +346,8 @@
             document.getElementById('settlement-time').textContent = `Settlement: ${data.settlement_time} (${data.minutes_to_settlement} min)`;
             document.getElementById('open-positions').textContent = data.open_positions.length;
             document.getElementById('total-exposure').textContent = `$${data.total_exposure.toFixed(2)}`;
-            document.getElementById('hourly-trades').textContent = data.hourly_summary.trades;
-            document.getElementById('avg-edge').textContent = `${data.hourly_summary.avg_edge.toFixed(1)}%`;
+            document.getElementById('volatility').textContent = data.volatility ? `${(data.volatility * 100).toFixed(2)}%` : '0%';
+
             document.getElementById('opportunities').textContent = data.fair_values ? data.fair_values.filter(fv => fv.edge >= 10).length : 0;
 
             // Update positions table
@@ -363,8 +365,8 @@
                             <td>${pos.ticker}</td>
                             <td>${pos.contracts}</td>
                             <td>${pos.price_cents}¢</td>
-                            <td>${pos.current_bid > 0 ? pos.current_bid + '¢' : '-'}</td>
-                            <td>${pos.current_ask > 0 ? pos.current_ask + '¢' : '-'}</td>
+                            <td>${pos.model_fair || '-'}¢</td>
+                            <td>${pos.exit_price > 0 ? pos.exit_price + '¢' : '-'}</td>
                             <td>$${pos.strike.toLocaleString()}</td>
                             <td><span class="${pnlClass}">${pnlSign}$${pos.unrealized_pnl.toFixed(2)} (${pctSign}${(pos.pnl_pct || 0).toFixed(0)}%)</span></td>
                             <td><span class="badge ${statusClass}">${pos.status || 'ACTIVE'}</span></td>
@@ -379,7 +381,7 @@
             // Update fair values table
             const fairValuesBody = document.getElementById('fair-values-body');
             if (!data.fair_values || data.fair_values.length === 0) {
-                fairValuesBody.innerHTML = '<tr><td colspan="5" class="empty-state">No strikes above current price</td></tr>';
+                fairValuesBody.innerHTML = '<tr><td colspan="6" class="empty-state">No strikes above current price</td></tr>';
             } else {
                 fairValuesBody.innerHTML = data.fair_values.map(fv => {
                     const edgeClass = fv.edge >= 10 ? 'badge-green' : fv.edge >= 0 ? 'badge-blue' : 'badge-red';
@@ -388,6 +390,7 @@
                         <tr>
                             <td>$${fv.strike.toLocaleString()} <span style="color: #9ca3af; font-size: 12px;">${fv.bps_above >= 0 ? '+' : ''}${fv.bps_above.toFixed(0)}bps</span></td>
                             <td>${fv.model_fair || fv.no_bid}¢</td>
+                            <td>${fv.no_bid}¢</td>
                             <td>${fv.no_ask}¢</td>
                             <td><span class="badge ${edgeClass}">${fv.edge >= 0 ? '+' : ''}${fv.edge.toFixed(0)}%</span></td>
                             <td>${betStatus}</td>

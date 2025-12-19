@@ -53,7 +53,7 @@ except ImportError:
 MIN_EDGE_PCT = 10.0
 
 # Exit threshold - sell when edge drops below this AND we're losing
-EXIT_EDGE_PCT = -20.0  # Wider stop: only exit when edge is very negative
+EXIT_EDGE_PCT = 2.0  # Exit when edge drops below 2% AND losing
 
 # Profit target - take profit when unrealized gain exceeds this % of entry cost
 # This prevents holding winners until they become losers
@@ -86,8 +86,10 @@ AVERAGE_DOWN_MIN_FAIR = 95.0       # Model must say >= this % likely to win
 
 
 
-# Maximum slippage tolerance in cents - skip trade if spread exceeds this
-MAX_SLIPPAGE_CENTS = 5  # If bid-ask spread > 5 cents, skip
+# Maximum slippage tolerance in cents - skip if model fair value vs ask price differs by more than this
+# e.g., if model says fair value is 80¢ but ask is 84¢, that's 4¢ slippage
+MAX_SLIPPAGE_CENTS = 3  # If (ask - model_fair) > 3 cents, skip
+
 
 
 # Refresh interval in seconds
@@ -894,12 +896,17 @@ class HFTradingBot:
                 print(f"     Gross edge: {gross_edge:.1f}% | Fee: {fee_pct:.1f}% | NET: {net_edge:.1f}%")
 
                 
-                # SLIPPAGE CHECK: Skip if spread is too wide
-                if spread is not None and spread > MAX_SLIPPAGE_CENTS:
-                    print(f"     ⚠️ SKIP: Spread {spread}¢ > max allowed {MAX_SLIPPAGE_CENTS}¢")
+
+                # SLIPPAGE CHECK: Skip if model fair value vs ask price differs too much
+                # Model fair = model_prob * 100 (what we think the contract is worth)
+                model_fair_cents = int(model_prob * 100)
+                slippage = no_ask - model_fair_cents
+                if slippage > MAX_SLIPPAGE_CENTS:
+                    print(f"     ⚠️ SKIP: Slippage {slippage}¢ (ask {no_ask}¢ vs fair {model_fair_cents}¢) > max {MAX_SLIPPAGE_CENTS}¢")
                     continue
-                elif spread is not None:
-                    print(f"     Spread: {spread}¢ ✓")
+                else:
+                    print(f"     Slippage: {slippage}¢ (ask {no_ask}¢ vs fair {model_fair_cents}¢) ✓")
+
                 
                 if self.position_tracker.has_position(ticker):
                     # Check add rules (5pp increase OR average down with 95%+ model)
@@ -958,6 +965,15 @@ class HFTradingBot:
                 )
                 model_prob_pct = (model_prob or 0) * 100
                 
+                # Calculate CURRENT edge (not stale entry edge)
+                market_prob = current_bid / 100
+                current_edge = (model_prob - market_prob) * 100 if model_prob else 0
+                fee_pct = self.calculate_kalshi_fee_pct(current_bid)
+                current_net_edge = current_edge - fee_pct
+                
+                # Update position's last_edge to current for accurate tracking
+                pos.last_edge = current_net_edge
+                
                 # EXIT CONDITION 1: Profit target hit
                 # BUT skip if model says we're very likely to win - hold for $1 payout
                 if unrealized_pct >= PROFIT_TARGET_PCT:
@@ -968,20 +984,20 @@ class HFTradingBot:
                         order_id = self.execute_trade(
                             pos.ticker, pos.contracts, current_bid,
                             TradeAction.LIQUIDATE, btc_price, pos.strike_price,
-                            0, pos.last_edge
+                            0, current_net_edge
                         )
                         if order_id:
                             self.position_tracker.close_position(pos.ticker)
                         continue
 
                 
-                # EXIT CONDITION 2: Edge dropped AND we're losing
-                if pos.last_edge <= EXIT_EDGE_PCT and unrealized_pnl < 0:
-                    print(f"\n  🔴 STOP LOSS {pos.ticker}: edge {pos.last_edge:.1f}% AND P&L ${unrealized_pnl:.2f}")
+                # EXIT CONDITION 2: CURRENT edge dropped AND we're losing
+                if current_net_edge <= EXIT_EDGE_PCT and unrealized_pnl < 0:
+                    print(f"\n  🔴 STOP LOSS {pos.ticker}: edge {current_net_edge:.1f}% AND P&L ${unrealized_pnl:.2f}")
                     order_id = self.execute_trade(
                         pos.ticker, pos.contracts, current_bid,
                         TradeAction.LIQUIDATE, btc_price, pos.strike_price,
-                        0, pos.last_edge
+                        0, current_net_edge
                     )
                     if order_id:
                         self.position_tracker.close_position(pos.ticker)
@@ -989,7 +1005,8 @@ class HFTradingBot:
                     
                 # Holding - show status
                 status = "📈" if unrealized_pnl >= 0 else "📉"
-                print(f"  {status} HOLD {pos.ticker}: edge {pos.last_edge:.1f}%, P&L ${unrealized_pnl:.2f} ({unrealized_pct:.1f}%)")
+                print(f"  {status} HOLD {pos.ticker}: edge {current_net_edge:.1f}%, P&L ${unrealized_pnl:.2f} ({unrealized_pct:.1f}%)")
+
                 
             else:
                 # No bid available - fall back to edge-only logic
