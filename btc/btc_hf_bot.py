@@ -52,12 +52,16 @@ except ImportError:
 # Edge threshold - only trade if NET edge (after fees) shows this % edge
 MIN_EDGE_PCT = 10.0
 
-# Exit threshold - sell when edge drops to this level AND we're losing
-EXIT_EDGE_PCT = 1.0
+# Exit threshold - sell when edge drops below this AND we're losing
+EXIT_EDGE_PCT = -20.0  # Wider stop: only exit when edge is very negative
 
 # Profit target - take profit when unrealized gain exceeds this % of entry cost
 # This prevents holding winners until they become losers
 PROFIT_TARGET_PCT = 5.0
+
+# Hold for settlement - if model says NO is this likely to win, skip profit target
+# and hold for the full $1 payout instead of taking early profit
+HOLD_IF_LIKELY_WIN_PCT = 90.0  # 90% = model says very likely to win
 
 # Kalshi trading fee rate (7% of potential payout, per Kalshi docs)
 # Fee formula: ceil(0.07 × contracts × price_cents × (1 - price_cents/100))
@@ -74,6 +78,13 @@ MAX_EXPOSURE_FRACTION = 0.50  # 50% of balance max across all positions
 
 # Minimum edge increase (percentage points) to add to existing position
 EDGE_INCREASE_THRESHOLD = 5.0
+
+# Average down settings - add to position if price dropped and edge still good
+AVERAGE_DOWN_MIN_EDGE = 10.0       # Only average down if edge still >= this %
+AVERAGE_DOWN_MIN_DROP = 5          # Price must have dropped at least this many cents
+AVERAGE_DOWN_MIN_FAIR = 95.0       # Model must say >= this % likely to win
+
+
 
 # Maximum slippage tolerance in cents - skip trade if spread exceeds this
 MAX_SLIPPAGE_CENTS = 5  # If bid-ask spread > 5 cents, skip
@@ -124,12 +135,17 @@ class Position:
     def is_expired(self) -> bool:
         """Check if this position's contract has already settled."""
         try:
-            expiry = datetime.fromisoformat(self.expiry_time)
-            return datetime.utcnow() > expiry
+            expiry = datetime.fromisoformat(self.expiry_time.replace('Z', '+00:00'))
+            # Make sure we compare timezone-aware datetimes
+            if expiry.tzinfo is None:
+                expiry = expiry.replace(tzinfo=timezone.utc)
+            now_utc = datetime.now(timezone.utc)
+            return now_utc > expiry
         except Exception as e:
             # If we can't parse expiry, treat as expired (safe default)
             print(f"[WARNING] Could not parse expiry_time '{self.expiry_time}': {e}")
             return True
+
 
 
 class PositionTracker:
@@ -245,25 +261,62 @@ class PositionTracker:
         except Exception as e:
             print(f"[PositionTracker] Failed to delete from DynamoDB: {e}")
     
+    def cleanup_expired_positions(self):
+        """Remove expired positions from tracker.
+        
+        This should be called at the start of each scan cycle to ensure
+        we don't hold stale positions that have already settled.
+        """
+        expired = []
+        for ticker, pos in self.positions.items():
+            if pos.is_expired():
+                expired.append(ticker)
+        
+        for ticker in expired:
+            print(f"  🧹 Cleaning expired position: {ticker}")
+            del self.positions[ticker]
+            self._delete_position_from_dynamodb(ticker)
+        
+        if expired:
+            print(f"  📦 Cleaned {len(expired)} expired positions")
+    
     def has_position(self, ticker: str) -> bool:
         return ticker in self.positions
+
     
     def get_position(self, ticker: str) -> Optional[Position]:
         return self.positions.get(ticker)
     
-    def can_add_to_position(self, ticker: str, current_edge: float) -> bool:
-        """Check if we can add to an existing position (5pp rule)."""
+    def can_add_to_position(self, ticker: str, current_edge: float, current_price: int = 0, model_prob: float = 0) -> bool:
+        """Check if we can add to an existing position.
+        
+        Allow adding if:
+        1. Edge increased by 5pp (original rule), OR
+        2. Edge still high (>10%) AND price dropped at least 5¢ AND model says 95%+ (averaging down)
+        """
         pos = self.positions.get(ticker)
         if not pos:
             return True  # No existing position, can open new
         
+        # Rule 1: Edge increased significantly
         edge_increase = current_edge - pos.last_edge
         if edge_increase >= EDGE_INCREASE_THRESHOLD:
             print(f"  ✅ Edge increased by {edge_increase:.1f}pp (>{EDGE_INCREASE_THRESHOLD}pp) - can add")
             return True
-        else:
-            print(f"  ⏸️ Edge increase {edge_increase:.1f}pp < {EDGE_INCREASE_THRESHOLD}pp - skip add")
-            return False
+        
+        # Rule 2: Average down - edge still good, price dropped, and model says very likely to win
+        model_pct = model_prob * 100 if model_prob <= 1 else model_prob
+        if current_price > 0 and current_edge >= AVERAGE_DOWN_MIN_EDGE and model_pct >= AVERAGE_DOWN_MIN_FAIR:
+            price_drop = pos.avg_price_cents - current_price
+            if price_drop >= AVERAGE_DOWN_MIN_DROP:
+                print(f"  📉 AVERAGE DOWN: price dropped {price_drop}¢ ({pos.avg_price_cents}→{current_price}¢), edge {current_edge:.1f}%, model {model_pct:.0f}%")
+                return True
+
+        
+        print(f"  ⏸️ Edge increase {edge_increase:.1f}pp < {EDGE_INCREASE_THRESHOLD}pp - skip add")
+        return False
+
+
     
     def open_position(self, ticker: str, contracts: int, price_cents: float,
                       edge: float, btc_price: float, strike_price: float,
@@ -725,6 +778,10 @@ class HFTradingBot:
         print(f"🔍 Scan at {et_time.strftime('%H:%M:%S')} ET ({minutes_to_hour} min to settlement)")
         print(f"{'='*60}")
         
+        # Clean up expired positions from tracker before each scan
+        self.position_tracker.cleanup_expired_positions()
+
+        
         # Get BTC price
         btc_price = self.get_btc_price()
         if not btc_price:
@@ -845,8 +902,9 @@ class HFTradingBot:
                     print(f"     Spread: {spread}¢ ✓")
                 
                 if self.position_tracker.has_position(ticker):
-                    # Check 5pp rule
-                    if self.position_tracker.can_add_to_position(ticker, net_edge):
+                    # Check add rules (5pp increase OR average down with 95%+ model)
+                    if self.position_tracker.can_add_to_position(ticker, net_edge, no_ask, model_prob):
+
                         contracts = self.calculate_kelly_contracts(model_prob, no_ask, remaining_exposure)
                         if contracts > 0:
                             order_id = self.execute_trade(
@@ -882,7 +940,7 @@ class HFTradingBot:
             
             # Try to get current market bid for this position
             current_bid = None
-            for market in all_markets:
+            for market in markets:
                 if market.get('ticker') == pos.ticker:
                     current_bid = market.get('no_bid', 0)
                     break
@@ -894,17 +952,28 @@ class HFTradingBot:
                 unrealized_pnl = proceeds - entry_cost - entry_fee - exit_fee
                 unrealized_pct = (unrealized_pnl / entry_cost) * 100 if entry_cost > 0 else 0
                 
+                # Calculate current model probability for this position
+                model_prob = self.calculate_model_probability(
+                    btc_price, pos.strike_price, vol_15m, minutes_to_hour
+                )
+                model_prob_pct = (model_prob or 0) * 100
+                
                 # EXIT CONDITION 1: Profit target hit
+                # BUT skip if model says we're very likely to win - hold for $1 payout
                 if unrealized_pct >= PROFIT_TARGET_PCT:
-                    print(f"\n  💰 PROFIT TARGET {pos.ticker}: +${unrealized_pnl:.2f} ({unrealized_pct:.1f}%)")
-                    order_id = self.execute_trade(
-                        pos.ticker, pos.contracts, current_bid,
-                        TradeAction.LIQUIDATE, btc_price, pos.strike_price,
-                        0, pos.last_edge
-                    )
-                    if order_id:
-                        self.position_tracker.close_position(pos.ticker)
-                    continue
+                    if model_prob_pct >= HOLD_IF_LIKELY_WIN_PCT:
+                        print(f"\n  🎯 HOLD FOR WIN {pos.ticker}: P&L +${unrealized_pnl:.2f} ({unrealized_pct:.1f}%) but model={model_prob_pct:.0f}% likely to win")
+                    else:
+                        print(f"\n  💰 PROFIT TARGET {pos.ticker}: +${unrealized_pnl:.2f} ({unrealized_pct:.1f}%) model={model_prob_pct:.0f}%")
+                        order_id = self.execute_trade(
+                            pos.ticker, pos.contracts, current_bid,
+                            TradeAction.LIQUIDATE, btc_price, pos.strike_price,
+                            0, pos.last_edge
+                        )
+                        if order_id:
+                            self.position_tracker.close_position(pos.ticker)
+                        continue
+
                 
                 # EXIT CONDITION 2: Edge dropped AND we're losing
                 if pos.last_edge <= EXIT_EDGE_PCT and unrealized_pnl < 0:

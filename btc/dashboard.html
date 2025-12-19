@@ -262,11 +262,11 @@
                         <th>Ticker</th>
                         <th>Qty</th>
                         <th>Entry</th>
-                        <th>Current Bid</th>
-                        <th>Current Ask</th>
+                        <th>Bid</th>
+                        <th>Ask</th>
                         <th>Strike</th>
                         <th>P&L</th>
-                        <th>Opened</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
 
@@ -275,6 +275,7 @@
                         <td colspan="8" class="empty-state">No open positions</td>
                     </tr>
                 </tbody>
+
 
             </table>
         </div>
@@ -306,17 +307,19 @@
                     <tr>
                         <th>Ticker</th>
                         <th>Qty</th>
-                        <th>Exit Price</th>
-                        <th>Edge</th>
+                        <th>Entry</th>
+                        <th>Exit</th>
+                        <th>P&L</th>
                         <th>Closed</th>
                     </tr>
                 </thead>
                 <tbody id="closed-body">
                     <tr>
-                        <td colspan="5" class="empty-state">No closed trades</td>
+                        <td colspan="6" class="empty-state">No closed trades</td>
                     </tr>
                 </tbody>
             </table>
+
         </div>
 
         <div class="refresh-info">
@@ -353,6 +356,8 @@
                 positionsBody.innerHTML = data.open_positions.map(pos => {
                     const pnlClass = pos.unrealized_pnl >= 0 ? 'positive' : 'negative';
                     const pnlSign = pos.unrealized_pnl >= 0 ? '+' : '';
+                    const pctSign = (pos.pnl_pct || 0) >= 0 ? '+' : '';
+                    const statusClass = pos.status === 'EXPIRED' ? 'badge-blue' : 'badge-green';
                     return `
                         <tr>
                             <td>${pos.ticker}</td>
@@ -361,12 +366,14 @@
                             <td>${pos.current_bid > 0 ? pos.current_bid + '¢' : '-'}</td>
                             <td>${pos.current_ask > 0 ? pos.current_ask + '¢' : '-'}</td>
                             <td>$${pos.strike.toLocaleString()}</td>
-                            <td><span class="${pnlClass}">${pnlSign}$${pos.unrealized_pnl.toFixed(2)}</span></td>
-                            <td>${pos.opened}</td>
+                            <td><span class="${pnlClass}">${pnlSign}$${pos.unrealized_pnl.toFixed(2)} (${pctSign}${(pos.pnl_pct || 0).toFixed(0)}%)</span></td>
+                            <td><span class="badge ${statusClass}">${pos.status || 'ACTIVE'}</span></td>
                         </tr>
                     `;
                 }).join('');
             }
+
+
 
 
             // Update fair values table
@@ -380,7 +387,7 @@
                     return `
                         <tr>
                             <td>$${fv.strike.toLocaleString()} <span style="color: #9ca3af; font-size: 12px;">${fv.bps_above >= 0 ? '+' : ''}${fv.bps_above.toFixed(0)}bps</span></td>
-                            <td>${fv.no_bid}¢</td>
+                            <td>${fv.model_fair || fv.no_bid}¢</td>
                             <td>${fv.no_ask}¢</td>
                             <td><span class="badge ${edgeClass}">${fv.edge >= 0 ? '+' : ''}${fv.edge.toFixed(0)}%</span></td>
                             <td>${betStatus}</td>
@@ -393,18 +400,26 @@
             // Update closed trades table
             const closedBody = document.getElementById('closed-body');
             if (data.closed_trades.length === 0) {
-                closedBody.innerHTML = '<tr><td colspan="5" class="empty-state">No closed trades</td></tr>';
+                closedBody.innerHTML = '<tr><td colspan="6" class="empty-state">No closed trades</td></tr>';
             } else {
-                closedBody.innerHTML = data.closed_trades.map(trade => `
-                    <tr>
-                        <td>${trade.ticker}</td>
-                        <td>${trade.contracts}</td>
-                        <td>${trade.price}¢</td>
-                        <td><span class="badge badge-red">${trade.edge.toFixed(1)}%</span></td>
-                        <td>${trade.closed}</td>
-                    </tr>
-                `).join('');
+                closedBody.innerHTML = data.closed_trades.map(trade => {
+                    const pnlClass = trade.pnl >= 0 ? 'positive' : 'negative';
+                    const pnlSign = trade.pnl >= 0 ? '+' : '';
+                    const pctSign = trade.pnl_pct >= 0 ? '+' : '';
+                    return `
+                        <tr>
+                            <td>${trade.ticker}</td>
+                            <td>${trade.contracts}</td>
+                            <td>${trade.entry_price}¢</td>
+                            <td>${trade.exit_price}¢</td>
+                            <td><span class="${pnlClass}">${pnlSign}$${trade.pnl.toFixed(2)} (${pctSign}${trade.pnl_pct.toFixed(0)}%)</span></td>
+                            <td>${trade.closed}</td>
+                        </tr>
+                    `;
+                }).join('');
             }
+
+
 
             // Update P&L data
             if (data.pnl) {

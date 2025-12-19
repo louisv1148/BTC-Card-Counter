@@ -48,43 +48,59 @@ def generate_status():
     minutes_to_settlement = int((next_hour - et_time).total_seconds() / 60)
 
     
-    
     # Get open positions with current market data
+    # Need to handle same ticker being traded multiple times
+    # An open is "still open" if there's no liquidate with higher ID for same ticker
     cursor.execute("""
-        SELECT ticker, contracts, price_cents, edge_pct, strike_price, timestamp
-        FROM trades
-        WHERE action = 'open'
-        AND ticker NOT IN (SELECT ticker FROM trades WHERE action = 'liquidate')
-        ORDER BY timestamp DESC
+        SELECT t1.id, t1.ticker, t1.contracts, t1.price_cents, t1.edge_pct, t1.strike_price, t1.timestamp
+        FROM trades t1
+        WHERE t1.action = 'open'
+        AND NOT EXISTS (
+            SELECT 1 FROM trades t2 
+            WHERE t2.ticker = t1.ticker 
+            AND t2.action = 'liquidate' 
+            AND t2.id > t1.id
+        )
+        ORDER BY t1.timestamp DESC
     """)
+
     
     # Fetch current market data for open positions
-    year = next_hour.strftime('%y')
-    month = next_hour.strftime('%b').upper()
-    day = next_hour.strftime('%d')
-    hour = next_hour.strftime('%H')
-    event_ticker = f"KXBTCD-{year}{month}{day}{hour}"
-    
+    # Need to fetch from EACH position's specific event, not just current hour
     current_market_data = {}
-    try:
-        url = f"https://api.elections.kalshi.com/trade-api/v2/events/{event_ticker}"
-        response = requests.get(url, headers={'Accept': 'application/json'}, timeout=10)
-        if response.status_code == 200:
-            markets = response.json().get('markets', [])
-            for market in markets:
-                ticker = market.get('ticker')
-                if ticker:
-                    current_market_data[ticker] = {
-                        'no_bid': market.get('no_bid', 0),
-                        'no_ask': market.get('no_ask', 0)
-                    }
-    except:
-        pass
+    events_fetched = set()
     
+    # First pass: identify all events we need to fetch
+    rows = cursor.fetchall()
+    for row in rows:
+        ticker = row[1]  # row[0] is ID, row[1] is ticker
+
+        # Extract event ticker from position ticker (e.g., KXBTCD-25DEC1410-T89249.99 -> KXBTCD-25DEC1410)
+        parts = ticker.rsplit('-', 1)
+        if len(parts) >= 1:
+            event_ticker = parts[0]
+            if event_ticker not in events_fetched:
+                events_fetched.add(event_ticker)
+                try:
+                    url = f"https://api.elections.kalshi.com/trade-api/v2/events/{event_ticker}"
+                    response = requests.get(url, headers={'Accept': 'application/json'}, timeout=5)
+                    if response.status_code == 200:
+                        markets = response.json().get('markets', [])
+                        for market in markets:
+                            mkt_ticker = market.get('ticker')
+                            if mkt_ticker:
+                                current_market_data[mkt_ticker] = {
+                                    'no_bid': market.get('no_bid', 0),
+                                    'no_ask': market.get('no_ask', 0),
+                                    'status': market.get('status', 'unknown')
+                                }
+                except:
+                    pass    
     open_positions = []
     total_exposure = 0
-    for row in cursor.fetchall():
-        ticker, contracts, entry_price, edge, strike, ts = row
+    for row in rows:  # Use rows we already fetched
+        trade_id, ticker, contracts, entry_price, edge, strike, ts = row
+
         exposure = contracts * entry_price / 100
         total_exposure += exposure
         
@@ -97,13 +113,26 @@ def generate_status():
         cost = contracts * entry_price / 100
         entry_fee = calculate_kalshi_fee(contracts, entry_price)
         
+        # Determine if position is expired (no bid, ask is 100 = settled)
+        market_status = current_data.get('status', 'unknown')
+        is_expired = current_bid == 0 and current_ask >= 99
+        
         # Current value if we sold at bid
         if current_bid > 0:
             proceeds = contracts * current_bid / 100
             exit_fee = calculate_kalshi_fee(contracts, current_bid)
             unrealized_pnl = proceeds - cost - entry_fee - exit_fee
+        elif is_expired:
+            # Expired - NO likely won (settled at 100¢ ask means NO is worth $1)
+            # We get $1 per contract
+            proceeds = contracts * 1.00
+            exit_fee = 0  # No exit fee on settlement
+            unrealized_pnl = proceeds - cost - entry_fee
         else:
             unrealized_pnl = -cost - entry_fee  # Worst case
+        
+        # Calculate percentage gain/loss
+        pnl_pct = (unrealized_pnl / cost * 100) if cost > 0 else 0
         
         open_positions.append({
             'ticker': ticker,
@@ -114,22 +143,22 @@ def generate_status():
             'opened': datetime.fromisoformat(ts).strftime("%m/%d %H:%M"),
             'current_bid': current_bid,
             'current_ask': current_ask,
-            'unrealized_pnl': unrealized_pnl
+            'unrealized_pnl': unrealized_pnl,
+            'pnl_pct': pnl_pct,
+            'status': 'EXPIRED' if is_expired else 'ACTIVE'
         })
 
-    
+
+
     
     # Get fair values - fetch current Kalshi market data for all strikes
-    import requests
-    
-    # Get next hour event ticker
-    et_time = datetime.now()  # Simplified - should use ET timezone
-    next_hour = et_time + timedelta(hours=1)
+    # Use the next_hour already calculated with ET timezone
     year = next_hour.strftime('%y')
     month = next_hour.strftime('%b').upper()
     day = next_hour.strftime('%d')
     hour = next_hour.strftime('%H')
     event_ticker = f"KXBTCD-{year}{month}{day}{hour}"
+
     
     # Fetch markets from Kalshi
     fair_values = []
@@ -140,10 +169,9 @@ def generate_status():
         if response.status_code == 200:
             markets = response.json().get('markets', [])
             
-            # Get volatility for model calculation
-            cursor.execute("SELECT vol_15m_std, vol_15m_samples FROM (SELECT * FROM price_observations ORDER BY timestamp DESC LIMIT 1)")
-            vol_row = cursor.fetchone()
-            vol_std = vol_row[0] if vol_row else 0.08
+            # Use default volatility for model calculation (simplified for dashboard)
+            vol_std = 0.02  # 2% default volatility
+
             
             # Calculate minutes to settlement
             minutes_to_settlement = 60 - et_time.minute
@@ -185,17 +213,24 @@ def generate_status():
                 # Calculate bps above current price
                 bps_above = (strike - btc_price) / btc_price * 10000
                 
+                # Model fair value in cents (what model thinks NO is worth)
+                model_fair_cents = int(model_prob * 100)
+                
                 fair_values.append({
                     'strike': strike,
                     'bps_above': bps_above,
                     'no_bid': no_bid,
                     'no_ask': no_ask,
+                    'model_fair': model_fair_cents,  # What model thinks NO is worth
                     'edge': net_edge,
                     'ticker': ticker
                 })
+
             
-            # Sort by strike
+            # Sort by strike and limit to top 5 (closest to current price)
             fair_values.sort(key=lambda x: x['strike'])
+            fair_values = fair_values[:5]
+
             
     except Exception as e:
         print(f"Error fetching fair values: {e}")
@@ -216,25 +251,62 @@ def generate_status():
         'avg_edge': row[1] if row and row[1] else 0
     }
     
-    # Get closed trades
+    # Get closed trades with entry price and P&L
     cursor.execute("""
-        SELECT ticker, contracts, price_cents, edge_pct, timestamp
-        FROM trades
-        WHERE action = 'liquidate'
-        AND timestamp > datetime('now', '-1 hour')
-        ORDER BY timestamp DESC
+        SELECT 
+            t_close.ticker, 
+            t_close.contracts, 
+            t_open.price_cents as entry_price,
+            t_close.price_cents as exit_price, 
+            t_close.timestamp,
+            t_close.realized_pnl
+        FROM trades t_close
+        JOIN trades t_open ON t_open.ticker = t_close.ticker 
+            AND t_open.action = 'open'
+            AND t_open.id < t_close.id
+            AND NOT EXISTS (
+                SELECT 1 FROM trades t_mid 
+                WHERE t_mid.ticker = t_close.ticker 
+                AND t_mid.action = 'liquidate'
+                AND t_mid.id > t_open.id 
+                AND t_mid.id < t_close.id
+            )
+        WHERE t_close.action = 'liquidate'
+        AND t_close.timestamp > datetime('now', '-1 hour')
+        ORDER BY t_close.timestamp DESC
     """)
     
     closed_trades = []
     for row in cursor.fetchall():
-        ticker, contracts, price, edge, ts = row
+        ticker, contracts, entry_price, exit_price, ts, realized_pnl = row
+        # Calculate P&L if not stored
+        entry_cost = contracts * entry_price / 100
+        if realized_pnl is None:
+            proceeds = contracts * exit_price / 100
+            entry_fee = calculate_kalshi_fee(contracts, entry_price)
+            exit_fee = calculate_kalshi_fee(contracts, exit_price)
+            realized_pnl = proceeds - entry_cost - entry_fee - exit_fee
+        # Calculate percentage gain/loss
+        pnl_pct = (realized_pnl / entry_cost * 100) if entry_cost > 0 else 0
+        # All timestamps are stored in UTC - convert to ET for display
+        closed_dt = datetime.fromisoformat(ts.replace('+00:00', '').replace('Z', ''))
+        # Treat as UTC and convert to ET
+        closed_dt = closed_dt.replace(tzinfo=timezone.utc).astimezone(et_tz)
         closed_trades.append({
             'ticker': ticker,
             'contracts': contracts,
-            'price': int(price),
-            'edge': edge,
-            'closed': datetime.fromisoformat(ts).strftime("%H:%M:%S")
+            'entry_price': int(entry_price),
+            'exit_price': int(exit_price),
+            'pnl': realized_pnl,
+            'pnl_pct': pnl_pct,
+            'closed': closed_dt.strftime("%H:%M:%S")
         })
+
+
+
+
+
+
     
     # Calculate P&L (for dry-run mode)
     # Get all closed positions (opened then liquidated)
@@ -315,10 +387,37 @@ def generate_status():
 
 if __name__ == '__main__':
     import time
-    print("🔄 Starting status.json generator (Ctrl+C to stop)")
+    import subprocess
+    
+    S3_BUCKET = "btc-trading-dashboard-1765598917"
+    
+    print("🔄 Starting status.json generator with S3 upload (Ctrl+C to stop)")    # Track last time we checked for expired positions (don't spam Kalshi API)
+    last_expired_check = 0
+    EXPIRED_CHECK_INTERVAL = 60  # Check every 60 seconds
+    
     while True:
         try:
+            # Periodically close expired positions (uses Kalshi API)
+            current_time = time.time()
+            if current_time - last_expired_check >= EXPIRED_CHECK_INTERVAL:
+                try:
+                    from close_expired import close_expired_positions
+                    count, pnl = close_expired_positions(dry_run=False)
+                    if count > 0:
+                        print(f"  📦 Closed {count} expired positions for ${pnl:.2f}")
+                    last_expired_check = current_time
+                except Exception as e:
+                    print(f"  ⚠️ Error closing expired: {e}")
+                    last_expired_check = current_time
+            
             generate_status()
+            # Upload to S3
+            result = subprocess.run(
+                ['aws', 's3', 'cp', OUTPUT_FILE, f's3://{S3_BUCKET}/status.json', '--quiet'],
+                capture_output=True, text=True
+            )
+            if result.returncode != 0:
+                print(f"  ⚠️ S3 upload failed: {result.stderr}")
             time.sleep(10)  # Update every 10 seconds
         except KeyboardInterrupt:
             print("\n👋 Stopped")
@@ -326,3 +425,4 @@ if __name__ == '__main__':
         except Exception as e:
             print(f"Error: {e}")
             time.sleep(10)
+

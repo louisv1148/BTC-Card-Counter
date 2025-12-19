@@ -1,43 +1,230 @@
 {
-  "btc_price": 90399.09,
-  "settlement_time": "12:01 AM ET",
-  "minutes_to_settlement": 58,
+  "btc_price": 87051.895,
+  "settlement_time": "12:00 AM ET",
+  "minutes_to_settlement": 3,
   "open_positions": [],
   "total_exposure": 0,
-  "fair_values": [],
+  "fair_values": [
+    {
+      "strike": 87249.99,
+      "bps_above": 22.755966426693085,
+      "no_bid": 99,
+      "no_ask": 100,
+      "model_fair": 100,
+      "edge": 0.0,
+      "ticker": "KXBTCD-25DEC1900-T87249.99"
+    },
+    {
+      "strike": 87499.99,
+      "bps_above": 51.47446818934856,
+      "no_bid": 99,
+      "no_ask": 100,
+      "model_fair": 100,
+      "edge": 0.0,
+      "ticker": "KXBTCD-25DEC1900-T87499.99"
+    },
+    {
+      "strike": 87749.99,
+      "bps_above": 80.19296995200405,
+      "no_bid": 98,
+      "no_ask": 100,
+      "model_fair": 100,
+      "edge": 0.0,
+      "ticker": "KXBTCD-25DEC1900-T87749.99"
+    },
+    {
+      "strike": 87999.99,
+      "bps_above": 108.91147171465953,
+      "no_bid": 91,
+      "no_ask": 100,
+      "model_fair": 100,
+      "edge": 0.0,
+      "ticker": "KXBTCD-25DEC1900-T87999.99"
+    },
+    {
+      "strike": 88249.99,
+      "bps_above": 137.62997347731502,
+      "no_bid": 86,
+      "no_ask": 100,
+      "model_fair": 100,
+      "edge": 0.0,
+      "ticker": "KXBTCD-25DEC1900-T88249.99"
+    }
+  ],
   "hourly_summary": {
-    "trades": 6,
-    "avg_edge": 6.336033672046338
+    "trades": 48,
+    "avg_edge": 14.463420495131517
   },
   "closed_trades": [
     {
-      "ticker": "KXBTCD-25DEC1300-T90499.99",
-      "contracts": 10,
-      "price": 89,
-      "edge": 0.9299993474190782,
-      "closed": "04:52:33"
+      "ticker": "KXBTCD-25DEC1823-T86999.99",
+      "contracts": 1,
+      "entry_price": 28,
+      "exit_price": 35,
+      "pnl": 0.029999999999999947,
+      "pnl_pct": 10.714285714285694,
+      "closed": "22:41:03"
     },
     {
-      "ticker": "KXBTCD-25DEC1300-T90499.99",
-      "contracts": 10,
-      "price": 85,
-      "edge": 0.9300000000000008,
-      "closed": "04:36:58"
+      "ticker": "KXBTCD-25DEC1823-T87249.99",
+      "contracts": 1,
+      "entry_price": 32,
+      "exit_price": 55,
+      "pnl": 0.19000000000000006,
+      "pnl_pct": 59.37500000000002,
+      "closed": "22:40:52"
     },
     {
-      "ticker": "KXBTCD-25DEC1223-T90499.99",
+      "ticker": "KXBTCD-25DEC1823-T86999.99",
+      "contracts": 3,
+      "entry_price": 17,
+      "exit_price": 21,
+      "pnl": 0.049999999999999996,
+      "pnl_pct": 9.80392156862745,
+      "closed": "22:36:43"
+    },
+    {
+      "ticker": "KXBTCD-25DEC1823-T85999.99",
+      "contracts": 1,
+      "entry_price": 38,
+      "exit_price": 45,
+      "pnl": 0.030000000000000002,
+      "pnl_pct": 7.894736842105264,
+      "closed": "22:30:53"
+    },
+    {
+      "ticker": "KXBTCD-25DEC1822-T85249.99",
+      "contracts": 1,
+      "entry_price": 71,
+      "exit_price": 0,
+      "pnl": -0.71,
+      "pnl_pct": -100.0,
+      "closed": "22:03:03"
+    },
+    {
+      "ticker": "KXBTCD-25DEC1822-T85499.99",
+      "contracts": 1,
+      "entry_price": 81,
+      "exit_price": 0,
+      "pnl": -0.81,
+      "pnl_pct": -100.0,
+      "closed": "22:03:03"
+    },
+    {
+      "ticker": "KXBTCD-25DEC1822-T85249.99",
+      "contracts": 1,
+      "entry_price": 57,
+      "exit_price": 64,
+      "pnl": 0.030000000000000058,
+      "pnl_pct": 5.263157894736853,
+      "closed": "21:03:32"
+    },
+    {
+      "ticker": "KXBTCD-25DEC1821-T85249.99",
+      "contracts": 2,
+      "entry_price": 69,
+      "exit_price": 0,
+      "pnl": -1.38,
+      "pnl_pct": -100.0,
+      "closed": "21:01:48"
+    },
+    {
+      "ticker": "KXBTCD-25DEC1821-T85499.99",
+      "contracts": 5,
+      "entry_price": 68,
+      "exit_price": 100,
+      "pnl": 1.6,
+      "pnl_pct": 47.05882352941177,
+      "closed": "21:01:48"
+    },
+    {
+      "ticker": "KXBTCD-25DEC1821-T85749.99",
+      "contracts": 7,
+      "entry_price": 78,
+      "exit_price": 100,
+      "pnl": 1.54,
+      "pnl_pct": 28.205128205128204,
+      "closed": "21:01:48"
+    },
+    {
+      "ticker": "KXBTCD-25DEC1821-T85499.99",
+      "contracts": 6,
+      "entry_price": 57,
+      "exit_price": 66,
+      "pnl": 0.33000000000000007,
+      "pnl_pct": 9.649122807017546,
+      "closed": "20:02:31"
+    },
+    {
+      "ticker": "KXBTCD-25DEC1820-T85749.99",
       "contracts": 10,
-      "price": 88,
-      "edge": 0.9300000000000008,
-      "closed": "03:50:28"
+      "entry_price": 84,
+      "exit_price": 100,
+      "pnl": 1.5999999999999996,
+      "pnl_pct": 19.047619047619044,
+      "closed": "20:01:41"
+    },
+    {
+      "ticker": "KXBTCD-25DEC1819-T85749.99",
+      "contracts": 10,
+      "entry_price": 77,
+      "exit_price": 100,
+      "pnl": 2.3,
+      "pnl_pct": 29.87012987012987,
+      "closed": "19:06:22"
+    },
+    {
+      "ticker": "KXBTCD-25DEC1819-T85749.99",
+      "contracts": 10,
+      "entry_price": 86,
+      "exit_price": 100,
+      "pnl": 2.3,
+      "pnl_pct": 26.744186046511626,
+      "closed": "19:06:22"
+    },
+    {
+      "ticker": "KXBTCD-25DEC1819-T85749.99",
+      "contracts": 10,
+      "entry_price": 89,
+      "exit_price": 100,
+      "pnl": 2.3,
+      "pnl_pct": 25.842696629213478,
+      "closed": "19:06:22"
+    },
+    {
+      "ticker": "KXBTCD-25DEC1819-T85499.99",
+      "contracts": 10,
+      "entry_price": 60,
+      "exit_price": 100,
+      "pnl": 4.0,
+      "pnl_pct": 66.66666666666666,
+      "closed": "19:06:22"
+    },
+    {
+      "ticker": "KXBTCD-25DEC1819-T85499.99",
+      "contracts": 10,
+      "entry_price": 75,
+      "exit_price": 100,
+      "pnl": 4.0,
+      "pnl_pct": 53.333333333333336,
+      "closed": "19:06:22"
+    },
+    {
+      "ticker": "KXBTCD-25DEC1820-T85499.99",
+      "contracts": 10,
+      "entry_price": 58,
+      "exit_price": 65,
+      "pnl": 0.3600000000000002,
+      "pnl_pct": 6.206896551724142,
+      "closed": "19:06:06"
     }
   ],
   "pnl": {
-    "realized": -0.48,
+    "realized": 27.550000000000026,
     "unrealized": 0,
-    "total": -0.48,
-    "closed_trades": 3,
-    "total_fees": 0.48
+    "total": 27.550000000000026,
+    "closed_trades": 96,
+    "total_fees": 16.669999999999995
   },
-  "last_updated": "2025-12-12T23:01:57.924436"
+  "last_updated": "2025-12-18T22:57:43.437372"
 }

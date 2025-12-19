@@ -1,0 +1,4501 @@
+🔄 Starting status.json generator with S3 upload (Ctrl+C to stop)
+Current time: 2025-12-18 18:07 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ✅ EXPIRED: KXBTCD-25DEC1818-T85749.99
+     Entry: 67¢ → Exit: 100¢ | P&L: $3.30 (NO_WIN)
+  ✅ EXPIRED: KXBTCD-25DEC1818-T85999.99
+     Entry: 84¢ → Exit: 100¢ | P&L: $1.60 (NO_WIN)
+  ❌ EXPIRED: KXBTCD-25DEC1818-T85499.99
+     Entry: 66¢ → Exit: 0¢ | P&L: $-6.60 (YES_WIN)
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 3
+Total P&L: $-1.70
+✅ Changes committed to database
+  📦 Closed 3 expired positions for $-1.70
+✅ Generated status.json at 17:07:20
+✅ Generated status.json at 17:07:32
+✅ Generated status.json at 17:07:43
+✅ Generated status.json at 17:07:55
+✅ Generated status.json at 17:08:07
+✅ Generated status.json at 17:08:18
+Current time: 2025-12-18 18:08 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:08:30
+✅ Generated status.json at 17:08:41
+✅ Generated status.json at 17:08:53
+✅ Generated status.json at 17:09:05
+✅ Generated status.json at 17:09:16
+✅ Generated status.json at 17:09:28
+Current time: 2025-12-18 18:09 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:09:41
+✅ Generated status.json at 17:09:52
+✅ Generated status.json at 17:10:03
+✅ Generated status.json at 17:10:16
+✅ Generated status.json at 17:10:27
+✅ Generated status.json at 17:10:39
+Current time: 2025-12-18 18:10 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:10:50
+✅ Generated status.json at 17:11:02
+✅ Generated status.json at 17:11:13
+✅ Generated status.json at 17:11:25
+✅ Generated status.json at 17:11:36
+✅ Generated status.json at 17:11:48
+Current time: 2025-12-18 18:11 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:11:59
+✅ Generated status.json at 17:12:12
+✅ Generated status.json at 17:12:23
+✅ Generated status.json at 17:12:35
+✅ Generated status.json at 17:12:46
+✅ Generated status.json at 17:12:58
+Current time: 2025-12-18 18:13 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:13:09
+✅ Generated status.json at 17:13:20
+✅ Generated status.json at 17:13:32
+✅ Generated status.json at 17:13:44
+✅ Generated status.json at 17:13:55
+✅ Generated status.json at 17:14:06
+Current time: 2025-12-18 18:14 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:14:18
+✅ Generated status.json at 17:14:30
+✅ Generated status.json at 17:14:42
+✅ Generated status.json at 17:14:54
+✅ Generated status.json at 17:15:05
+✅ Generated status.json at 17:15:17
+Current time: 2025-12-18 18:15 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:15:28
+✅ Generated status.json at 17:15:40
+✅ Generated status.json at 17:15:51
+✅ Generated status.json at 17:16:04
+✅ Generated status.json at 17:16:15
+✅ Generated status.json at 17:16:27
+Current time: 2025-12-18 18:16 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:16:38
+✅ Generated status.json at 17:16:50
+✅ Generated status.json at 17:17:01
+✅ Generated status.json at 17:17:13
+✅ Generated status.json at 17:17:24
+✅ Generated status.json at 17:17:36
+Current time: 2025-12-18 18:17 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:17:47
+✅ Generated status.json at 17:17:59
+✅ Generated status.json at 17:18:10
+✅ Generated status.json at 17:18:22
+✅ Generated status.json at 17:18:33
+✅ Generated status.json at 17:18:45
+Current time: 2025-12-18 18:18 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:18:57
+✅ Generated status.json at 17:19:08
+✅ Generated status.json at 17:19:20
+✅ Generated status.json at 17:19:32
+✅ Generated status.json at 17:19:44
+✅ Generated status.json at 17:19:55
+Current time: 2025-12-18 18:20 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:20:07
+✅ Generated status.json at 17:20:18
+✅ Generated status.json at 17:20:30
+✅ Generated status.json at 17:20:42
+✅ Generated status.json at 17:20:53
+✅ Generated status.json at 17:21:05
+Current time: 2025-12-18 18:21 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:21:16
+✅ Generated status.json at 17:21:28
+✅ Generated status.json at 17:21:39
+✅ Generated status.json at 17:21:51
+✅ Generated status.json at 17:22:03
+✅ Generated status.json at 17:22:14
+Current time: 2025-12-18 18:22 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 4 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:22:26
+✅ Generated status.json at 17:22:37
+✅ Generated status.json at 17:22:49
+✅ Generated status.json at 17:23:00
+✅ Generated status.json at 17:23:13
+✅ Generated status.json at 17:23:25
+Current time: 2025-12-18 18:23 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:23:36
+✅ Generated status.json at 17:23:48
+✅ Generated status.json at 17:23:59
+✅ Generated status.json at 17:24:11
+✅ Generated status.json at 17:24:22
+✅ Generated status.json at 17:24:34
+Current time: 2025-12-18 18:24 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:24:45
+✅ Generated status.json at 17:24:57
+✅ Generated status.json at 17:25:08
+✅ Generated status.json at 17:25:20
+✅ Generated status.json at 17:25:33
+✅ Generated status.json at 17:25:44
+Current time: 2025-12-18 18:25 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 6 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:25:56
+✅ Generated status.json at 17:26:08
+✅ Generated status.json at 17:26:19
+✅ Generated status.json at 17:26:32
+✅ Generated status.json at 17:26:43
+✅ Generated status.json at 17:26:55
+Current time: 2025-12-18 18:27 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 4 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:27:06
+✅ Generated status.json at 17:27:18
+✅ Generated status.json at 17:27:29
+✅ Generated status.json at 17:27:41
+✅ Generated status.json at 17:27:52
+✅ Generated status.json at 17:28:04
+Current time: 2025-12-18 18:28 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 4 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:28:16
+✅ Generated status.json at 17:28:27
+✅ Generated status.json at 17:28:39
+✅ Generated status.json at 17:28:50
+✅ Generated status.json at 17:29:02
+✅ Generated status.json at 17:29:14
+Current time: 2025-12-18 18:29 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 4 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:29:25
+✅ Generated status.json at 17:29:36
+✅ Generated status.json at 17:29:48
+✅ Generated status.json at 17:30:00
+✅ Generated status.json at 17:30:11
+✅ Generated status.json at 17:30:23
+Current time: 2025-12-18 18:30 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 4 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:30:35
+✅ Generated status.json at 17:30:47
+✅ Generated status.json at 17:30:58
+✅ Generated status.json at 17:31:10
+✅ Generated status.json at 17:31:22
+✅ Generated status.json at 17:31:34
+Current time: 2025-12-18 18:31 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 4 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:31:45
+✅ Generated status.json at 17:31:57
+✅ Generated status.json at 17:32:08
+✅ Generated status.json at 17:32:20
+✅ Generated status.json at 17:32:31
+✅ Generated status.json at 17:32:43
+Current time: 2025-12-18 18:32 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:32:55
+✅ Generated status.json at 17:33:07
+✅ Generated status.json at 17:33:18
+✅ Generated status.json at 17:33:29
+✅ Generated status.json at 17:33:41
+✅ Generated status.json at 17:33:53
+Current time: 2025-12-18 18:34 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:34:05
+✅ Generated status.json at 17:34:18
+✅ Generated status.json at 17:34:30
+✅ Generated status.json at 17:34:41
+✅ Generated status.json at 17:34:53
+Current time: 2025-12-18 18:35 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:35:05
+✅ Generated status.json at 17:35:16
+✅ Generated status.json at 17:35:28
+✅ Generated status.json at 17:35:40
+✅ Generated status.json at 17:35:51
+✅ Generated status.json at 17:36:02
+Current time: 2025-12-18 18:36 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:36:14
+✅ Generated status.json at 17:36:26
+✅ Generated status.json at 17:36:37
+✅ Generated status.json at 17:36:49
+✅ Generated status.json at 17:37:01
+✅ Generated status.json at 17:37:12
+Current time: 2025-12-18 18:37 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:37:24
+✅ Generated status.json at 17:37:35
+✅ Generated status.json at 17:37:47
+✅ Generated status.json at 17:37:58
+✅ Generated status.json at 17:38:10
+✅ Generated status.json at 17:38:22
+Current time: 2025-12-18 18:38 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:38:34
+✅ Generated status.json at 17:38:45
+✅ Generated status.json at 17:38:58
+✅ Generated status.json at 17:39:10
+✅ Generated status.json at 17:39:21
+✅ Generated status.json at 17:39:33
+Current time: 2025-12-18 18:39 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:39:44
+✅ Generated status.json at 17:39:56
+✅ Generated status.json at 17:40:07
+✅ Generated status.json at 17:40:18
+✅ Generated status.json at 17:40:30
+✅ Generated status.json at 17:40:42
+Current time: 2025-12-18 18:40 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:40:53
+✅ Generated status.json at 17:41:05
+✅ Generated status.json at 17:41:17
+✅ Generated status.json at 17:41:28
+✅ Generated status.json at 17:41:40
+✅ Generated status.json at 17:41:51
+Current time: 2025-12-18 18:42 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:42:03
+✅ Generated status.json at 17:42:14
+✅ Generated status.json at 17:42:26
+✅ Generated status.json at 17:42:38
+✅ Generated status.json at 17:42:50
+✅ Generated status.json at 17:43:01
+Current time: 2025-12-18 18:43 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:43:13
+✅ Generated status.json at 17:43:24
+✅ Generated status.json at 17:43:36
+✅ Generated status.json at 17:43:47
+✅ Generated status.json at 17:43:59
+✅ Generated status.json at 17:44:10
+Current time: 2025-12-18 18:44 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:44:22
+✅ Generated status.json at 17:44:33
+✅ Generated status.json at 17:44:44
+✅ Generated status.json at 17:44:56
+✅ Generated status.json at 17:45:07
+✅ Generated status.json at 17:45:19
+Current time: 2025-12-18 18:45 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:45:30
+✅ Generated status.json at 17:45:41
+✅ Generated status.json at 17:45:53
+✅ Generated status.json at 17:46:04
+✅ Generated status.json at 17:46:16
+✅ Generated status.json at 17:46:28
+Current time: 2025-12-18 18:46 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:46:39
+✅ Generated status.json at 17:46:51
+✅ Generated status.json at 17:47:02
+✅ Generated status.json at 17:47:14
+✅ Generated status.json at 17:47:25
+✅ Generated status.json at 17:47:37
+Current time: 2025-12-18 18:47 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:47:48
+✅ Generated status.json at 17:47:59
+✅ Generated status.json at 17:48:11
+✅ Generated status.json at 17:48:24
+✅ Generated status.json at 17:48:35
+✅ Generated status.json at 17:48:47
+Current time: 2025-12-18 18:48 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:48:58
+✅ Generated status.json at 17:49:10
+✅ Generated status.json at 17:49:22
+✅ Generated status.json at 17:49:33
+✅ Generated status.json at 17:49:45
+✅ Generated status.json at 17:49:56
+Current time: 2025-12-18 18:50 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:50:09
+✅ Generated status.json at 17:50:20
+✅ Generated status.json at 17:50:32
+✅ Generated status.json at 17:50:43
+✅ Generated status.json at 17:50:55
+✅ Generated status.json at 17:51:07
+Current time: 2025-12-18 18:51 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:51:18
+✅ Generated status.json at 17:51:30
+✅ Generated status.json at 17:51:41
+✅ Generated status.json at 17:51:53
+✅ Generated status.json at 17:52:04
+✅ Generated status.json at 17:52:16
+Current time: 2025-12-18 18:52 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:52:28
+✅ Generated status.json at 17:52:39
+✅ Generated status.json at 17:52:51
+✅ Generated status.json at 17:53:03
+✅ Generated status.json at 17:53:14
+✅ Generated status.json at 17:53:26
+Current time: 2025-12-18 18:53 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:53:38
+✅ Generated status.json at 17:53:49
+✅ Generated status.json at 17:54:01
+✅ Generated status.json at 17:54:12
+✅ Generated status.json at 17:54:24
+✅ Generated status.json at 17:54:36
+Current time: 2025-12-18 18:54 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:54:47
+✅ Generated status.json at 17:54:59
+✅ Generated status.json at 17:55:11
+✅ Generated status.json at 17:55:22
+✅ Generated status.json at 17:55:34
+✅ Generated status.json at 17:55:46
+Current time: 2025-12-18 18:55 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:55:57
+✅ Generated status.json at 17:56:09
+✅ Generated status.json at 17:56:20
+✅ Generated status.json at 17:56:32
+✅ Generated status.json at 17:56:44
+✅ Generated status.json at 17:56:55
+Current time: 2025-12-18 18:57 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:57:07
+✅ Generated status.json at 17:57:18
+✅ Generated status.json at 17:57:30
+✅ Generated status.json at 17:57:41
+✅ Generated status.json at 17:57:53
+✅ Generated status.json at 17:58:05
+Current time: 2025-12-18 18:58 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:58:16
+✅ Generated status.json at 17:58:28
+✅ Generated status.json at 17:58:40
+✅ Generated status.json at 17:58:51
+✅ Generated status.json at 17:59:03
+✅ Generated status.json at 17:59:14
+Current time: 2025-12-18 18:59 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85749.99 settles at 19:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1819-T85499.99 settles at 19:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 17:59:26
+✅ Generated status.json at 17:59:37
+✅ Generated status.json at 17:59:49
+✅ Generated status.json at 18:00:00
+✅ Generated status.json at 18:00:12
+✅ Generated status.json at 18:00:25
+Current time: 2025-12-18 19:00 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85499.99 (strike 85499.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85749.99 (strike 85749.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85749.99 (strike 85749.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85749.99 (strike 85749.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85499.99 (strike 85499.99)
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:00:37
+✅ Generated status.json at 18:00:48
+✅ Generated status.json at 18:01:00
+✅ Generated status.json at 18:01:12
+✅ Generated status.json at 18:01:24
+✅ Generated status.json at 18:01:35
+Current time: 2025-12-18 19:01 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 7 open positions
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85499.99 (strike 85499.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85749.99 (strike 85749.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85749.99 (strike 85749.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85749.99 (strike 85749.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85499.99 (strike 85499.99)
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:01:49
+✅ Generated status.json at 18:02:01
+✅ Generated status.json at 18:02:14
+✅ Generated status.json at 18:02:25
+✅ Generated status.json at 18:02:37
+Current time: 2025-12-18 19:02 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 7 open positions
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85499.99 (strike 85499.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85749.99 (strike 85749.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85749.99 (strike 85749.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85749.99 (strike 85749.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85499.99 (strike 85499.99)
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:02:49
+✅ Generated status.json at 18:03:01
+✅ Generated status.json at 18:03:13
+✅ Generated status.json at 18:03:24
+✅ Generated status.json at 18:03:36
+✅ Generated status.json at 18:03:48
+Current time: 2025-12-18 19:03 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 7 open positions
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85499.99 (strike 85499.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85749.99 (strike 85749.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85749.99 (strike 85749.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85749.99 (strike 85749.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85499.99 (strike 85499.99)
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:04:00
+✅ Generated status.json at 18:04:12
+✅ Generated status.json at 18:04:24
+✅ Generated status.json at 18:04:36
+✅ Generated status.json at 18:04:47
+✅ Generated status.json at 18:04:59
+Current time: 2025-12-18 19:05 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 7 open positions
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85499.99 (strike 85499.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85749.99 (strike 85749.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85749.99 (strike 85749.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85749.99 (strike 85749.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1819-T85499.99 (strike 85499.99)
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:05:11
+✅ Generated status.json at 18:05:23
+✅ Generated status.json at 18:05:35
+✅ Generated status.json at 18:05:47
+✅ Generated status.json at 18:05:59
+✅ Generated status.json at 18:06:11
+Current time: 2025-12-18 19:06 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 7 open positions
+  ✅ EXPIRED: KXBTCD-25DEC1819-T85499.99
+     Entry: 60¢ → Exit: 100¢ | P&L: $4.00 (NO_WIN)
+  ✅ EXPIRED: KXBTCD-25DEC1819-T85749.99
+     Entry: 77¢ → Exit: 100¢ | P&L: $2.30 (NO_WIN)
+  ✅ EXPIRED: KXBTCD-25DEC1819-T85749.99
+     Entry: 86¢ → Exit: 100¢ | P&L: $1.40 (NO_WIN)
+  ✅ EXPIRED: KXBTCD-25DEC1819-T85749.99
+     Entry: 89¢ → Exit: 100¢ | P&L: $1.10 (NO_WIN)
+  ✅ EXPIRED: KXBTCD-25DEC1819-T85499.99
+     Entry: 75¢ → Exit: 100¢ | P&L: $2.50 (NO_WIN)
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 5
+Total P&L: $11.30
+✅ Changes committed to database
+  📦 Closed 5 expired positions for $11.30
+✅ Generated status.json at 18:06:23
+✅ Generated status.json at 18:06:35
+✅ Generated status.json at 18:06:46
+✅ Generated status.json at 18:06:58
+✅ Generated status.json at 18:07:09
+✅ Generated status.json at 18:07:21
+Current time: 2025-12-18 19:07 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:07:33
+✅ Generated status.json at 18:07:45
+✅ Generated status.json at 18:07:56
+✅ Generated status.json at 18:08:08
+✅ Generated status.json at 18:08:20
+✅ Generated status.json at 18:08:32
+Current time: 2025-12-18 19:08 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:08:43
+✅ Generated status.json at 18:08:56
+✅ Generated status.json at 18:09:07
+✅ Generated status.json at 18:09:19
+✅ Generated status.json at 18:09:30
+✅ Generated status.json at 18:09:42
+Current time: 2025-12-18 19:09 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:09:53
+✅ Generated status.json at 18:10:05
+✅ Generated status.json at 18:10:16
+✅ Generated status.json at 18:10:28
+✅ Generated status.json at 18:10:39
+✅ Generated status.json at 18:10:51
+Current time: 2025-12-18 19:11 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:11:03
+✅ Generated status.json at 18:11:15
+✅ Generated status.json at 18:11:26
+✅ Generated status.json at 18:11:38
+✅ Generated status.json at 18:11:49
+✅ Generated status.json at 18:12:00
+Current time: 2025-12-18 19:12 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:12:12
+✅ Generated status.json at 18:12:23
+✅ Generated status.json at 18:12:35
+✅ Generated status.json at 18:12:47
+✅ Generated status.json at 18:12:58
+✅ Generated status.json at 18:13:10
+Current time: 2025-12-18 19:13 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:13:21
+✅ Generated status.json at 18:13:32
+✅ Generated status.json at 18:13:44
+✅ Generated status.json at 18:13:56
+✅ Generated status.json at 18:14:07
+✅ Generated status.json at 18:14:18
+Current time: 2025-12-18 19:14 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:14:30
+✅ Generated status.json at 18:14:41
+✅ Generated status.json at 18:14:53
+✅ Generated status.json at 18:15:04
+✅ Generated status.json at 18:15:16
+✅ Generated status.json at 18:15:27
+Current time: 2025-12-18 19:15 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:15:40
+✅ Generated status.json at 18:15:51
+✅ Generated status.json at 18:16:03
+✅ Generated status.json at 18:16:14
+✅ Generated status.json at 18:16:26
+✅ Generated status.json at 18:16:37
+Current time: 2025-12-18 19:16 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:16:48
+✅ Generated status.json at 18:17:00
+✅ Generated status.json at 18:17:12
+✅ Generated status.json at 18:17:25
+✅ Generated status.json at 18:17:37
+Current time: 2025-12-18 19:17 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:17:48
+✅ Generated status.json at 18:18:00
+✅ Generated status.json at 18:18:12
+✅ Generated status.json at 18:18:25
+✅ Generated status.json at 18:18:37
+✅ Generated status.json at 18:18:48
+Current time: 2025-12-18 19:18 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:19:00
+✅ Generated status.json at 18:19:14
+✅ Generated status.json at 18:19:27
+✅ Generated status.json at 18:19:38
+✅ Generated status.json at 18:19:50
+Current time: 2025-12-18 19:20 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:20:01
+✅ Generated status.json at 18:20:13
+✅ Generated status.json at 18:20:24
+✅ Generated status.json at 18:20:36
+✅ Generated status.json at 18:20:47
+✅ Generated status.json at 18:20:59
+Current time: 2025-12-18 19:21 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:21:11
+✅ Generated status.json at 18:21:22
+✅ Generated status.json at 18:21:34
+✅ Generated status.json at 18:21:46
+✅ Generated status.json at 18:21:57
+✅ Generated status.json at 18:22:09
+Current time: 2025-12-18 19:22 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:22:20
+✅ Generated status.json at 18:22:32
+✅ Generated status.json at 18:22:43
+✅ Generated status.json at 18:22:55
+✅ Generated status.json at 18:23:06
+✅ Generated status.json at 18:23:18
+Current time: 2025-12-18 19:23 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:23:29
+✅ Generated status.json at 18:23:41
+✅ Generated status.json at 18:23:53
+✅ Generated status.json at 18:24:04
+✅ Generated status.json at 18:24:16
+✅ Generated status.json at 18:24:27
+Current time: 2025-12-18 19:24 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:24:38
+✅ Generated status.json at 18:24:50
+✅ Generated status.json at 18:25:01
+✅ Generated status.json at 18:25:13
+✅ Generated status.json at 18:25:24
+✅ Generated status.json at 18:25:36
+Current time: 2025-12-18 19:25 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:25:48
+✅ Generated status.json at 18:25:59
+✅ Generated status.json at 18:26:11
+✅ Generated status.json at 18:26:23
+✅ Generated status.json at 18:26:34
+✅ Generated status.json at 18:26:46
+Current time: 2025-12-18 19:26 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:26:57
+✅ Generated status.json at 18:27:09
+✅ Generated status.json at 18:27:20
+✅ Generated status.json at 18:27:32
+✅ Generated status.json at 18:27:43
+✅ Generated status.json at 18:27:56
+Current time: 2025-12-18 19:28 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:28:07
+✅ Generated status.json at 18:28:19
+✅ Generated status.json at 18:28:31
+✅ Generated status.json at 18:28:43
+✅ Generated status.json at 18:28:55
+✅ Generated status.json at 18:29:06
+Current time: 2025-12-18 19:29 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:29:18
+✅ Generated status.json at 18:29:29
+✅ Generated status.json at 18:29:41
+✅ Generated status.json at 18:29:52
+✅ Generated status.json at 18:30:04
+✅ Generated status.json at 18:30:16
+Current time: 2025-12-18 19:30 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:30:27
+✅ Generated status.json at 18:30:39
+✅ Generated status.json at 18:30:50
+✅ Generated status.json at 18:31:01
+✅ Generated status.json at 18:31:13
+✅ Generated status.json at 18:31:25
+Current time: 2025-12-18 19:31 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:31:36
+✅ Generated status.json at 18:31:48
+✅ Generated status.json at 18:32:00
+✅ Generated status.json at 18:32:11
+✅ Generated status.json at 18:32:23
+✅ Generated status.json at 18:32:36
+Current time: 2025-12-18 19:32 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85499.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:32:47
+✅ Generated status.json at 18:32:59
+✅ Generated status.json at 18:33:10
+✅ Generated status.json at 18:33:22
+✅ Generated status.json at 18:33:35
+✅ Generated status.json at 18:33:47
+Current time: 2025-12-18 19:33 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:33:59
+✅ Generated status.json at 18:34:10
+✅ Generated status.json at 18:34:22
+✅ Generated status.json at 18:34:34
+✅ Generated status.json at 18:34:46
+✅ Generated status.json at 18:34:57
+Current time: 2025-12-18 19:35 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:35:09
+✅ Generated status.json at 18:35:20
+✅ Generated status.json at 18:35:32
+✅ Generated status.json at 18:35:43
+✅ Generated status.json at 18:35:55
+✅ Generated status.json at 18:36:07
+Current time: 2025-12-18 19:36 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:36:18
+✅ Generated status.json at 18:36:30
+✅ Generated status.json at 18:36:41
+✅ Generated status.json at 18:36:53
+✅ Generated status.json at 18:37:04
+✅ Generated status.json at 18:37:16
+Current time: 2025-12-18 19:37 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:37:27
+✅ Generated status.json at 18:37:39
+✅ Generated status.json at 18:37:50
+✅ Generated status.json at 18:38:02
+✅ Generated status.json at 18:38:13
+✅ Generated status.json at 18:38:25
+Current time: 2025-12-18 19:38 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:38:36
+✅ Generated status.json at 18:38:48
+✅ Generated status.json at 18:38:59
+✅ Generated status.json at 18:39:11
+✅ Generated status.json at 18:39:22
+✅ Generated status.json at 18:39:34
+Current time: 2025-12-18 19:39 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:39:45
+✅ Generated status.json at 18:39:57
+✅ Generated status.json at 18:40:09
+✅ Generated status.json at 18:40:20
+✅ Generated status.json at 18:40:32
+✅ Generated status.json at 18:40:43
+Current time: 2025-12-18 19:40 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:40:55
+✅ Generated status.json at 18:41:06
+✅ Generated status.json at 18:41:18
+✅ Generated status.json at 18:41:29
+✅ Generated status.json at 18:41:41
+✅ Generated status.json at 18:41:52
+Current time: 2025-12-18 19:42 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:42:04
+✅ Generated status.json at 18:42:15
+✅ Generated status.json at 18:42:27
+✅ Generated status.json at 18:42:38
+✅ Generated status.json at 18:42:50
+✅ Generated status.json at 18:43:01
+Current time: 2025-12-18 19:43 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:43:13
+✅ Generated status.json at 18:43:24
+✅ Generated status.json at 18:43:36
+✅ Generated status.json at 18:43:47
+✅ Generated status.json at 18:43:59
+✅ Generated status.json at 18:44:10
+Current time: 2025-12-18 19:44 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:44:22
+✅ Generated status.json at 18:44:33
+✅ Generated status.json at 18:44:45
+✅ Generated status.json at 18:44:56
+✅ Generated status.json at 18:45:08
+✅ Generated status.json at 18:45:19
+Current time: 2025-12-18 19:45 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:45:31
+✅ Generated status.json at 18:45:42
+✅ Generated status.json at 18:45:54
+✅ Generated status.json at 18:46:05
+✅ Generated status.json at 18:46:17
+✅ Generated status.json at 18:46:28
+Current time: 2025-12-18 19:46 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:46:40
+✅ Generated status.json at 18:46:51
+✅ Generated status.json at 18:47:03
+✅ Generated status.json at 18:47:14
+✅ Generated status.json at 18:47:26
+✅ Generated status.json at 18:47:37
+Current time: 2025-12-18 19:47 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:47:48
+✅ Generated status.json at 18:48:00
+✅ Generated status.json at 18:48:11
+✅ Generated status.json at 18:48:23
+✅ Generated status.json at 18:48:35
+✅ Generated status.json at 18:48:46
+Current time: 2025-12-18 19:48 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:48:58
+✅ Generated status.json at 18:49:09
+✅ Generated status.json at 18:49:21
+✅ Generated status.json at 18:49:32
+✅ Generated status.json at 18:49:44
+✅ Generated status.json at 18:49:55
+Current time: 2025-12-18 19:50 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:50:07
+✅ Generated status.json at 18:50:18
+✅ Generated status.json at 18:50:30
+✅ Generated status.json at 18:50:42
+✅ Generated status.json at 18:50:53
+✅ Generated status.json at 18:51:05
+Current time: 2025-12-18 19:51 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:51:16
+✅ Generated status.json at 18:51:28
+✅ Generated status.json at 18:51:40
+✅ Generated status.json at 18:51:51
+✅ Generated status.json at 18:52:03
+✅ Generated status.json at 18:52:14
+Current time: 2025-12-18 19:52 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:52:25
+✅ Generated status.json at 18:52:38
+✅ Generated status.json at 18:52:49
+✅ Generated status.json at 18:53:01
+✅ Generated status.json at 18:53:12
+✅ Generated status.json at 18:53:24
+Current time: 2025-12-18 19:53 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:53:36
+✅ Generated status.json at 18:53:47
+✅ Generated status.json at 18:53:59
+✅ Generated status.json at 18:54:10
+✅ Generated status.json at 18:54:22
+✅ Generated status.json at 18:54:33
+Current time: 2025-12-18 19:54 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:54:45
+✅ Generated status.json at 18:54:56
+✅ Generated status.json at 18:55:08
+✅ Generated status.json at 18:55:19
+✅ Generated status.json at 18:55:30
+✅ Generated status.json at 18:55:42
+Current time: 2025-12-18 19:55 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:55:54
+✅ Generated status.json at 18:56:05
+✅ Generated status.json at 18:56:17
+✅ Generated status.json at 18:56:29
+✅ Generated status.json at 18:56:41
+✅ Generated status.json at 18:56:52
+Current time: 2025-12-18 19:57 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:57:04
+✅ Generated status.json at 18:57:15
+✅ Generated status.json at 18:57:27
+✅ Generated status.json at 18:57:38
+✅ Generated status.json at 18:57:50
+✅ Generated status.json at 18:58:01
+Current time: 2025-12-18 19:58 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:58:13
+✅ Generated status.json at 18:58:24
+✅ Generated status.json at 18:58:36
+✅ Generated status.json at 18:58:48
+✅ Generated status.json at 18:58:59
+✅ Generated status.json at 18:59:11
+Current time: 2025-12-18 19:59 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1820-T85749.99 settles at 20:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 18:59:22
+✅ Generated status.json at 18:59:34
+✅ Generated status.json at 18:59:45
+✅ Generated status.json at 18:59:57
+✅ Generated status.json at 19:00:08
+✅ Generated status.json at 19:00:20
+Current time: 2025-12-18 20:00 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⚠️ No settlement result for KXBTCD-25DEC1820-T85749.99 (strike 85749.99)
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:00:31
+✅ Generated status.json at 19:00:43
+✅ Generated status.json at 19:00:55
+✅ Generated status.json at 19:01:06
+✅ Generated status.json at 19:01:18
+✅ Generated status.json at 19:01:30
+Current time: 2025-12-18 20:01 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ✅ EXPIRED: KXBTCD-25DEC1820-T85749.99
+     Entry: 84¢ → Exit: 100¢ | P&L: $1.60 (NO_WIN)
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 1
+Total P&L: $1.60
+✅ Changes committed to database
+  📦 Closed 1 expired positions for $1.60
+✅ Generated status.json at 19:01:42
+✅ Generated status.json at 19:01:53
+✅ Generated status.json at 19:02:05
+✅ Generated status.json at 19:02:16
+✅ Generated status.json at 19:02:28
+✅ Generated status.json at 19:02:39
+Current time: 2025-12-18 20:02 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:02:50
+✅ Generated status.json at 19:03:02
+✅ Generated status.json at 19:03:14
+✅ Generated status.json at 19:03:25
+✅ Generated status.json at 19:03:37
+✅ Generated status.json at 19:03:48
+Current time: 2025-12-18 20:03 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:04:00
+✅ Generated status.json at 19:04:11
+✅ Generated status.json at 19:04:23
+✅ Generated status.json at 19:04:34
+✅ Generated status.json at 19:04:46
+✅ Generated status.json at 19:04:57
+Current time: 2025-12-18 20:05 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:05:09
+✅ Generated status.json at 19:05:21
+✅ Generated status.json at 19:05:32
+✅ Generated status.json at 19:05:44
+✅ Generated status.json at 19:05:55
+✅ Generated status.json at 19:06:07
+Current time: 2025-12-18 20:06 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:06:19
+✅ Generated status.json at 19:06:30
+✅ Generated status.json at 19:06:42
+✅ Generated status.json at 19:06:53
+✅ Generated status.json at 19:07:05
+✅ Generated status.json at 19:07:17
+Current time: 2025-12-18 20:07 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:07:28
+✅ Generated status.json at 19:07:40
+✅ Generated status.json at 19:07:51
+✅ Generated status.json at 19:08:03
+✅ Generated status.json at 19:08:14
+✅ Generated status.json at 19:08:26
+Current time: 2025-12-18 20:08 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:08:38
+✅ Generated status.json at 19:08:49
+✅ Generated status.json at 19:09:01
+✅ Generated status.json at 19:09:12
+✅ Generated status.json at 19:09:24
+✅ Generated status.json at 19:09:35
+Current time: 2025-12-18 20:09 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:09:47
+✅ Generated status.json at 19:09:58
+✅ Generated status.json at 19:10:10
+✅ Generated status.json at 19:10:21
+✅ Generated status.json at 19:10:33
+✅ Generated status.json at 19:10:44
+Current time: 2025-12-18 20:10 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:10:56
+✅ Generated status.json at 19:11:07
+✅ Generated status.json at 19:11:19
+✅ Generated status.json at 19:11:30
+✅ Generated status.json at 19:11:42
+✅ Generated status.json at 19:11:53
+Current time: 2025-12-18 20:12 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:12:05
+✅ Generated status.json at 19:12:16
+✅ Generated status.json at 19:12:28
+✅ Generated status.json at 19:12:40
+✅ Generated status.json at 19:12:51
+✅ Generated status.json at 19:13:03
+Current time: 2025-12-18 20:13 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:13:15
+✅ Generated status.json at 19:13:26
+✅ Generated status.json at 19:13:38
+✅ Generated status.json at 19:13:49
+✅ Generated status.json at 19:14:01
+✅ Generated status.json at 19:14:12
+Current time: 2025-12-18 20:14 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:14:23
+✅ Generated status.json at 19:14:35
+✅ Generated status.json at 19:14:46
+✅ Generated status.json at 19:14:58
+✅ Generated status.json at 19:15:09
+✅ Generated status.json at 19:15:21
+Current time: 2025-12-18 20:15 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:15:33
+✅ Generated status.json at 19:15:44
+✅ Generated status.json at 19:15:56
+✅ Generated status.json at 19:16:07
+✅ Generated status.json at 19:16:19
+✅ Generated status.json at 19:16:30
+Current time: 2025-12-18 20:16 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:16:42
+✅ Generated status.json at 19:16:53
+✅ Generated status.json at 19:17:05
+✅ Generated status.json at 19:17:16
+✅ Generated status.json at 19:17:28
+✅ Generated status.json at 19:17:39
+Current time: 2025-12-18 20:17 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:17:51
+✅ Generated status.json at 19:18:02
+✅ Generated status.json at 19:18:14
+✅ Generated status.json at 19:18:25
+✅ Generated status.json at 19:18:37
+✅ Generated status.json at 19:18:48
+Current time: 2025-12-18 20:18 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:19:00
+✅ Generated status.json at 19:19:11
+✅ Generated status.json at 19:19:23
+✅ Generated status.json at 19:19:35
+✅ Generated status.json at 19:19:46
+✅ Generated status.json at 19:19:58
+Current time: 2025-12-18 20:20 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:20:10
+✅ Generated status.json at 19:20:21
+✅ Generated status.json at 19:20:33
+✅ Generated status.json at 19:20:44
+✅ Generated status.json at 19:20:56
+✅ Generated status.json at 19:21:07
+Current time: 2025-12-18 20:21 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:21:19
+✅ Generated status.json at 19:21:31
+✅ Generated status.json at 19:21:42
+✅ Generated status.json at 19:21:54
+✅ Generated status.json at 19:22:05
+✅ Generated status.json at 19:22:17
+Current time: 2025-12-18 20:22 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:22:28
+✅ Generated status.json at 19:22:40
+✅ Generated status.json at 19:22:51
+✅ Generated status.json at 19:23:03
+✅ Generated status.json at 19:23:14
+✅ Generated status.json at 19:23:26
+Current time: 2025-12-18 20:23 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:23:37
+✅ Generated status.json at 19:23:49
+✅ Generated status.json at 19:24:00
+✅ Generated status.json at 19:24:12
+✅ Generated status.json at 19:24:23
+✅ Generated status.json at 19:24:35
+Current time: 2025-12-18 20:24 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:24:46
+✅ Generated status.json at 19:24:58
+✅ Generated status.json at 19:25:09
+✅ Generated status.json at 19:25:21
+✅ Generated status.json at 19:25:33
+✅ Generated status.json at 19:25:45
+Current time: 2025-12-18 20:25 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:25:56
+✅ Generated status.json at 19:26:08
+✅ Generated status.json at 19:26:19
+✅ Generated status.json at 19:26:31
+✅ Generated status.json at 19:26:42
+✅ Generated status.json at 19:26:54
+Current time: 2025-12-18 20:27 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:27:06
+✅ Generated status.json at 19:27:17
+✅ Generated status.json at 19:27:29
+✅ Generated status.json at 19:27:40
+✅ Generated status.json at 19:27:52
+✅ Generated status.json at 19:28:04
+Current time: 2025-12-18 20:28 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:28:15
+✅ Generated status.json at 19:28:27
+✅ Generated status.json at 19:28:38
+✅ Generated status.json at 19:28:50
+✅ Generated status.json at 19:29:01
+✅ Generated status.json at 19:29:13
+Current time: 2025-12-18 20:29 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:29:24
+✅ Generated status.json at 19:29:36
+✅ Generated status.json at 19:29:48
+✅ Generated status.json at 19:29:59
+✅ Generated status.json at 19:30:11
+✅ Generated status.json at 19:30:22
+Current time: 2025-12-18 20:30 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:30:34
+✅ Generated status.json at 19:30:45
+✅ Generated status.json at 19:30:57
+✅ Generated status.json at 19:31:08
+✅ Generated status.json at 19:31:20
+✅ Generated status.json at 19:31:31
+Current time: 2025-12-18 20:31 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:31:43
+✅ Generated status.json at 19:31:54
+✅ Generated status.json at 19:32:06
+✅ Generated status.json at 19:32:17
+✅ Generated status.json at 19:32:29
+✅ Generated status.json at 19:32:40
+Current time: 2025-12-18 20:32 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:32:52
+✅ Generated status.json at 19:33:03
+✅ Generated status.json at 19:33:15
+✅ Generated status.json at 19:33:26
+✅ Generated status.json at 19:33:38
+✅ Generated status.json at 19:33:50
+Current time: 2025-12-18 20:34 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:34:02
+✅ Generated status.json at 19:34:13
+✅ Generated status.json at 19:34:25
+✅ Generated status.json at 19:34:36
+✅ Generated status.json at 19:34:48
+✅ Generated status.json at 19:34:59
+Current time: 2025-12-18 20:35 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:35:11
+✅ Generated status.json at 19:35:22
+✅ Generated status.json at 19:35:34
+✅ Generated status.json at 19:35:45
+✅ Generated status.json at 19:35:57
+✅ Generated status.json at 19:36:08
+Current time: 2025-12-18 20:36 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:36:20
+✅ Generated status.json at 19:36:31
+✅ Generated status.json at 19:36:43
+✅ Generated status.json at 19:36:55
+✅ Generated status.json at 19:37:06
+✅ Generated status.json at 19:37:18
+Current time: 2025-12-18 20:37 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:37:30
+✅ Generated status.json at 19:37:41
+✅ Generated status.json at 19:37:53
+✅ Generated status.json at 19:38:04
+✅ Generated status.json at 19:38:16
+✅ Generated status.json at 19:38:28
+Current time: 2025-12-18 20:38 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:38:40
+✅ Generated status.json at 19:38:51
+✅ Generated status.json at 19:39:03
+✅ Generated status.json at 19:39:14
+✅ Generated status.json at 19:39:26
+✅ Generated status.json at 19:39:37
+Current time: 2025-12-18 20:39 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:39:49
+✅ Generated status.json at 19:40:00
+✅ Generated status.json at 19:40:12
+✅ Generated status.json at 19:40:23
+✅ Generated status.json at 19:40:35
+✅ Generated status.json at 19:40:47
+Current time: 2025-12-18 20:40 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:40:58
+✅ Generated status.json at 19:41:10
+✅ Generated status.json at 19:41:21
+✅ Generated status.json at 19:41:33
+✅ Generated status.json at 19:41:45
+✅ Generated status.json at 19:41:56
+Current time: 2025-12-18 20:42 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:42:08
+✅ Generated status.json at 19:42:19
+✅ Generated status.json at 19:42:31
+✅ Generated status.json at 19:42:43
+✅ Generated status.json at 19:42:54
+✅ Generated status.json at 19:43:06
+Current time: 2025-12-18 20:43 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:43:17
+✅ Generated status.json at 19:43:29
+✅ Generated status.json at 19:43:40
+✅ Generated status.json at 19:43:52
+✅ Generated status.json at 19:44:04
+✅ Generated status.json at 19:44:16
+Current time: 2025-12-18 20:44 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:44:27
+✅ Generated status.json at 19:44:39
+✅ Generated status.json at 19:44:50
+✅ Generated status.json at 19:45:02
+✅ Generated status.json at 19:45:14
+✅ Generated status.json at 19:45:25
+Current time: 2025-12-18 20:45 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:45:37
+✅ Generated status.json at 19:45:48
+✅ Generated status.json at 19:46:00
+✅ Generated status.json at 19:46:12
+✅ Generated status.json at 19:46:23
+✅ Generated status.json at 19:46:35
+Current time: 2025-12-18 20:46 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:46:47
+✅ Generated status.json at 19:46:58
+✅ Generated status.json at 19:47:10
+✅ Generated status.json at 19:47:21
+✅ Generated status.json at 19:47:33
+✅ Generated status.json at 19:47:44
+Current time: 2025-12-18 20:47 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:47:56
+✅ Generated status.json at 19:48:07
+✅ Generated status.json at 19:48:19
+✅ Generated status.json at 19:48:31
+✅ Generated status.json at 19:48:42
+✅ Generated status.json at 19:48:54
+Current time: 2025-12-18 20:49 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:49:05
+✅ Generated status.json at 19:49:17
+✅ Generated status.json at 19:49:28
+✅ Generated status.json at 19:49:40
+✅ Generated status.json at 19:49:51
+✅ Generated status.json at 19:50:03
+Current time: 2025-12-18 20:50 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:50:14
+✅ Generated status.json at 19:50:26
+✅ Generated status.json at 19:50:37
+✅ Generated status.json at 19:50:48
+✅ Generated status.json at 19:51:00
+✅ Generated status.json at 19:51:11
+Current time: 2025-12-18 20:51 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:51:23
+✅ Generated status.json at 19:51:35
+✅ Generated status.json at 19:51:46
+✅ Generated status.json at 19:51:58
+✅ Generated status.json at 19:52:09
+✅ Generated status.json at 19:52:21
+Current time: 2025-12-18 20:52 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:52:32
+✅ Generated status.json at 19:52:44
+✅ Generated status.json at 19:52:55
+✅ Generated status.json at 19:53:07
+✅ Generated status.json at 19:53:18
+✅ Generated status.json at 19:53:29
+Current time: 2025-12-18 20:53 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:53:41
+✅ Generated status.json at 19:53:53
+✅ Generated status.json at 19:54:04
+✅ Generated status.json at 19:54:15
+✅ Generated status.json at 19:54:27
+✅ Generated status.json at 19:54:38
+Current time: 2025-12-18 20:54 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:54:50
+✅ Generated status.json at 19:55:01
+✅ Generated status.json at 19:55:13
+✅ Generated status.json at 19:55:25
+✅ Generated status.json at 19:55:36
+✅ Generated status.json at 19:55:48
+Current time: 2025-12-18 20:55 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:55:59
+✅ Generated status.json at 19:56:11
+✅ Generated status.json at 19:56:22
+✅ Generated status.json at 19:56:34
+✅ Generated status.json at 19:56:46
+✅ Generated status.json at 19:56:57
+Current time: 2025-12-18 20:57 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:57:09
+✅ Generated status.json at 19:57:20
+✅ Generated status.json at 19:57:32
+✅ Generated status.json at 19:57:43
+✅ Generated status.json at 19:57:55
+✅ Generated status.json at 19:58:06
+Current time: 2025-12-18 20:58 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:58:18
+✅ Generated status.json at 19:58:29
+✅ Generated status.json at 19:58:41
+✅ Generated status.json at 19:58:53
+✅ Generated status.json at 19:59:05
+✅ Generated status.json at 19:59:16
+Current time: 2025-12-18 20:59 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85749.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85499.99 settles at 21:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1821-T85249.99 settles at 21:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 19:59:28
+✅ Generated status.json at 19:59:39
+✅ Generated status.json at 19:59:51
+✅ Generated status.json at 20:00:02
+✅ Generated status.json at 20:00:14
+✅ Generated status.json at 20:00:25
+Current time: 2025-12-18 21:00 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⚠️ No settlement result for KXBTCD-25DEC1821-T85749.99 (strike 85749.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1821-T85499.99 (strike 85499.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1821-T85249.99 (strike 85249.99)
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:00:38
+✅ Generated status.json at 20:00:49
+✅ Generated status.json at 20:01:01
+✅ Generated status.json at 20:01:13
+✅ Generated status.json at 20:01:25
+✅ Generated status.json at 20:01:37
+Current time: 2025-12-18 21:01 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ✅ EXPIRED: KXBTCD-25DEC1821-T85749.99
+     Entry: 78¢ → Exit: 100¢ | P&L: $1.54 (NO_WIN)
+  ✅ EXPIRED: KXBTCD-25DEC1821-T85499.99
+     Entry: 68¢ → Exit: 100¢ | P&L: $1.60 (NO_WIN)
+  ❌ EXPIRED: KXBTCD-25DEC1821-T85249.99
+     Entry: 69¢ → Exit: 0¢ | P&L: $-1.38 (YES_WIN)
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 3
+Total P&L: $1.76
+✅ Changes committed to database
+  📦 Closed 3 expired positions for $1.76
+✅ Generated status.json at 20:01:49
+✅ Generated status.json at 20:02:00
+✅ Generated status.json at 20:02:12
+✅ Generated status.json at 20:02:24
+✅ Generated status.json at 20:02:36
+✅ Generated status.json at 20:02:47
+Current time: 2025-12-18 21:02 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:02:59
+✅ Generated status.json at 20:03:10
+✅ Generated status.json at 20:03:22
+✅ Generated status.json at 20:03:34
+✅ Generated status.json at 20:03:45
+✅ Generated status.json at 20:03:56
+Current time: 2025-12-18 21:04 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:04:08
+✅ Generated status.json at 20:04:19
+✅ Generated status.json at 20:04:31
+✅ Generated status.json at 20:04:43
+✅ Generated status.json at 20:04:54
+✅ Generated status.json at 20:05:06
+Current time: 2025-12-18 21:05 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:05:17
+✅ Generated status.json at 20:05:29
+✅ Generated status.json at 20:05:41
+✅ Generated status.json at 20:05:52
+✅ Generated status.json at 20:06:04
+✅ Generated status.json at 20:06:15
+Current time: 2025-12-18 21:06 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:06:27
+✅ Generated status.json at 20:06:38
+✅ Generated status.json at 20:06:50
+✅ Generated status.json at 20:07:01
+✅ Generated status.json at 20:07:13
+✅ Generated status.json at 20:07:24
+Current time: 2025-12-18 21:07 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:07:36
+✅ Generated status.json at 20:07:48
+✅ Generated status.json at 20:07:59
+✅ Generated status.json at 20:08:11
+✅ Generated status.json at 20:08:22
+✅ Generated status.json at 20:08:34
+Current time: 2025-12-18 21:08 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:08:46
+✅ Generated status.json at 20:08:57
+✅ Generated status.json at 20:09:09
+✅ Generated status.json at 20:09:21
+✅ Generated status.json at 20:09:32
+✅ Generated status.json at 20:09:44
+Current time: 2025-12-18 21:09 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:09:55
+✅ Generated status.json at 20:10:07
+✅ Generated status.json at 20:10:18
+✅ Generated status.json at 20:10:30
+✅ Generated status.json at 20:10:41
+✅ Generated status.json at 20:10:52
+Current time: 2025-12-18 21:11 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:11:04
+✅ Generated status.json at 20:11:15
+✅ Generated status.json at 20:11:27
+✅ Generated status.json at 20:11:38
+✅ Generated status.json at 20:11:50
+✅ Generated status.json at 20:12:01
+Current time: 2025-12-18 21:12 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:12:13
+✅ Generated status.json at 20:12:24
+✅ Generated status.json at 20:12:36
+✅ Generated status.json at 20:12:47
+✅ Generated status.json at 20:12:59
+✅ Generated status.json at 20:13:10
+Current time: 2025-12-18 21:13 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:13:22
+✅ Generated status.json at 20:13:33
+✅ Generated status.json at 20:13:45
+✅ Generated status.json at 20:13:56
+✅ Generated status.json at 20:14:08
+✅ Generated status.json at 20:14:19
+Current time: 2025-12-18 21:14 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:14:31
+✅ Generated status.json at 20:14:42
+✅ Generated status.json at 20:14:54
+✅ Generated status.json at 20:15:06
+✅ Generated status.json at 20:15:18
+✅ Generated status.json at 20:15:29
+Current time: 2025-12-18 21:15 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:15:41
+✅ Generated status.json at 20:15:52
+✅ Generated status.json at 20:16:04
+✅ Generated status.json at 20:16:15
+✅ Generated status.json at 20:16:27
+✅ Generated status.json at 20:16:38
+Current time: 2025-12-18 21:16 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:16:50
+✅ Generated status.json at 20:17:01
+✅ Generated status.json at 20:17:13
+✅ Generated status.json at 20:17:24
+✅ Generated status.json at 20:17:36
+✅ Generated status.json at 20:17:47
+Current time: 2025-12-18 21:17 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:17:59
+✅ Generated status.json at 20:18:10
+✅ Generated status.json at 20:18:22
+✅ Generated status.json at 20:18:33
+✅ Generated status.json at 20:18:45
+✅ Generated status.json at 20:18:56
+Current time: 2025-12-18 21:19 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:19:08
+✅ Generated status.json at 20:19:20
+✅ Generated status.json at 20:19:31
+✅ Generated status.json at 20:19:43
+✅ Generated status.json at 20:19:54
+✅ Generated status.json at 20:20:06
+Current time: 2025-12-18 21:20 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:20:18
+✅ Generated status.json at 20:20:29
+✅ Generated status.json at 20:20:41
+✅ Generated status.json at 20:20:52
+✅ Generated status.json at 20:21:04
+✅ Generated status.json at 20:21:16
+Current time: 2025-12-18 21:21 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:21:27
+✅ Generated status.json at 20:21:39
+✅ Generated status.json at 20:21:50
+✅ Generated status.json at 20:22:02
+✅ Generated status.json at 20:22:14
+✅ Generated status.json at 20:22:26
+Current time: 2025-12-18 21:22 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:22:37
+✅ Generated status.json at 20:22:49
+✅ Generated status.json at 20:23:00
+✅ Generated status.json at 20:23:12
+✅ Generated status.json at 20:23:23
+✅ Generated status.json at 20:23:35
+Current time: 2025-12-18 21:23 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:23:46
+✅ Generated status.json at 20:23:58
+✅ Generated status.json at 20:24:09
+✅ Generated status.json at 20:24:21
+✅ Generated status.json at 20:24:32
+✅ Generated status.json at 20:24:44
+Current time: 2025-12-18 21:24 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:24:55
+✅ Generated status.json at 20:25:07
+✅ Generated status.json at 20:25:18
+✅ Generated status.json at 20:25:30
+✅ Generated status.json at 20:25:42
+✅ Generated status.json at 20:25:53
+Current time: 2025-12-18 21:26 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:26:05
+✅ Generated status.json at 20:26:17
+✅ Generated status.json at 20:26:28
+✅ Generated status.json at 20:26:40
+✅ Generated status.json at 20:26:52
+✅ Generated status.json at 20:27:03
+Current time: 2025-12-18 21:27 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:27:15
+✅ Generated status.json at 20:27:26
+✅ Generated status.json at 20:27:38
+✅ Generated status.json at 20:27:50
+✅ Generated status.json at 20:28:01
+✅ Generated status.json at 20:28:13
+Current time: 2025-12-18 21:28 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:28:24
+✅ Generated status.json at 20:28:36
+✅ Generated status.json at 20:28:47
+✅ Generated status.json at 20:28:59
+✅ Generated status.json at 20:29:11
+✅ Generated status.json at 20:29:22
+Current time: 2025-12-18 21:29 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:29:33
+✅ Generated status.json at 20:29:45
+✅ Generated status.json at 20:29:57
+✅ Generated status.json at 20:30:08
+✅ Generated status.json at 20:30:20
+✅ Generated status.json at 20:30:31
+Current time: 2025-12-18 21:30 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:30:43
+✅ Generated status.json at 20:30:54
+✅ Generated status.json at 20:31:06
+✅ Generated status.json at 20:31:17
+✅ Generated status.json at 20:31:29
+✅ Generated status.json at 20:31:40
+Current time: 2025-12-18 21:31 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:31:52
+✅ Generated status.json at 20:32:03
+✅ Generated status.json at 20:32:15
+✅ Generated status.json at 20:32:26
+✅ Generated status.json at 20:32:37
+✅ Generated status.json at 20:32:49
+Current time: 2025-12-18 21:33 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:33:00
+✅ Generated status.json at 20:33:12
+✅ Generated status.json at 20:33:24
+✅ Generated status.json at 20:33:35
+✅ Generated status.json at 20:33:47
+✅ Generated status.json at 20:33:58
+Current time: 2025-12-18 21:34 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:34:09
+✅ Generated status.json at 20:34:21
+✅ Generated status.json at 20:34:33
+✅ Generated status.json at 20:34:44
+✅ Generated status.json at 20:34:56
+✅ Generated status.json at 20:35:07
+Current time: 2025-12-18 21:35 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:35:19
+✅ Generated status.json at 20:35:31
+✅ Generated status.json at 20:35:42
+✅ Generated status.json at 20:35:54
+✅ Generated status.json at 20:36:06
+✅ Generated status.json at 20:36:17
+Current time: 2025-12-18 21:36 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:36:29
+✅ Generated status.json at 20:36:40
+✅ Generated status.json at 20:36:52
+✅ Generated status.json at 20:37:04
+✅ Generated status.json at 20:37:15
+✅ Generated status.json at 20:37:26
+Current time: 2025-12-18 21:37 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:37:38
+✅ Generated status.json at 20:37:49
+✅ Generated status.json at 20:38:01
+✅ Generated status.json at 20:38:12
+✅ Generated status.json at 20:38:24
+✅ Generated status.json at 20:38:35
+Current time: 2025-12-18 21:38 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:38:47
+✅ Generated status.json at 20:38:58
+✅ Generated status.json at 20:39:10
+✅ Generated status.json at 20:39:21
+✅ Generated status.json at 20:39:33
+✅ Generated status.json at 20:39:45
+Current time: 2025-12-18 21:39 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:39:56
+✅ Generated status.json at 20:40:08
+✅ Generated status.json at 20:40:19
+✅ Generated status.json at 20:40:31
+✅ Generated status.json at 20:40:42
+✅ Generated status.json at 20:40:53
+Current time: 2025-12-18 21:41 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:41:05
+✅ Generated status.json at 20:41:17
+✅ Generated status.json at 20:41:28
+✅ Generated status.json at 20:41:40
+✅ Generated status.json at 20:41:51
+✅ Generated status.json at 20:42:03
+Current time: 2025-12-18 21:42 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:42:14
+✅ Generated status.json at 20:42:26
+✅ Generated status.json at 20:42:37
+✅ Generated status.json at 20:42:49
+✅ Generated status.json at 20:43:00
+✅ Generated status.json at 20:43:12
+Current time: 2025-12-18 21:43 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:43:24
+✅ Generated status.json at 20:43:35
+✅ Generated status.json at 20:43:47
+✅ Generated status.json at 20:43:58
+✅ Generated status.json at 20:44:10
+✅ Generated status.json at 20:44:21
+Current time: 2025-12-18 21:44 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:44:33
+✅ Generated status.json at 20:44:44
+✅ Generated status.json at 20:44:56
+✅ Generated status.json at 20:45:07
+✅ Generated status.json at 20:45:19
+✅ Generated status.json at 20:45:30
+Current time: 2025-12-18 21:45 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:45:42
+✅ Generated status.json at 20:45:55
+✅ Generated status.json at 20:46:07
+✅ Generated status.json at 20:46:18
+✅ Generated status.json at 20:46:30
+✅ Generated status.json at 20:46:41
+Current time: 2025-12-18 21:46 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:46:53
+✅ Generated status.json at 20:47:04
+✅ Generated status.json at 20:47:16
+✅ Generated status.json at 20:47:28
+✅ Generated status.json at 20:47:39
+✅ Generated status.json at 20:47:51
+Current time: 2025-12-18 21:48 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:48:02
+✅ Generated status.json at 20:48:14
+✅ Generated status.json at 20:48:25
+✅ Generated status.json at 20:48:37
+✅ Generated status.json at 20:48:49
+✅ Generated status.json at 20:49:00
+Current time: 2025-12-18 21:49 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:49:12
+✅ Generated status.json at 20:49:23
+✅ Generated status.json at 20:49:35
+✅ Generated status.json at 20:49:46
+✅ Generated status.json at 20:49:58
+✅ Generated status.json at 20:50:09
+Current time: 2025-12-18 21:50 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:50:21
+✅ Generated status.json at 20:50:32
+✅ Generated status.json at 20:50:44
+✅ Generated status.json at 20:50:55
+✅ Generated status.json at 20:51:07
+✅ Generated status.json at 20:51:18
+Current time: 2025-12-18 21:51 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:51:30
+✅ Generated status.json at 20:51:42
+✅ Generated status.json at 20:51:53
+✅ Generated status.json at 20:52:05
+✅ Generated status.json at 20:52:17
+✅ Generated status.json at 20:52:28
+Current time: 2025-12-18 21:52 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:52:40
+✅ Generated status.json at 20:52:51
+✅ Generated status.json at 20:53:03
+✅ Generated status.json at 20:53:14
+✅ Generated status.json at 20:53:26
+✅ Generated status.json at 20:53:37
+Current time: 2025-12-18 21:53 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:53:49
+✅ Generated status.json at 20:54:00
+✅ Generated status.json at 20:54:12
+✅ Generated status.json at 20:54:23
+✅ Generated status.json at 20:54:35
+✅ Generated status.json at 20:54:47
+Current time: 2025-12-18 21:54 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:54:58
+✅ Generated status.json at 20:55:10
+✅ Generated status.json at 20:55:21
+✅ Generated status.json at 20:55:33
+✅ Generated status.json at 20:55:44
+✅ Generated status.json at 20:55:56
+Current time: 2025-12-18 21:56 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:56:07
+✅ Generated status.json at 20:56:19
+✅ Generated status.json at 20:56:30
+✅ Generated status.json at 20:56:42
+✅ Generated status.json at 20:56:54
+✅ Generated status.json at 20:57:05
+Current time: 2025-12-18 21:57 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:57:17
+✅ Generated status.json at 20:57:28
+✅ Generated status.json at 20:57:40
+✅ Generated status.json at 20:57:51
+✅ Generated status.json at 20:58:03
+✅ Generated status.json at 20:58:14
+Current time: 2025-12-18 21:58 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:58:26
+✅ Generated status.json at 20:58:38
+✅ Generated status.json at 20:58:49
+✅ Generated status.json at 20:59:01
+✅ Generated status.json at 20:59:12
+✅ Generated status.json at 20:59:24
+Current time: 2025-12-18 21:59 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85499.99 settles at 22:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1822-T85249.99 settles at 22:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 20:59:35
+✅ Generated status.json at 20:59:47
+✅ Generated status.json at 20:59:58
+✅ Generated status.json at 21:00:10
+✅ Generated status.json at 21:00:21
+✅ Generated status.json at 21:00:33
+Current time: 2025-12-18 22:00 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⚠️ No settlement result for KXBTCD-25DEC1822-T85499.99 (strike 85499.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1822-T85249.99 (strike 85249.99)
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:00:45
+✅ Generated status.json at 21:00:56
+✅ Generated status.json at 21:01:07
+✅ Generated status.json at 21:01:19
+✅ Generated status.json at 21:01:31
+✅ Generated status.json at 21:01:42
+Current time: 2025-12-18 22:01 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ⚠️ No settlement result for KXBTCD-25DEC1822-T85499.99 (strike 85499.99)
+  ⚠️ No settlement result for KXBTCD-25DEC1822-T85249.99 (strike 85249.99)
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:01:54
+✅ Generated status.json at 21:02:05
+✅ Generated status.json at 21:02:17
+✅ Generated status.json at 21:02:29
+✅ Generated status.json at 21:02:40
+✅ Generated status.json at 21:02:51
+Current time: 2025-12-18 22:03 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 2 open positions
+  ❌ EXPIRED: KXBTCD-25DEC1822-T85499.99
+     Entry: 81¢ → Exit: 0¢ | P&L: $-0.81 (YES_WIN)
+  ❌ EXPIRED: KXBTCD-25DEC1822-T85249.99
+     Entry: 71¢ → Exit: 0¢ | P&L: $-0.71 (YES_WIN)
+------------------------------------------------------------
+Positions to close: 2
+Total P&L: $-1.52
+✅ Changes committed to database
+  📦 Closed 2 expired positions for $-1.52
+✅ Generated status.json at 21:03:03
+✅ Generated status.json at 21:03:14
+✅ Generated status.json at 21:03:26
+✅ Generated status.json at 21:03:37
+✅ Generated status.json at 21:03:48
+✅ Generated status.json at 21:03:59
+Current time: 2025-12-18 22:04 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:04:11
+✅ Generated status.json at 21:04:22
+✅ Generated status.json at 21:04:33
+✅ Generated status.json at 21:04:44
+✅ Generated status.json at 21:04:56
+✅ Generated status.json at 21:05:07
+Current time: 2025-12-18 22:05 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:05:18
+✅ Generated status.json at 21:05:29
+✅ Generated status.json at 21:05:41
+✅ Generated status.json at 21:05:52
+✅ Generated status.json at 21:06:03
+✅ Generated status.json at 21:06:14
+Current time: 2025-12-18 22:06 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:06:26
+✅ Generated status.json at 21:06:37
+✅ Generated status.json at 21:06:48
+✅ Generated status.json at 21:06:59
+✅ Generated status.json at 21:07:11
+✅ Generated status.json at 21:07:22
+Current time: 2025-12-18 22:07 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:07:33
+✅ Generated status.json at 21:07:44
+✅ Generated status.json at 21:07:56
+✅ Generated status.json at 21:08:07
+✅ Generated status.json at 21:08:18
+✅ Generated status.json at 21:08:30
+Current time: 2025-12-18 22:08 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:08:41
+✅ Generated status.json at 21:08:52
+✅ Generated status.json at 21:09:03
+✅ Generated status.json at 21:09:15
+✅ Generated status.json at 21:09:26
+✅ Generated status.json at 21:09:37
+Current time: 2025-12-18 22:09 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:09:49
+✅ Generated status.json at 21:10:00
+✅ Generated status.json at 21:10:11
+✅ Generated status.json at 21:10:22
+✅ Generated status.json at 21:10:34
+✅ Generated status.json at 21:10:45
+Current time: 2025-12-18 22:10 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:10:56
+✅ Generated status.json at 21:11:07
+✅ Generated status.json at 21:11:19
+✅ Generated status.json at 21:11:30
+✅ Generated status.json at 21:11:41
+✅ Generated status.json at 21:11:52
+Current time: 2025-12-18 22:12 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:12:03
+✅ Generated status.json at 21:12:14
+✅ Generated status.json at 21:12:26
+✅ Generated status.json at 21:12:37
+✅ Generated status.json at 21:12:48
+✅ Generated status.json at 21:12:59
+Current time: 2025-12-18 22:13 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:13:11
+✅ Generated status.json at 21:13:22
+✅ Generated status.json at 21:13:33
+✅ Generated status.json at 21:13:44
+✅ Generated status.json at 21:13:56
+✅ Generated status.json at 21:14:07
+Current time: 2025-12-18 22:14 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:14:18
+✅ Generated status.json at 21:14:29
+✅ Generated status.json at 21:14:41
+✅ Generated status.json at 21:14:52
+✅ Generated status.json at 21:15:03
+✅ Generated status.json at 21:15:15
+Current time: 2025-12-18 22:15 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:15:26
+✅ Generated status.json at 21:15:37
+✅ Generated status.json at 21:15:48
+✅ Generated status.json at 21:15:59
+✅ Generated status.json at 21:16:11
+✅ Generated status.json at 21:16:22
+Current time: 2025-12-18 22:16 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:16:33
+✅ Generated status.json at 21:16:45
+✅ Generated status.json at 21:16:56
+✅ Generated status.json at 21:17:07
+✅ Generated status.json at 21:17:18
+✅ Generated status.json at 21:17:30
+Current time: 2025-12-18 22:17 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:17:41
+✅ Generated status.json at 21:17:52
+✅ Generated status.json at 21:18:03
+✅ Generated status.json at 21:18:15
+✅ Generated status.json at 21:18:26
+✅ Generated status.json at 21:18:37
+Current time: 2025-12-18 22:18 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:18:48
+✅ Generated status.json at 21:18:59
+✅ Generated status.json at 21:19:11
+✅ Generated status.json at 21:19:22
+✅ Generated status.json at 21:19:33
+✅ Generated status.json at 21:19:45
+Current time: 2025-12-18 22:19 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:19:56
+✅ Generated status.json at 21:20:07
+✅ Generated status.json at 21:20:18
+✅ Generated status.json at 21:20:29
+✅ Generated status.json at 21:20:40
+✅ Generated status.json at 21:20:52
+Current time: 2025-12-18 22:21 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:21:03
+✅ Generated status.json at 21:21:14
+✅ Generated status.json at 21:21:26
+✅ Generated status.json at 21:21:37
+✅ Generated status.json at 21:21:49
+✅ Generated status.json at 21:22:00
+Current time: 2025-12-18 22:22 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1823-T85999.99 settles at 23:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:22:12
+✅ Generated status.json at 21:22:23
+✅ Generated status.json at 21:22:35
+✅ Generated status.json at 21:22:46
+✅ Generated status.json at 21:22:58
+✅ Generated status.json at 21:23:09
+Current time: 2025-12-18 22:23 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1823-T85999.99 settles at 23:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:23:21
+✅ Generated status.json at 21:23:33
+✅ Generated status.json at 21:23:44
+✅ Generated status.json at 21:23:55
+✅ Generated status.json at 21:24:07
+✅ Generated status.json at 21:24:18
+Current time: 2025-12-18 22:24 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1823-T85999.99 settles at 23:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:24:30
+✅ Generated status.json at 21:24:41
+✅ Generated status.json at 21:24:53
+✅ Generated status.json at 21:25:04
+✅ Generated status.json at 21:25:16
+✅ Generated status.json at 21:25:27
+Current time: 2025-12-18 22:25 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1823-T85999.99 settles at 23:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:25:39
+✅ Generated status.json at 21:25:50
+✅ Generated status.json at 21:26:01
+✅ Generated status.json at 21:26:13
+✅ Generated status.json at 21:26:25
+✅ Generated status.json at 21:26:36
+Current time: 2025-12-18 22:26 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1823-T85999.99 settles at 23:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:26:48
+✅ Generated status.json at 21:26:59
+✅ Generated status.json at 21:27:11
+✅ Generated status.json at 21:27:22
+✅ Generated status.json at 21:27:34
+✅ Generated status.json at 21:27:45
+Current time: 2025-12-18 22:27 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1823-T85999.99 settles at 23:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:27:57
+✅ Generated status.json at 21:28:08
+✅ Generated status.json at 21:28:20
+✅ Generated status.json at 21:28:31
+✅ Generated status.json at 21:28:43
+✅ Generated status.json at 21:28:54
+Current time: 2025-12-18 22:29 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1823-T85999.99 settles at 23:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:29:06
+✅ Generated status.json at 21:29:18
+✅ Generated status.json at 21:29:29
+✅ Generated status.json at 21:29:41
+✅ Generated status.json at 21:29:52
+✅ Generated status.json at 21:30:04
+Current time: 2025-12-18 22:30 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1823-T85999.99 settles at 23:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:30:15
+✅ Generated status.json at 21:30:27
+✅ Generated status.json at 21:30:38
+✅ Generated status.json at 21:30:50
+✅ Generated status.json at 21:31:01
+✅ Generated status.json at 21:31:12
+Current time: 2025-12-18 22:31 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:31:24
+✅ Generated status.json at 21:31:35
+✅ Generated status.json at 21:31:46
+✅ Generated status.json at 21:31:57
+✅ Generated status.json at 21:32:09
+✅ Generated status.json at 21:32:20
+Current time: 2025-12-18 22:32 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:32:31
+✅ Generated status.json at 21:32:42
+✅ Generated status.json at 21:32:53
+✅ Generated status.json at 21:33:05
+✅ Generated status.json at 21:33:16
+✅ Generated status.json at 21:33:27
+Current time: 2025-12-18 22:33 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:33:39
+✅ Generated status.json at 21:33:50
+✅ Generated status.json at 21:34:01
+✅ Generated status.json at 21:34:12
+✅ Generated status.json at 21:34:24
+✅ Generated status.json at 21:34:35
+Current time: 2025-12-18 22:34 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:34:46
+✅ Generated status.json at 21:34:57
+✅ Generated status.json at 21:35:08
+✅ Generated status.json at 21:35:20
+✅ Generated status.json at 21:35:31
+✅ Generated status.json at 21:35:42
+Current time: 2025-12-18 22:35 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:35:53
+✅ Generated status.json at 21:36:05
+✅ Generated status.json at 21:36:16
+✅ Generated status.json at 21:36:27
+✅ Generated status.json at 21:36:39
+✅ Generated status.json at 21:36:50
+Current time: 2025-12-18 22:37 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1823-T87249.99 settles at 23:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:37:02
+✅ Generated status.json at 21:37:14
+✅ Generated status.json at 21:37:25
+✅ Generated status.json at 21:37:37
+✅ Generated status.json at 21:37:48
+✅ Generated status.json at 21:38:00
+Current time: 2025-12-18 22:38 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1823-T87249.99 settles at 23:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:38:12
+✅ Generated status.json at 21:38:23
+✅ Generated status.json at 21:38:35
+✅ Generated status.json at 21:38:47
+✅ Generated status.json at 21:38:59
+✅ Generated status.json at 21:39:10
+Current time: 2025-12-18 22:39 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1823-T87249.99 settles at 23:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:39:22
+✅ Generated status.json at 21:39:33
+✅ Generated status.json at 21:39:45
+✅ Generated status.json at 21:39:57
+✅ Generated status.json at 21:40:08
+✅ Generated status.json at 21:40:20
+Current time: 2025-12-18 22:40 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1823-T87249.99 settles at 23:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:40:31
+✅ Generated status.json at 21:40:43
+✅ Generated status.json at 21:40:54
+✅ Generated status.json at 21:41:06
+✅ Generated status.json at 21:41:17
+✅ Generated status.json at 21:41:28
+Current time: 2025-12-18 22:41 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:41:39
+✅ Generated status.json at 21:41:51
+✅ Generated status.json at 21:42:02
+✅ Generated status.json at 21:42:13
+✅ Generated status.json at 21:42:24
+✅ Generated status.json at 21:42:36
+Current time: 2025-12-18 22:42 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:42:47
+✅ Generated status.json at 21:42:58
+✅ Generated status.json at 21:43:09
+✅ Generated status.json at 21:43:21
+✅ Generated status.json at 21:43:32
+✅ Generated status.json at 21:43:43
+Current time: 2025-12-18 22:43 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:43:54
+✅ Generated status.json at 21:44:05
+✅ Generated status.json at 21:44:17
+✅ Generated status.json at 21:44:28
+✅ Generated status.json at 21:44:39
+✅ Generated status.json at 21:44:50
+Current time: 2025-12-18 22:45 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:45:01
+✅ Generated status.json at 21:45:13
+✅ Generated status.json at 21:45:24
+✅ Generated status.json at 21:45:35
+✅ Generated status.json at 21:45:47
+✅ Generated status.json at 21:45:58
+Current time: 2025-12-18 22:46 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:46:09
+✅ Generated status.json at 21:46:20
+✅ Generated status.json at 21:46:32
+✅ Generated status.json at 21:46:43
+✅ Generated status.json at 21:46:54
+✅ Generated status.json at 21:47:05
+Current time: 2025-12-18 22:47 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:47:17
+✅ Generated status.json at 21:47:28
+✅ Generated status.json at 21:47:39
+✅ Generated status.json at 21:47:50
+✅ Generated status.json at 21:48:02
+✅ Generated status.json at 21:48:13
+Current time: 2025-12-18 22:48 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:48:24
+✅ Generated status.json at 21:48:36
+✅ Generated status.json at 21:48:47
+✅ Generated status.json at 21:48:58
+✅ Generated status.json at 21:49:09
+✅ Generated status.json at 21:49:20
+Current time: 2025-12-18 22:49 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:49:32
+✅ Generated status.json at 21:49:43
+✅ Generated status.json at 21:49:54
+✅ Generated status.json at 21:50:06
+✅ Generated status.json at 21:50:17
+✅ Generated status.json at 21:50:28
+Current time: 2025-12-18 22:50 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:50:39
+✅ Generated status.json at 21:50:50
+✅ Generated status.json at 21:51:02
+✅ Generated status.json at 21:51:13
+✅ Generated status.json at 21:51:24
+✅ Generated status.json at 21:51:35
+Current time: 2025-12-18 22:51 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:51:47
+✅ Generated status.json at 21:51:58
+✅ Generated status.json at 21:52:09
+✅ Generated status.json at 21:52:21
+✅ Generated status.json at 21:52:32
+✅ Generated status.json at 21:52:43
+Current time: 2025-12-18 22:52 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:52:54
+✅ Generated status.json at 21:53:05
+✅ Generated status.json at 21:53:16
+✅ Generated status.json at 21:53:28
+✅ Generated status.json at 21:53:39
+✅ Generated status.json at 21:53:50
+Current time: 2025-12-18 22:54 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:54:02
+✅ Generated status.json at 21:54:13
+✅ Generated status.json at 21:54:24
+✅ Generated status.json at 21:54:36
+✅ Generated status.json at 21:54:47
+✅ Generated status.json at 21:54:58
+Current time: 2025-12-18 22:55 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:55:10
+✅ Generated status.json at 21:55:21
+✅ Generated status.json at 21:55:32
+✅ Generated status.json at 21:55:43
+✅ Generated status.json at 21:55:55
+✅ Generated status.json at 21:56:06
+Current time: 2025-12-18 22:56 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:56:17
+✅ Generated status.json at 21:56:29
+✅ Generated status.json at 21:56:40
+✅ Generated status.json at 21:56:51
+✅ Generated status.json at 21:57:03
+✅ Generated status.json at 21:57:14
+Current time: 2025-12-18 22:57 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:57:26
+✅ Generated status.json at 21:57:37
+✅ Generated status.json at 21:57:49
+✅ Generated status.json at 21:58:00
+✅ Generated status.json at 21:58:11
+✅ Generated status.json at 21:58:23
+Current time: 2025-12-18 22:58 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:58:34
+✅ Generated status.json at 21:58:46
+✅ Generated status.json at 21:58:57
+✅ Generated status.json at 21:59:08
+✅ Generated status.json at 21:59:19
+✅ Generated status.json at 21:59:31
+Current time: 2025-12-18 22:59 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 21:59:42
+✅ Generated status.json at 21:59:53
+✅ Generated status.json at 22:00:05
+✅ Generated status.json at 22:00:16
+✅ Generated status.json at 22:00:28
+✅ Generated status.json at 22:00:39
+Current time: 2025-12-18 23:00 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:00:50
+✅ Generated status.json at 22:01:01
+✅ Generated status.json at 22:01:13
+✅ Generated status.json at 22:01:24
+✅ Generated status.json at 22:01:35
+✅ Generated status.json at 22:01:47
+Current time: 2025-12-18 23:01 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:01:58
+✅ Generated status.json at 22:02:09
+✅ Generated status.json at 22:02:20
+✅ Generated status.json at 22:02:32
+✅ Generated status.json at 22:02:43
+✅ Generated status.json at 22:02:54
+Current time: 2025-12-18 23:03 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:03:06
+✅ Generated status.json at 22:03:18
+✅ Generated status.json at 22:03:31
+✅ Generated status.json at 22:03:43
+✅ Generated status.json at 22:03:55
+Current time: 2025-12-18 23:04 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 0 open positions
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:04:07
+✅ Generated status.json at 22:04:20
+✅ Generated status.json at 22:04:31
+✅ Generated status.json at 22:04:44
+✅ Generated status.json at 22:04:56
+Current time: 2025-12-18 23:05 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:05:10
+✅ Generated status.json at 22:05:24
+✅ Generated status.json at 22:05:38
+✅ Generated status.json at 22:05:51
+✅ Generated status.json at 22:06:03
+Current time: 2025-12-18 23:06 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:06:15
+✅ Generated status.json at 22:06:27
+✅ Generated status.json at 22:06:41
+✅ Generated status.json at 22:06:55
+✅ Generated status.json at 22:07:09
+Current time: 2025-12-18 23:07 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:07:24
+✅ Generated status.json at 22:07:38
+✅ Generated status.json at 22:07:52
+✅ Generated status.json at 22:08:05
+✅ Generated status.json at 22:08:16
+Current time: 2025-12-18 23:08 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:08:29
+✅ Generated status.json at 22:08:41
+✅ Generated status.json at 22:08:52
+✅ Generated status.json at 22:09:10
+✅ Generated status.json at 22:09:26
+Current time: 2025-12-18 23:09 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:09:42
+✅ Generated status.json at 22:09:57
+✅ Generated status.json at 22:10:13
+✅ Generated status.json at 22:10:25
+✅ Generated status.json at 22:10:36
+Current time: 2025-12-18 23:10 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:10:48
+✅ Generated status.json at 22:10:59
+✅ Generated status.json at 22:11:11
+✅ Generated status.json at 22:11:22
+✅ Generated status.json at 22:11:34
+✅ Generated status.json at 22:11:45
+Current time: 2025-12-18 23:11 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:11:57
+✅ Generated status.json at 22:12:08
+✅ Generated status.json at 22:12:20
+✅ Generated status.json at 22:12:32
+✅ Generated status.json at 22:12:43
+✅ Generated status.json at 22:12:55
+Current time: 2025-12-18 23:13 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:13:06
+✅ Generated status.json at 22:13:18
+✅ Generated status.json at 22:13:29
+✅ Generated status.json at 22:13:41
+✅ Generated status.json at 22:13:52
+✅ Generated status.json at 22:14:04
+Current time: 2025-12-18 23:14 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:14:16
+✅ Generated status.json at 22:14:27
+✅ Generated status.json at 22:14:39
+✅ Generated status.json at 22:14:50
+✅ Generated status.json at 22:15:02
+✅ Generated status.json at 22:15:13
+Current time: 2025-12-18 23:15 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:15:25
+✅ Generated status.json at 22:15:37
+✅ Generated status.json at 22:15:48
+✅ Generated status.json at 22:16:00
+✅ Generated status.json at 22:16:12
+✅ Generated status.json at 22:16:23
+Current time: 2025-12-18 23:16 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:16:35
+✅ Generated status.json at 22:16:47
+✅ Generated status.json at 22:16:58
+✅ Generated status.json at 22:17:10
+✅ Generated status.json at 22:17:21
+✅ Generated status.json at 22:17:33
+Current time: 2025-12-18 23:17 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:17:44
+✅ Generated status.json at 22:17:56
+✅ Generated status.json at 22:18:07
+✅ Generated status.json at 22:18:19
+✅ Generated status.json at 22:18:30
+✅ Generated status.json at 22:18:42
+Current time: 2025-12-18 23:18 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:18:54
+✅ Generated status.json at 22:19:06
+✅ Generated status.json at 22:19:17
+✅ Generated status.json at 22:19:29
+✅ Generated status.json at 22:19:40
+✅ Generated status.json at 22:19:51
+Current time: 2025-12-18 23:20 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:20:03
+✅ Generated status.json at 22:20:15
+✅ Generated status.json at 22:20:26
+✅ Generated status.json at 22:20:38
+✅ Generated status.json at 22:20:49
+✅ Generated status.json at 22:21:01
+Current time: 2025-12-18 23:21 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:21:13
+✅ Generated status.json at 22:21:24
+✅ Generated status.json at 22:21:36
+✅ Generated status.json at 22:21:48
+✅ Generated status.json at 22:21:59
+✅ Generated status.json at 22:22:11
+Current time: 2025-12-18 23:22 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:22:23
+✅ Generated status.json at 22:22:34
+✅ Generated status.json at 22:22:46
+✅ Generated status.json at 22:22:58
+✅ Generated status.json at 22:23:09
+✅ Generated status.json at 22:23:21
+Current time: 2025-12-18 23:23 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:23:32
+✅ Generated status.json at 22:23:44
+✅ Generated status.json at 22:23:56
+✅ Generated status.json at 22:24:07
+✅ Generated status.json at 22:24:19
+✅ Generated status.json at 22:24:31
+Current time: 2025-12-18 23:24 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:24:42
+✅ Generated status.json at 22:24:54
+✅ Generated status.json at 22:25:06
+✅ Generated status.json at 22:25:17
+✅ Generated status.json at 22:25:29
+✅ Generated status.json at 22:25:41
+Current time: 2025-12-18 23:25 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:25:52
+✅ Generated status.json at 22:26:04
+✅ Generated status.json at 22:26:16
+✅ Generated status.json at 22:26:28
+✅ Generated status.json at 22:26:39
+✅ Generated status.json at 22:26:51
+Current time: 2025-12-18 23:27 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:27:03
+✅ Generated status.json at 22:27:15
+✅ Generated status.json at 22:27:27
+✅ Generated status.json at 22:27:38
+✅ Generated status.json at 22:27:50
+✅ Generated status.json at 22:28:01
+Current time: 2025-12-18 23:28 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:28:13
+✅ Generated status.json at 22:28:24
+✅ Generated status.json at 22:28:36
+✅ Generated status.json at 22:28:48
+✅ Generated status.json at 22:29:00
+✅ Generated status.json at 22:29:11
+Current time: 2025-12-18 23:29 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:29:23
+✅ Generated status.json at 22:29:35
+✅ Generated status.json at 22:29:46
+✅ Generated status.json at 22:29:58
+✅ Generated status.json at 22:30:09
+✅ Generated status.json at 22:30:21
+Current time: 2025-12-18 23:30 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:30:32
+✅ Generated status.json at 22:30:44
+✅ Generated status.json at 22:30:55
+✅ Generated status.json at 22:31:07
+✅ Generated status.json at 22:31:19
+✅ Generated status.json at 22:31:31
+Current time: 2025-12-18 23:31 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:31:43
+✅ Generated status.json at 22:31:54
+✅ Generated status.json at 22:32:06
+✅ Generated status.json at 22:32:17
+✅ Generated status.json at 22:32:29
+✅ Generated status.json at 22:32:40
+Current time: 2025-12-18 23:32 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:32:52
+✅ Generated status.json at 22:33:04
+✅ Generated status.json at 22:33:16
+✅ Generated status.json at 22:33:27
+✅ Generated status.json at 22:33:39
+✅ Generated status.json at 22:33:51
+Current time: 2025-12-18 23:34 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:34:02
+✅ Generated status.json at 22:34:14
+✅ Generated status.json at 22:34:25
+✅ Generated status.json at 22:34:37
+✅ Generated status.json at 22:34:48
+✅ Generated status.json at 22:35:01
+Current time: 2025-12-18 23:35 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:35:12
+✅ Generated status.json at 22:35:24
+✅ Generated status.json at 22:35:36
+✅ Generated status.json at 22:35:47
+✅ Generated status.json at 22:35:59
+✅ Generated status.json at 22:36:11
+Current time: 2025-12-18 23:36 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 1 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:36:22
+✅ Generated status.json at 22:36:34
+✅ Generated status.json at 22:36:46
+✅ Generated status.json at 22:36:57
+✅ Generated status.json at 22:37:09
+✅ Generated status.json at 22:37:21
+Current time: 2025-12-18 23:37 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T87249.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:37:33
+✅ Generated status.json at 22:37:44
+✅ Generated status.json at 22:37:56
+✅ Generated status.json at 22:38:07
+✅ Generated status.json at 22:38:19
+✅ Generated status.json at 22:38:30
+Current time: 2025-12-18 23:38 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T87249.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:38:42
+✅ Generated status.json at 22:38:54
+✅ Generated status.json at 22:39:06
+✅ Generated status.json at 22:39:18
+✅ Generated status.json at 22:39:29
+✅ Generated status.json at 22:39:41
+Current time: 2025-12-18 23:39 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 3 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T87249.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:39:53
+✅ Generated status.json at 22:40:04
+✅ Generated status.json at 22:40:16
+✅ Generated status.json at 22:40:27
+✅ Generated status.json at 22:40:39
+✅ Generated status.json at 22:40:51
+Current time: 2025-12-18 23:41 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 5 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T87249.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T87249.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:41:03
+✅ Generated status.json at 22:41:14
+✅ Generated status.json at 22:41:26
+✅ Generated status.json at 22:41:38
+✅ Generated status.json at 22:41:49
+✅ Generated status.json at 22:42:01
+Current time: 2025-12-18 23:42 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 7 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T87249.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T87249.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:42:12
+✅ Generated status.json at 22:42:24
+✅ Generated status.json at 22:42:36
+✅ Generated status.json at 22:42:48
+✅ Generated status.json at 22:42:59
+✅ Generated status.json at 22:43:11
+Current time: 2025-12-18 23:43 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 11 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T87249.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T87249.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T87249.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:43:23
+✅ Generated status.json at 22:43:34
+✅ Generated status.json at 22:43:46
+✅ Generated status.json at 22:43:58
+✅ Generated status.json at 22:44:09
+✅ Generated status.json at 22:44:20
+Current time: 2025-12-18 23:44 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 13 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T87249.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T87249.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T87249.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:44:32
+✅ Generated status.json at 22:44:44
+✅ Generated status.json at 22:44:55
+✅ Generated status.json at 22:45:07
+✅ Generated status.json at 22:45:19
+✅ Generated status.json at 22:45:30
+Current time: 2025-12-18 23:45 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 13 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T87249.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T87249.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T87249.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+------------------------------------------------------------
+Positions to close: 0
+Total P&L: $0.00
+✅ Generated status.json at 22:45:42
+✅ Generated status.json at 22:45:54
+✅ Generated status.json at 22:46:05
+✅ Generated status.json at 22:46:17
+✅ Generated status.json at 22:46:29
+✅ Generated status.json at 22:46:41
+Current time: 2025-12-18 23:46 ET
+Mode: LIVE - MAKING CHANGES
+------------------------------------------------------------
+Found 13 open positions
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T87249.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T87249.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
+  ⏰ ACTIVE: KXBTCD-25DEC1900-T86999.99 settles at 00:00 ET
