@@ -43,10 +43,15 @@ AVERAGE_DOWN_MIN_EDGE = 10.0  # Only average down if edge >= 10%
 AVERAGE_DOWN_MIN_DROP = 5     # Price dropped at least 5¢
 AVERAGE_DOWN_MIN_FAIR = 95.0  # Model >= 95% likely to win
 
+# Late game strategy (inside cutoff window)
+LATE_GAME_MIN_FAIR = 98.0     # Model must be >= 98% likely to win
+LATE_GAME_MIN_EDGE = 3.0      # Only need 3% edge in late game
+LATE_GAME_AVG_DOWN_DROP = 5   # Average down every 5¢ in late game
+
 # Other
 MAX_SLIPPAGE_CENTS = 3        # Skip if ask - model_fair > 3¢
 KALSHI_FEE_RATE = 0.07
-TRADING_CUTOFF_MINUTES = 15   # Stop opening new positions
+TRADING_CUTOFF_MINUTES = 15   # Normal cutoff (late game rules apply inside)
 DRY_RUN = True                # Set via environment variable
 STARTING_BALANCE = 200.0
 
@@ -376,9 +381,10 @@ def check_add_conditions(pos, btc_price, vol_std, minutes_left, market_ask, bank
     return add_contracts > 0, add_contracts, None
 
 
-def find_new_entry(markets, btc_price, vol_std, minutes_left, bankroll, existing_tickers):
+def find_new_entry(markets, btc_price, vol_std, minutes_left, bankroll, existing_tickers, late_game=False):
     """
     Find new entry opportunity.
+    In late game mode (inside cutoff), only trade if model is highly confident.
     Returns: (market, contracts, edge) or (None, 0, 0)
     """
     for market in markets:
@@ -402,8 +408,18 @@ def find_new_entry(markets, btc_price, vol_std, minutes_left, bankroll, existing
         model_fair = calculate_model_fair(btc_price, strike, vol_std, minutes_left)
         edge = calculate_edge(model_fair, ask)
         
-        if edge < MIN_EDGE_PCT:
-            continue
+        # Apply different thresholds based on late game mode
+        if late_game:
+            # Late game: need very high model confidence but lower edge threshold
+            if model_fair < LATE_GAME_MIN_FAIR:
+                continue
+            if edge < LATE_GAME_MIN_EDGE:
+                continue
+            print(f"  🎯 LATE GAME: {ticker} fair={model_fair}% edge={edge:.1f}%")
+        else:
+            # Normal: need higher edge threshold
+            if edge < MIN_EDGE_PCT:
+                continue
         
         # Check slippage
         slippage = ask - model_fair
@@ -541,37 +557,39 @@ def lambda_handler(event, context):
                     })
                     print(f"  ➕ ADD {add_contracts} to {ticker} @ {market_ask}¢")
         
-        # Look for new entries (only if not in cutoff period)
-        if minutes_left > TRADING_CUTOFF_MINUTES:
-            remaining_exposure = bankroll * MAX_EXPOSURE_FRACTION - total_exposure
-            if remaining_exposure > 1:  # At least $1 available
-                market, contracts, edge = find_new_entry(
-                    markets, btc_price, vol_std, minutes_left, bankroll, existing_tickers
-                )
+        # Look for new entries
+        # Normal mode outside cutoff, late game mode inside cutoff (high confidence only)
+        in_cutoff = minutes_left <= TRADING_CUTOFF_MINUTES
+        remaining_exposure = bankroll * MAX_EXPOSURE_FRACTION - total_exposure
+        if remaining_exposure > 1:  # At least $1 available
+            market, contracts, edge = find_new_entry(
+                markets, btc_price, vol_std, minutes_left, bankroll, existing_tickers,
+                late_game=in_cutoff
+            )
+            
+            if market and contracts > 0:
+                ticker = market['ticker']
+                strike = market['floor_strike']
+                ask = market['no_ask']
                 
-                if market and contracts > 0:
-                    ticker = market['ticker']
-                    strike = market['floor_strike']
-                    ask = market['no_ask']
-                    
-                    # Open new position
-                    cost_basis = contracts * ask / 100
-                    save_position(ticker, contracts, ask, strike, edge, cost_basis)
-                    record_trade(ticker, 'open', contracts, ask, edge, btc_price, strike)
-                    
-                    # Update balance
-                    cost = cost_basis + calculate_fee(contracts, ask)
-                    new_balance = bankroll - cost
-                    update_simulated_balance(new_balance)
-                    
-                    trades_made.append({
-                        'action': 'open',
-                        'ticker': ticker,
-                        'contracts': contracts,
-                        'price': ask,
-                        'edge': edge
-                    })
-                    print(f"  🟢 OPEN {ticker}: {contracts} @ {ask}¢, edge={edge:.1f}%")
+                # Open new position
+                cost_basis = contracts * ask / 100
+                save_position(ticker, contracts, ask, strike, edge, cost_basis)
+                record_trade(ticker, 'open', contracts, ask, edge, btc_price, strike)
+                
+                # Update balance
+                cost = cost_basis + calculate_fee(contracts, ask)
+                new_balance = bankroll - cost
+                update_simulated_balance(new_balance)
+                
+                trades_made.append({
+                    'action': 'open',
+                    'ticker': ticker,
+                    'contracts': contracts,
+                    'price': ask,
+                    'edge': edge
+                })
+                print(f"  🟢 OPEN {ticker}: {contracts} @ {ask}¢, edge={edge:.1f}%")
         
         return {
             'statusCode': 200,

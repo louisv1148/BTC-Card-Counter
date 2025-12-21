@@ -124,26 +124,30 @@ def get_trade_history():
             if trades['liquidates']:
                 # Position was closed
                 for liq in trades['liquidates']:
-                    if liq['realized_pnl'] is not None:
-                        total_pnl += liq['realized_pnl']
+                    contracts = liq['contracts']
+                    exit_price = liq['price_cents']
+                    entry_price = trades['opens'][0]['price_cents'] if trades['opens'] else 0
                     
-                    # Calculate fees
-                    fee = calculate_kalshi_fee(liq['contracts'], liq['price_cents'])
-                    total_fees += fee
+                    # Calculate P&L: (exit - entry) * contracts / 100, minus fees
+                    entry_cost = contracts * entry_price / 100
+                    exit_value = contracts * exit_price / 100
+                    entry_fee = calculate_kalshi_fee(contracts, entry_price)
+                    exit_fee = calculate_kalshi_fee(contracts, exit_price)
+                    pnl = exit_value - entry_cost - entry_fee - exit_fee
+                    pnl_pct = (pnl / entry_cost) * 100 if entry_cost > 0 else 0
+                    
+                    total_pnl += pnl
+                    total_fees += entry_fee + exit_fee
                     
                     closed_trades.append({
                         'ticker': ticker,
-                        'contracts': liq['contracts'],
-                        'entry_price': trades['opens'][0]['price_cents'] if trades['opens'] else 0,
-                        'exit_price': liq['price_cents'],
-                        'pnl': liq['realized_pnl'] or 0,
+                        'contracts': contracts,
+                        'entry_price': entry_price,
+                        'exit_price': exit_price,
+                        'pnl': round(pnl, 2),
+                        'pnl_pct': round(pnl_pct, 1),
                         'closed': liq['timestamp'].split('T')[1][:8] if 'T' in liq['timestamp'] else liq['timestamp']
                     })
-                
-                # Also add entry fees
-                for op in trades['opens']:
-                    fee = calculate_kalshi_fee(op['contracts'], op['price_cents'])
-                    total_fees += fee
     
     except Exception as e:
         print(f"Error getting trade history: {e}")
