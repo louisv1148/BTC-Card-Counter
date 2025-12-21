@@ -74,10 +74,12 @@ class PerformanceTracker:
         self.session_start = datetime.utcnow().isoformat()
         self.trades: List[TradeRecord] = []
         
+        # Always initialize DynamoDB for Lambda access
+        self._init_dynamodb()
+        
         if dry_run:
             self._init_sqlite()
-        else:
-            self._init_dynamodb()
+
     
     def _init_sqlite(self):
         """Initialize SQLite database for dry-run mode."""
@@ -161,20 +163,26 @@ class PerformanceTracker:
         print(f"[PerformanceTracker] SQLite initialized: {self.db_path}")
     
     def _init_dynamodb(self):
-        """Initialize DynamoDB connection for live mode."""
+        """Initialize DynamoDB connection for trade logging."""
         import boto3
         self.dynamodb = boto3.resource('dynamodb')
-        self.table = self.dynamodb.Table('BTCTradeLog')
-        print("[PerformanceTracker] DynamoDB initialized: BTCTradeLog")
+        # Use same table as position tracker for consistency
+        table_name = 'BTCHFPositions-DryRun' if self.dry_run else 'BTCTradeLog'
+        self.table = self.dynamodb.Table(table_name)
+        print(f"[PerformanceTracker] DynamoDB initialized: {table_name}")
+
     
     def record_trade(self, trade: TradeRecord):
         """Record a trade to the appropriate storage."""
         self.trades.append(trade)
         
+        # Always write to DynamoDB for Lambda access
+        self._record_dynamodb(trade)
+        
+        # Also write to SQLite in dry-run mode for local analysis
         if self.dry_run:
             self._record_sqlite(trade)
-        else:
-            self._record_dynamodb(trade)
+
         
         action_emoji = {
             TradeAction.OPEN: "🟢",

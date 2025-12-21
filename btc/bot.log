@@ -1,7 +1,5 @@
-/Users/lvc/.gemini/antigravity/scratch/BTC-Card-Counter/btc/btc_hf_bot.py:685: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
-  timestamp=datetime.utcnow().isoformat(),
-/Users/lvc/.gemini/antigravity/scratch/BTC-Card-Counter/btc/btc_hf_bot.py:349: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
-  opened_at=datetime.utcnow().isoformat(),
+[PositionTracker] Loaded 1 active positions from BTCHFPositions-DryRun
+[PerformanceTracker] DynamoDB initialized: BTCHFPositions-DryRun
 [PerformanceTracker] SQLite initialized: hf_trades.db
 
 ######################################################################
@@ -18,845 +16,411 @@
 
 
 ============================================================
-🔍 Scan at 17:18:48 ET (42 min to settlement)
+🔍 Scan at 17:33:47 ET (27 min to settlement)
 ============================================================
-📊 BTC: $88,330.47
-📈 Volatility (15m): 0.0443%
+📊 BTC: $88,286.20
+📈 Volatility (15m): 0.0581%
 📋 75 markets for KXBTCD-25DEC2118
 💰 Bankroll: $200.00
-📊 Exposure: $0.00 / $200.00 (0.0%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (19bps above)
-     Model: 99.5% | Market: 78.0%
-     Gross edge: 21.5% | Fee: 1.5% | NET: 20.0%
-     Slippage: -21¢ (ask 78¢ vs fair 99¢) ✓
-🟢 [OPEN] KXBTCD-25DEC2118-T88499.99: 10 contracts @ 78¢ (edge: 20.0%)
-  📉 HOLD KXBTCD-25DEC2118-T88499.99: edge 20.9%, P&L $-0.36 (-4.6%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 20.9%)
-
-============================================================
-🔍 Scan at 17:19:00 ET (41 min to settlement)
-============================================================
-📊 BTC: $88,324.89
-📈 Volatility (15m): 0.0443%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (20bps above)
-     Model: 99.7% | Market: 79.0%
-     Gross edge: 20.7% | Fee: 1.5% | NET: 19.2%
-     Slippage: -20¢ (ask 79¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📉 HOLD KXBTCD-25DEC2118-T88499.99: edge 21.1%, P&L $-0.36 (-4.6%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 21.1%)
-
-============================================================
-🔍 Scan at 17:19:11 ET (41 min to settlement)
-============================================================
-📊 BTC: $88,323.07
-📈 Volatility (15m): 0.0443%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (20bps above)
-     Model: 99.7% | Market: 81.0%
-     Gross edge: 18.7% | Fee: 1.3% | NET: 17.4%
-     Slippage: -18¢ (ask 81¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📉 HOLD KXBTCD-25DEC2118-T88499.99: edge 19.2%, P&L $-0.15 (-1.9%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 19.2%)
-
-============================================================
-🔍 Scan at 17:19:23 ET (41 min to settlement)
-============================================================
-📊 BTC: $88,316.35
-📈 Volatility (15m): 0.0468%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (21bps above)
-     Model: 99.6% | Market: 81.0%
-     Gross edge: 18.6% | Fee: 1.3% | NET: 17.3%
-     Slippage: -18¢ (ask 81¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📉 HOLD KXBTCD-25DEC2118-T88499.99: edge 18.2%, P&L $-0.05 (-0.6%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 18.2%)
-
-============================================================
-🔍 Scan at 17:19:34 ET (41 min to settlement)
-============================================================
-📊 BTC: $88,308.65
-📈 Volatility (15m): 0.0468%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (22bps above)
-     Model: 99.7% | Market: 84.0%
-     Gross edge: 15.7% | Fee: 1.1% | NET: 14.6%
-     Slippage: -15¢ (ask 84¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 15.6%, P&L $0.27 (3.5%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 15.6%)
-
-============================================================
-🔍 Scan at 17:19:45 ET (41 min to settlement)
-============================================================
-📊 BTC: $88,283.99
-📈 Volatility (15m): 0.0468%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
+📊 Exposure: $14.80 / $200.00 (7.4%)
 
   🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (24bps above)
-     Model: 99.9% | Market: 85.0%
-     Gross edge: 14.9% | Fee: 1.1% | NET: 13.9%
-     Slippage: -14¢ (ask 85¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 14.8%, P&L $0.37 (4.7%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 14.8%)
-
-============================================================
-🔍 Scan at 17:19:57 ET (41 min to settlement)
-============================================================
-📊 BTC: $88,233.99
-📈 Volatility (15m): 0.0468%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (30bps above)
-     Model: 100.0% | Market: 86.0%
-     Gross edge: 14.0% | Fee: 1.0% | NET: 13.0%
+     Model: 99.9% | Market: 86.0%
+     Gross edge: 13.9% | Fee: 1.0% | NET: 12.9%
      Slippage: -13¢ (ask 86¢ vs fair 99¢) ✓
   ⏸️ Edge increase 0.0pp < 5.0pp - skip add
 
-  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$0.48 (6.2%) but model=100% likely to win
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 13.9%, P&L $0.48 (6.2%)
+  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$1.75 (11.8%) but model=100% likely to win
+  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 13.9%, P&L $1.75 (11.8%)
 
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 13.9%)
+📦 Open positions: 1, Total contracts: 20
+   Total exposure: $14.80
+   KXBTCD-25DEC2118-T88499.99: 20 @ 74¢ (edge: 13.9%)
 
 ============================================================
-🔍 Scan at 17:20:08 ET (40 min to settlement)
+🔍 Scan at 17:33:59 ET (27 min to settlement)
 ============================================================
-📊 BTC: $88,233.99
-📈 Volatility (15m): 0.0468%
+📊 BTC: $88,287.38
+📈 Volatility (15m): 0.0581%
 📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
+💰 Bankroll: $200.00
+📊 Exposure: $14.80 / $200.00 (7.4%)
 
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (30bps above)
-     Model: 100.0% | Market: 87.0%
-     Gross edge: 13.0% | Fee: 0.9% | NET: 12.1%
-     Slippage: -12¢ (ask 87¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-
-  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$0.58 (7.4%) but model=100% likely to win
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 13.0%, P&L $0.58 (7.4%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 13.0%)
-
-============================================================
-🔍 Scan at 17:20:20 ET (40 min to settlement)
-============================================================
-📊 BTC: $88,244.01
-📈 Volatility (15m): 0.0468%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (29bps above)
-     Model: 100.0% | Market: 87.0%
-     Gross edge: 13.0% | Fee: 0.9% | NET: 12.1%
-     Slippage: -12¢ (ask 87¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-
-  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$0.58 (7.4%) but model=100% likely to win
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 13.0%, P&L $0.58 (7.4%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 13.0%)
-
-============================================================
-🔍 Scan at 17:20:31 ET (40 min to settlement)
-============================================================
-📊 BTC: $88,228.01
-📈 Volatility (15m): 0.0561%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (31bps above)
-     Model: 100.0% | Market: 87.0%
-     Gross edge: 13.0% | Fee: 0.9% | NET: 12.1%
-     Slippage: -12¢ (ask 87¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-
-  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$0.58 (7.4%) but model=100% likely to win
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 13.0%, P&L $0.58 (7.4%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 13.0%)
-
-============================================================
-🔍 Scan at 17:20:42 ET (40 min to settlement)
-============================================================
-📊 BTC: $88,237.96
-📈 Volatility (15m): 0.0561%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (30bps above)
-     Model: 99.9% | Market: 87.0%
-     Gross edge: 12.9% | Fee: 0.9% | NET: 12.0%
-     Slippage: -12¢ (ask 87¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-
-  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$0.58 (7.4%) but model=100% likely to win
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 13.0%, P&L $0.58 (7.4%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 13.0%)
-
-============================================================
-🔍 Scan at 17:20:54 ET (40 min to settlement)
-============================================================
-📊 BTC: $88,231.01
-📈 Volatility (15m): 0.0561%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (30bps above)
-     Model: 100.0% | Market: 86.0%
-     Gross edge: 14.0% | Fee: 1.0% | NET: 13.0%
+  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (24bps above)
+     Model: 99.9% | Market: 86.0%
+     Gross edge: 13.9% | Fee: 1.0% | NET: 12.9%
      Slippage: -13¢ (ask 86¢ vs fair 99¢) ✓
   ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 15.8%, P&L $0.27 (3.5%)
 
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 15.8%)
+  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$1.54 (10.4%) but model=100% likely to win
+  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 14.8%, P&L $1.54 (10.4%)
+
+📦 Open positions: 1, Total contracts: 20
+   Total exposure: $14.80
+   KXBTCD-25DEC2118-T88499.99: 20 @ 74¢ (edge: 14.8%)
 
 ============================================================
-🔍 Scan at 17:21:05 ET (39 min to settlement)
+🔍 Scan at 17:34:10 ET (26 min to settlement)
 ============================================================
-📊 BTC: $88,248.03
-📈 Volatility (15m): 0.0561%
+📊 BTC: $88,287.76
+📈 Volatility (15m): 0.0581%
 📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
+💰 Bankroll: $200.00
+📊 Exposure: $14.80 / $200.00 (7.4%)
 
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (29bps above)
-     Model: 99.9% | Market: 84.0%
-     Gross edge: 15.9% | Fee: 1.1% | NET: 14.8%
-     Slippage: -15¢ (ask 84¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 16.7%, P&L $0.16 (2.1%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 16.7%)
-
-============================================================
-🔍 Scan at 17:21:16 ET (39 min to settlement)
-============================================================
-📊 BTC: $88,265.99
-📈 Volatility (15m): 0.0561%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (27bps above)
-     Model: 99.8% | Market: 84.0%
-     Gross edge: 15.8% | Fee: 1.1% | NET: 14.7%
-     Slippage: -15¢ (ask 84¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 15.6%, P&L $0.27 (3.5%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 15.6%)
-
-============================================================
-🔍 Scan at 17:21:28 ET (39 min to settlement)
-============================================================
-📊 BTC: $88,265.99
-📈 Volatility (15m): 0.0573%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (27bps above)
-     Model: 99.8% | Market: 84.0%
-     Gross edge: 15.8% | Fee: 1.1% | NET: 14.7%
-     Slippage: -15¢ (ask 84¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 16.5%, P&L $0.16 (2.1%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 16.5%)
-
-============================================================
-🔍 Scan at 17:21:39 ET (39 min to settlement)
-============================================================
-📊 BTC: $88,269.43
-📈 Volatility (15m): 0.0573%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (26bps above)
-     Model: 99.8% | Market: 84.0%
-     Gross edge: 15.8% | Fee: 1.1% | NET: 14.6%
-     Slippage: -15¢ (ask 84¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 15.6%, P&L $0.27 (3.5%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 15.6%)
-
-============================================================
-🔍 Scan at 17:21:50 ET (39 min to settlement)
-============================================================
-📊 BTC: $88,269.43
-📈 Volatility (15m): 0.0573%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (26bps above)
-     Model: 99.8% | Market: 84.0%
-     Gross edge: 15.8% | Fee: 1.1% | NET: 14.6%
-     Slippage: -15¢ (ask 84¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 16.5%, P&L $0.16 (2.1%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 16.5%)
-
-============================================================
-🔍 Scan at 17:22:02 ET (38 min to settlement)
-============================================================
-📊 BTC: $88,269.43
-📈 Volatility (15m): 0.0573%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (26bps above)
-     Model: 99.8% | Market: 84.0%
-     Gross edge: 15.8% | Fee: 1.1% | NET: 14.7%
-     Slippage: -15¢ (ask 84¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 15.6%, P&L $0.27 (3.5%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 15.6%)
-
-============================================================
-🔍 Scan at 17:22:13 ET (38 min to settlement)
-============================================================
-📊 BTC: $88,269.57
-📈 Volatility (15m): 0.0573%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (26bps above)
-     Model: 99.8% | Market: 85.0%
-     Gross edge: 14.8% | Fee: 1.1% | NET: 13.7%
-     Slippage: -14¢ (ask 85¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 15.6%, P&L $0.27 (3.5%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 15.6%)
-
-============================================================
-🔍 Scan at 17:22:24 ET (38 min to settlement)
-============================================================
-📊 BTC: $88,267.28
-📈 Volatility (15m): 0.0573%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (26bps above)
-     Model: 99.8% | Market: 85.0%
-     Gross edge: 14.8% | Fee: 1.1% | NET: 13.8%
-     Slippage: -14¢ (ask 85¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 15.6%, P&L $0.27 (3.5%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 15.6%)
-
-============================================================
-🔍 Scan at 17:22:35 ET (38 min to settlement)
-============================================================
-📊 BTC: $88,269.99
-📈 Volatility (15m): 0.0573%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (26bps above)
-     Model: 99.8% | Market: 85.0%
-     Gross edge: 14.8% | Fee: 1.1% | NET: 13.7%
-     Slippage: -14¢ (ask 85¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 15.6%, P&L $0.27 (3.5%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 15.6%)
-
-============================================================
-🔍 Scan at 17:22:47 ET (38 min to settlement)
-============================================================
-📊 BTC: $88,269.99
-📈 Volatility (15m): 0.0573%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (26bps above)
-     Model: 99.8% | Market: 85.0%
-     Gross edge: 14.8% | Fee: 1.1% | NET: 13.7%
-     Slippage: -14¢ (ask 85¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 15.6%, P&L $0.27 (3.5%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 15.6%)
-
-============================================================
-🔍 Scan at 17:22:58 ET (38 min to settlement)
-============================================================
-📊 BTC: $88,267.12
-📈 Volatility (15m): 0.0573%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (26bps above)
-     Model: 99.8% | Market: 85.0%
-     Gross edge: 14.8% | Fee: 1.1% | NET: 13.8%
-     Slippage: -14¢ (ask 85¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 15.6%, P&L $0.27 (3.5%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 15.6%)
-
-============================================================
-🔍 Scan at 17:23:09 ET (37 min to settlement)
-============================================================
-📊 BTC: $88,267.12
-📈 Volatility (15m): 0.0573%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (26bps above)
-     Model: 99.8% | Market: 85.0%
-     Gross edge: 14.8% | Fee: 1.1% | NET: 13.8%
-     Slippage: -14¢ (ask 85¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 15.6%, P&L $0.27 (3.5%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 15.6%)
-
-============================================================
-🔍 Scan at 17:23:20 ET (37 min to settlement)
-============================================================
-📊 BTC: $88,267.46
-📈 Volatility (15m): 0.0573%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (26bps above)
-     Model: 99.8% | Market: 85.0%
-     Gross edge: 14.8% | Fee: 1.1% | NET: 13.8%
-     Slippage: -14¢ (ask 85¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 14.7%, P&L $0.37 (4.7%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 14.7%)
-
-============================================================
-🔍 Scan at 17:23:32 ET (37 min to settlement)
-============================================================
-📊 BTC: $88,266.97
-📈 Volatility (15m): 0.0573%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (26bps above)
-     Model: 99.8% | Market: 85.0%
-     Gross edge: 14.8% | Fee: 1.1% | NET: 13.8%
-     Slippage: -14¢ (ask 85¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 14.7%, P&L $0.37 (4.7%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 14.7%)
-
-============================================================
-🔍 Scan at 17:23:43 ET (37 min to settlement)
-============================================================
-📊 BTC: $88,266.54
-📈 Volatility (15m): 0.0573%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (26bps above)
-     Model: 99.8% | Market: 85.0%
-     Gross edge: 14.8% | Fee: 1.1% | NET: 13.8%
-     Slippage: -14¢ (ask 85¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 14.7%, P&L $0.37 (4.7%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 14.7%)
-
-============================================================
-🔍 Scan at 17:23:54 ET (37 min to settlement)
-============================================================
-📊 BTC: $88,266.21
-📈 Volatility (15m): 0.0573%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (26bps above)
-     Model: 99.8% | Market: 85.0%
-     Gross edge: 14.8% | Fee: 1.1% | NET: 13.8%
-     Slippage: -14¢ (ask 85¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 14.7%, P&L $0.37 (4.7%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 14.7%)
-
-============================================================
-🔍 Scan at 17:24:05 ET (36 min to settlement)
-============================================================
-📊 BTC: $88,266.21
-📈 Volatility (15m): 0.0573%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (26bps above)
-     Model: 99.9% | Market: 87.0%
-     Gross edge: 12.9% | Fee: 0.9% | NET: 11.9%
-     Slippage: -12¢ (ask 87¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 14.7%, P&L $0.37 (4.7%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 14.7%)
-
-============================================================
-🔍 Scan at 17:24:16 ET (36 min to settlement)
-============================================================
-📊 BTC: $88,261.93
-📈 Volatility (15m): 0.0573%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (27bps above)
-     Model: 99.9% | Market: 87.0%
-     Gross edge: 12.9% | Fee: 0.9% | NET: 12.0%
-     Slippage: -12¢ (ask 87¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 14.8%, P&L $0.37 (4.7%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 14.8%)
-
-============================================================
-🔍 Scan at 17:24:27 ET (36 min to settlement)
-============================================================
-📊 BTC: $88,262.01
-📈 Volatility (15m): 0.0569%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (27bps above)
-     Model: 99.9% | Market: 87.0%
-     Gross edge: 12.9% | Fee: 0.9% | NET: 12.0%
-     Slippage: -12¢ (ask 87¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 14.8%, P&L $0.37 (4.7%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 14.8%)
-
-============================================================
-🔍 Scan at 17:24:38 ET (36 min to settlement)
-============================================================
-📊 BTC: $88,262.01
-📈 Volatility (15m): 0.0569%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (27bps above)
-     Model: 99.9% | Market: 87.0%
-     Gross edge: 12.9% | Fee: 0.9% | NET: 12.0%
-     Slippage: -12¢ (ask 87¢ vs fair 99¢) ✓
-  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 14.8%, P&L $0.37 (4.7%)
-
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 14.8%)
-
-============================================================
-🔍 Scan at 17:24:49 ET (36 min to settlement)
-============================================================
-📊 BTC: $88,258.04
-📈 Volatility (15m): 0.0569%
-📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
-
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (27bps above)
+  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (24bps above)
      Model: 99.9% | Market: 87.0%
      Gross edge: 12.9% | Fee: 0.9% | NET: 12.0%
      Slippage: -12¢ (ask 87¢ vs fair 99¢) ✓
   ⏸️ Edge increase 0.0pp < 5.0pp - skip add
 
-  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$0.48 (6.2%) but model=100% likely to win
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 13.9%, P&L $0.48 (6.2%)
+  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$1.54 (10.4%) but model=100% likely to win
+  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 14.8%, P&L $1.54 (10.4%)
 
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 13.9%)
+📦 Open positions: 1, Total contracts: 20
+   Total exposure: $14.80
+   KXBTCD-25DEC2118-T88499.99: 20 @ 74¢ (edge: 14.8%)
 
 ============================================================
-🔍 Scan at 17:25:01 ET (35 min to settlement)
+🔍 Scan at 17:34:22 ET (26 min to settlement)
 ============================================================
-📊 BTC: $88,256.13
-📈 Volatility (15m): 0.0569%
+📊 BTC: $88,313.93
+📈 Volatility (15m): 0.0581%
 📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
+💰 Bankroll: $200.00
+📊 Exposure: $14.80 / $200.00 (7.4%)
 
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (28bps above)
+  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (21bps above)
+     Model: 99.7% | Market: 87.0%
+     Gross edge: 12.7% | Fee: 0.9% | NET: 11.8%
+     Slippage: -12¢ (ask 87¢ vs fair 99¢) ✓
+  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
+
+  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$1.54 (10.4%) but model=100% likely to win
+  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 14.6%, P&L $1.54 (10.4%)
+
+📦 Open positions: 1, Total contracts: 20
+   Total exposure: $14.80
+   KXBTCD-25DEC2118-T88499.99: 20 @ 74¢ (edge: 14.6%)
+
+============================================================
+🔍 Scan at 17:34:33 ET (26 min to settlement)
+============================================================
+📊 BTC: $88,312.50
+📈 Volatility (15m): 0.0512%
+📋 75 markets for KXBTCD-25DEC2118
+💰 Bankroll: $200.00
+📊 Exposure: $14.80 / $200.00 (7.4%)
+
+  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (21bps above)
      Model: 99.9% | Market: 87.0%
      Gross edge: 12.9% | Fee: 0.9% | NET: 12.0%
      Slippage: -12¢ (ask 87¢ vs fair 99¢) ✓
   ⏸️ Edge increase 0.0pp < 5.0pp - skip add
 
-  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$0.48 (6.2%) but model=100% likely to win
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 13.9%, P&L $0.48 (6.2%)
+  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$1.54 (10.4%) but model=100% likely to win
+  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 14.8%, P&L $1.54 (10.4%)
 
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 13.9%)
+📦 Open positions: 1, Total contracts: 20
+   Total exposure: $14.80
+   KXBTCD-25DEC2118-T88499.99: 20 @ 74¢ (edge: 14.8%)
 
 ============================================================
-🔍 Scan at 17:25:12 ET (35 min to settlement)
+🔍 Scan at 17:34:44 ET (26 min to settlement)
 ============================================================
-📊 BTC: $88,263.02
-📈 Volatility (15m): 0.0569%
+📊 BTC: $88,319.71
+📈 Volatility (15m): 0.0512%
 📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
+💰 Bankroll: $200.00
+📊 Exposure: $14.80 / $200.00 (7.4%)
 
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (27bps above)
+  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (20bps above)
      Model: 99.9% | Market: 87.0%
      Gross edge: 12.9% | Fee: 0.9% | NET: 12.0%
      Slippage: -12¢ (ask 87¢ vs fair 99¢) ✓
   ⏸️ Edge increase 0.0pp < 5.0pp - skip add
 
-  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$0.48 (6.2%) but model=100% likely to win
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 13.8%, P&L $0.48 (6.2%)
+  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$1.54 (10.4%) but model=100% likely to win
+  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 14.8%, P&L $1.54 (10.4%)
 
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 13.8%)
+📦 Open positions: 1, Total contracts: 20
+   Total exposure: $14.80
+   KXBTCD-25DEC2118-T88499.99: 20 @ 74¢ (edge: 14.8%)
 
 ============================================================
-🔍 Scan at 17:25:24 ET (35 min to settlement)
+🔍 Scan at 17:34:55 ET (26 min to settlement)
 ============================================================
-📊 BTC: $88,238.01
-📈 Volatility (15m): 0.0577%
+📊 BTC: $88,329.27
+📈 Volatility (15m): 0.0512%
 📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
+💰 Bankroll: $200.00
+📊 Exposure: $14.80 / $200.00 (7.4%)
 
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (30bps above)
-     Model: 100.0% | Market: 87.0%
-     Gross edge: 13.0% | Fee: 0.9% | NET: 12.1%
+  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (19bps above)
+     Model: 99.8% | Market: 87.0%
+     Gross edge: 12.8% | Fee: 0.9% | NET: 11.9%
      Slippage: -12¢ (ask 87¢ vs fair 99¢) ✓
   ⏸️ Edge increase 0.0pp < 5.0pp - skip add
 
-  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$0.48 (6.2%) but model=100% likely to win
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 13.9%, P&L $0.48 (6.2%)
+  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$1.54 (10.4%) but model=100% likely to win
+  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 14.7%, P&L $1.54 (10.4%)
 
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 13.9%)
+📦 Open positions: 1, Total contracts: 20
+   Total exposure: $14.80
+   KXBTCD-25DEC2118-T88499.99: 20 @ 74¢ (edge: 14.7%)
 
 ============================================================
-🔍 Scan at 17:25:35 ET (35 min to settlement)
+🔍 Scan at 17:35:06 ET (25 min to settlement)
 ============================================================
-📊 BTC: $88,238.01
-📈 Volatility (15m): 0.0577%
+📊 BTC: $88,346.74
+📈 Volatility (15m): 0.0512%
 📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
+💰 Bankroll: $200.00
+📊 Exposure: $14.80 / $200.00 (7.4%)
 
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (30bps above)
-     Model: 100.0% | Market: 87.0%
-     Gross edge: 13.0% | Fee: 0.9% | NET: 12.1%
+  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (17bps above)
+     Model: 99.6% | Market: 87.0%
+     Gross edge: 12.6% | Fee: 0.9% | NET: 11.7%
      Slippage: -12¢ (ask 87¢ vs fair 99¢) ✓
   ⏸️ Edge increase 0.0pp < 5.0pp - skip add
 
-  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$0.48 (6.2%) but model=100% likely to win
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 13.9%, P&L $0.48 (6.2%)
+  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$1.54 (10.4%) but model=100% likely to win
+  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 14.4%, P&L $1.54 (10.4%)
 
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 13.9%)
+📦 Open positions: 1, Total contracts: 20
+   Total exposure: $14.80
+   KXBTCD-25DEC2118-T88499.99: 20 @ 74¢ (edge: 14.4%)
 
 ============================================================
-🔍 Scan at 17:25:46 ET (35 min to settlement)
+🔍 Scan at 17:35:18 ET (25 min to settlement)
 ============================================================
-📊 BTC: $88,256.74
-📈 Volatility (15m): 0.0577%
+📊 BTC: $88,346.74
+📈 Volatility (15m): 0.0512%
 📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
+💰 Bankroll: $200.00
+📊 Exposure: $14.80 / $200.00 (7.4%)
 
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (28bps above)
-     Model: 99.9% | Market: 87.0%
-     Gross edge: 12.9% | Fee: 0.9% | NET: 12.0%
+  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (17bps above)
+     Model: 99.6% | Market: 87.0%
+     Gross edge: 12.6% | Fee: 0.9% | NET: 11.7%
      Slippage: -12¢ (ask 87¢ vs fair 99¢) ✓
   ⏸️ Edge increase 0.0pp < 5.0pp - skip add
 
-  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$0.48 (6.2%) but model=100% likely to win
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 13.9%, P&L $0.48 (6.2%)
+  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$1.54 (10.4%) but model=100% likely to win
+  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 14.4%, P&L $1.54 (10.4%)
 
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 13.9%)
+📦 Open positions: 1, Total contracts: 20
+   Total exposure: $14.80
+   KXBTCD-25DEC2118-T88499.99: 20 @ 74¢ (edge: 14.4%)
 
 ============================================================
-🔍 Scan at 17:25:57 ET (35 min to settlement)
+🔍 Scan at 17:35:29 ET (25 min to settlement)
 ============================================================
-📊 BTC: $88,256.74
-📈 Volatility (15m): 0.0577%
+📊 BTC: $88,347.34
+📈 Volatility (15m): 0.0507%
 📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
+💰 Bankroll: $200.00
+📊 Exposure: $14.80 / $200.00 (7.4%)
 
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (28bps above)
-     Model: 99.9% | Market: 87.0%
-     Gross edge: 12.9% | Fee: 0.9% | NET: 12.0%
-     Slippage: -12¢ (ask 87¢ vs fair 99¢) ✓
+  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (17bps above)
+     Model: 99.6% | Market: 85.0%
+     Gross edge: 14.6% | Fee: 1.1% | NET: 13.5%
+     Slippage: -14¢ (ask 85¢ vs fair 99¢) ✓
   ⏸️ Edge increase 0.0pp < 5.0pp - skip add
 
-  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$0.48 (6.2%) but model=100% likely to win
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 13.9%, P&L $0.48 (6.2%)
+  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$1.12 (7.6%) but model=100% likely to win
+  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 16.3%, P&L $1.12 (7.6%)
 
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 13.9%)
+📦 Open positions: 1, Total contracts: 20
+   Total exposure: $14.80
+   KXBTCD-25DEC2118-T88499.99: 20 @ 74¢ (edge: 16.3%)
 
 ============================================================
-🔍 Scan at 17:26:08 ET (34 min to settlement)
+🔍 Scan at 17:35:40 ET (25 min to settlement)
 ============================================================
-📊 BTC: $88,256.74
-📈 Volatility (15m): 0.0577%
+📊 BTC: $88,347.34
+📈 Volatility (15m): 0.0507%
 📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
+💰 Bankroll: $200.00
+📊 Exposure: $14.80 / $200.00 (7.4%)
 
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (28bps above)
-     Model: 99.9% | Market: 88.0%
-     Gross edge: 11.9% | Fee: 0.8% | NET: 11.1%
-     Slippage: -11¢ (ask 88¢ vs fair 99¢) ✓
+  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (17bps above)
+     Model: 99.6% | Market: 85.0%
+     Gross edge: 14.6% | Fee: 1.1% | NET: 13.5%
+     Slippage: -14¢ (ask 85¢ vs fair 99¢) ✓
   ⏸️ Edge increase 0.0pp < 5.0pp - skip add
 
-  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$0.69 (8.8%) but model=100% likely to win
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 12.0%, P&L $0.69 (8.8%)
+  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$1.12 (7.6%) but model=100% likely to win
+  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 16.3%, P&L $1.12 (7.6%)
 
-📦 Open positions: 1, Total contracts: 10
-   Total exposure: $7.80
-   KXBTCD-25DEC2118-T88499.99: 10 @ 78¢ (edge: 12.0%)
+📦 Open positions: 1, Total contracts: 20
+   Total exposure: $14.80
+   KXBTCD-25DEC2118-T88499.99: 20 @ 74¢ (edge: 16.3%)
 
 ============================================================
-🔍 Scan at 17:26:19 ET (34 min to settlement)
+🔍 Scan at 17:35:51 ET (25 min to settlement)
 ============================================================
-📊 BTC: $88,280.90
-📈 Volatility (15m): 0.0577%
+📊 BTC: $88,347.66
+📈 Volatility (15m): 0.0507%
 📋 75 markets for KXBTCD-25DEC2118
-💰 Bankroll: $192.20
-📊 Exposure: $7.80 / $192.20 (4.1%)
+💰 Bankroll: $200.00
+📊 Exposure: $14.80 / $200.00 (7.4%)
 
-  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (25bps above)
-     Model: 99.8% | Market: 88.0%
-     Gross edge: 11.8% | Fee: 0.8% | NET: 10.9%
-     Slippage: -11¢ (ask 88¢ vs fair 99¢) ✓
+  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (17bps above)
+     Model: 99.6% | Market: 81.0%
+     Gross edge: 18.6% | Fee: 1.3% | NET: 17.2%
+     Slippage: -18¢ (ask 81¢ vs fair 99¢) ✓
   ⏸️ Edge increase 0.0pp < 5.0pp - skip add
+  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 18.2%, P&L $0.70 (4.7%)
 
-  🎯 HOLD FOR WIN KXBTCD-25DEC2118-T88499.99: P&L +$0.69 (8.8%) but model=100% likely to win
-  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 11.9%, P&L $0.69 (8.8%)
+📦 Open positions: 1, Total contracts: 20
+   Total exposure: $14.80
+   KXBTCD-25DEC2118-T88499.99: 20 @ 74¢ (edge: 18.2%)
+
+============================================================
+🔍 Scan at 17:36:02 ET (24 min to settlement)
+============================================================
+📊 BTC: $88,347.91
+📈 Volatility (15m): 0.0507%
+📋 75 markets for KXBTCD-25DEC2118
+💰 Bankroll: $200.00
+📊 Exposure: $14.80 / $200.00 (7.4%)
+
+  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (17bps above)
+     Model: 99.6% | Market: 80.0%
+     Gross edge: 19.6% | Fee: 1.4% | NET: 18.2%
+     Slippage: -19¢ (ask 80¢ vs fair 99¢) ✓
+  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
+  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 20.1%, P&L $0.28 (1.9%)
+
+📦 Open positions: 1, Total contracts: 20
+   Total exposure: $14.80
+   KXBTCD-25DEC2118-T88499.99: 20 @ 74¢ (edge: 20.1%)
+
+============================================================
+🔍 Scan at 17:36:14 ET (24 min to settlement)
+============================================================
+📊 BTC: $88,343.99
+📈 Volatility (15m): 0.0507%
+📋 75 markets for KXBTCD-25DEC2118
+💰 Bankroll: $200.00
+📊 Exposure: $14.80 / $200.00 (7.4%)
+
+  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (18bps above)
+     Model: 99.7% | Market: 80.0%
+     Gross edge: 19.7% | Fee: 1.4% | NET: 18.3%
+     Slippage: -19¢ (ask 80¢ vs fair 99¢) ✓
+  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
+  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 20.2%, P&L $0.28 (1.9%)
+
+📦 Open positions: 1, Total contracts: 20
+   Total exposure: $14.80
+   KXBTCD-25DEC2118-T88499.99: 20 @ 74¢ (edge: 20.2%)
+
+============================================================
+🔍 Scan at 17:36:26 ET (24 min to settlement)
+============================================================
+📊 BTC: $88,345.99
+📈 Volatility (15m): 0.0507%
+📋 75 markets for KXBTCD-25DEC2118
+💰 Bankroll: $200.00
+📊 Exposure: $14.80 / $200.00 (7.4%)
+
+  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (17bps above)
+     Model: 99.7% | Market: 78.0%
+     Gross edge: 21.7% | Fee: 1.5% | NET: 20.1%
+     Slippage: -21¢ (ask 78¢ vs fair 99¢) ✓
+  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
+  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 21.1%, P&L $0.08 (0.5%)
+
+📦 Open positions: 1, Total contracts: 20
+   Total exposure: $14.80
+   KXBTCD-25DEC2118-T88499.99: 20 @ 74¢ (edge: 21.1%)
+
+============================================================
+🔍 Scan at 17:36:38 ET (24 min to settlement)
+============================================================
+📊 BTC: $88,340.95
+📈 Volatility (15m): 0.0507%
+📋 75 markets for KXBTCD-25DEC2118
+💰 Bankroll: $200.00
+📊 Exposure: $14.80 / $200.00 (7.4%)
+
+  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (18bps above)
+     Model: 99.8% | Market: 78.0%
+     Gross edge: 21.8% | Fee: 1.5% | NET: 20.2%
+     Slippage: -21¢ (ask 78¢ vs fair 99¢) ✓
+  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
+  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 21.1%, P&L $0.08 (0.5%)
+
+📦 Open positions: 1, Total contracts: 20
+   Total exposure: $14.80
+   KXBTCD-25DEC2118-T88499.99: 20 @ 74¢ (edge: 21.1%)
+
+============================================================
+🔍 Scan at 17:36:49 ET (24 min to settlement)
+============================================================
+📊 BTC: $88,358.13
+📈 Volatility (15m): 0.0507%
+📋 75 markets for KXBTCD-25DEC2118
+💰 Bankroll: $200.00
+📊 Exposure: $14.80 / $200.00 (7.4%)
+
+  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (16bps above)
+     Model: 99.4% | Market: 78.0%
+     Gross edge: 21.4% | Fee: 1.5% | NET: 19.8%
+     Slippage: -21¢ (ask 78¢ vs fair 99¢) ✓
+  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
+  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 20.8%, P&L $0.08 (0.5%)
+
+📦 Open positions: 1, Total contracts: 20
+   Total exposure: $14.80
+   KXBTCD-25DEC2118-T88499.99: 20 @ 74¢ (edge: 20.8%)
+
+============================================================
+🔍 Scan at 17:37:01 ET (23 min to settlement)
+============================================================
+📊 BTC: $88,358.13
+📈 Volatility (15m): 0.0507%
+📋 75 markets for KXBTCD-25DEC2118
+💰 Bankroll: $200.00
+📊 Exposure: $14.80 / $200.00 (7.4%)
+
+  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (16bps above)
+     Model: 99.5% | Market: 78.0%
+     Gross edge: 21.5% | Fee: 1.5% | NET: 19.9%
+     Slippage: -21¢ (ask 78¢ vs fair 99¢) ✓
+  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
+  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 20.9%, P&L $0.08 (0.5%)
+
+📦 Open positions: 1, Total contracts: 20
+   Total exposure: $14.80
+   KXBTCD-25DEC2118-T88499.99: 20 @ 74¢ (edge: 20.9%)
+
+============================================================
+🔍 Scan at 17:37:12 ET (23 min to settlement)
+============================================================
+📊 BTC: $88,358.13
+📈 Volatility (15m): 0.0507%
+📋 75 markets for KXBTCD-25DEC2118
+💰 Bankroll: $200.00
+📊 Exposure: $14.80 / $200.00 (7.4%)
+
+  🎯 KXBTCD-25DEC2118-T88499.99: Strike $88,500 (16bps above)
+     Model: 99.5% | Market: 78.0%
+     Gross edge: 21.5% | Fee: 1.5% | NET: 19.9%
+     Slippage: -21¢ (ask 78¢ vs fair 99¢) ✓
+  ⏸️ Edge increase 0.0pp < 5.0pp - skip add
+  📈 HOLD KXBTCD-25DEC2118-T88499.99: edge 20.9%, P&L $0.08 (0.5%)
+
+📦 Open positions: 1, Total contracts: 20
+   Total exposure: $14.80
+   KXBTCD-25DEC2118-T88499.99: 20 @ 74¢ (edge: 20.9%)
+
+============================================================
+🔍 Scan at 17:37:23 ET (23 min to settlement)
+============================================================
+📊 BTC: $88,340.95
+📈 Volatility (15m): 0.0508%
+📋 75 markets for KXBTCD-25DEC2118
+💰 Bankroll: $200.00

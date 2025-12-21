@@ -16,10 +16,12 @@ S3_KEY = "status.json"
 DYNAMODB_POSITIONS_TABLE = "BTCHFPositions-DryRun"
 DYNAMODB_VOL_TABLE = "BTCPriceHistory"
 KALSHI_FEE_RATE = 0.07
+STARTING_BALANCE = 200.0
 
 # Initialize AWS clients
 s3 = boto3.client('s3')
 dynamodb = boto3.resource('dynamodb')
+
 
 
 def get_et_time():
@@ -80,6 +82,78 @@ def get_open_positions(current_event_prefix):
     except Exception as e:
         print(f"Error getting positions: {e}")
     return positions
+
+
+def get_trade_history():
+    """Get all trade history from DynamoDB for P&L calculation."""
+    closed_trades = []
+    total_pnl = 0.0
+    total_fees = 0.0
+    
+    try:
+        table = dynamodb.Table(DYNAMODB_POSITIONS_TABLE)
+        response = table.scan(
+            FilterExpression='pk = :pk',
+            ExpressionAttributeValues={':pk': 'HF_TRADE'}
+        )
+        
+        # Group trades by ticker
+        trades_by_ticker = {}
+        for item in response.get('Items', []):
+            ticker = item.get('ticker', '')
+            action = item.get('action', '')
+            
+            if ticker not in trades_by_ticker:
+                trades_by_ticker[ticker] = {'opens': [], 'liquidates': []}
+            
+            trade_data = {
+                'timestamp': item.get('sk', ''),
+                'contracts': int(item.get('contracts', 0)),
+                'price_cents': int(item.get('price_cents', 0)),
+                'edge_pct': float(item.get('edge_pct', 0)),
+                'realized_pnl': float(item.get('realized_pnl', 0)) if item.get('realized_pnl') else None
+            }
+            
+            if action in ['open', 'add']:
+                trades_by_ticker[ticker]['opens'].append(trade_data)
+            elif action == 'liquidate':
+                trades_by_ticker[ticker]['liquidates'].append(trade_data)
+        
+        # Calculate P&L for closed positions
+        for ticker, trades in trades_by_ticker.items():
+            if trades['liquidates']:
+                # Position was closed
+                for liq in trades['liquidates']:
+                    if liq['realized_pnl'] is not None:
+                        total_pnl += liq['realized_pnl']
+                    
+                    # Calculate fees
+                    fee = calculate_kalshi_fee(liq['contracts'], liq['price_cents'])
+                    total_fees += fee
+                    
+                    closed_trades.append({
+                        'ticker': ticker,
+                        'contracts': liq['contracts'],
+                        'entry_price': trades['opens'][0]['price_cents'] if trades['opens'] else 0,
+                        'exit_price': liq['price_cents'],
+                        'pnl': liq['realized_pnl'] or 0,
+                        'closed': liq['timestamp'].split('T')[1][:8] if 'T' in liq['timestamp'] else liq['timestamp']
+                    })
+                
+                # Also add entry fees
+                for op in trades['opens']:
+                    fee = calculate_kalshi_fee(op['contracts'], op['price_cents'])
+                    total_fees += fee
+    
+    except Exception as e:
+        print(f"Error getting trade history: {e}")
+    
+    return {
+        'closed_trades': sorted(closed_trades, key=lambda x: x.get('closed', ''), reverse=True)[:20],
+        'total_pnl': total_pnl,
+        'total_fees': total_fees,
+        'trade_count': len(closed_trades)
+    }
 
 
 def calculate_kalshi_fee(contracts, price_cents):
@@ -258,10 +332,14 @@ def lambda_handler(event, context):
     # Get fair values
     fair_values = get_fair_values(btc_price, current_event_prefix, vol_std, minutes_to_settlement)
     
+    # Get trade history for P&L
+    trade_history = get_trade_history()
     
-    # Calculate balance (starting balance minus current exposure)
-    starting_balance = 200.0
-    balance = starting_balance - total_exposure
+    # Calculate unrealized P&L from open positions
+    unrealized_pnl = sum(p.get('unrealized_pnl', 0) for p in open_positions)
+    
+    # Calculate balance (starting balance + realized P&L - current exposure)
+    balance = STARTING_BALANCE + trade_history['total_pnl'] - total_exposure
     
     # Build status data
     data = {
@@ -273,11 +351,18 @@ def lambda_handler(event, context):
         'open_positions': open_positions,
         'total_exposure': round(total_exposure, 2),
         'fair_values': fair_values,
-        'hourly_summary': {'trades': 0, 'avg_edge': 0},
-        'closed_trades': [],
-        'pnl': {'today': 0, 'week': 0, 'month': 0, 'all_time': 0, 'total': 0, 'realized': 0, 'unrealized': 0, 'total_fees': 0, 'closed_trades': 0},
+        'hourly_summary': {'trades': trade_history['trade_count'], 'avg_edge': 0},
+        'closed_trades': trade_history['closed_trades'],
+        'pnl': {
+            'total': round(trade_history['total_pnl'] + unrealized_pnl, 2),
+            'realized': round(trade_history['total_pnl'], 2),
+            'unrealized': round(unrealized_pnl, 2),
+            'total_fees': round(trade_history['total_fees'], 2),
+            'closed_trades': trade_history['trade_count']
+        },
         'last_updated': datetime.now(timezone.utc).isoformat()
     }
+
 
     
     # Upload to S3
