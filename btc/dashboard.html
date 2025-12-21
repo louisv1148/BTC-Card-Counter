@@ -235,7 +235,14 @@
             </div>
         </div>
 
+
         <div class="grid">
+            <div class="card">
+                <div class="card-title">Balance</div>
+                <div class="card-value" id="balance">$200.00</div>
+                <div class="card-subtitle">Simulated account</div>
+            </div>
+
             <div class="card">
                 <div class="card-title">Total P&L (Net of Fees)</div>
                 <div class="card-value" id="total-pnl">$0.00</div>
@@ -244,6 +251,7 @@
                     Unrealized: <span id="unrealized-pnl">$0.00</span>
                 </div>
             </div>
+
 
             <div class="card">
                 <div class="card-title">Fees Paid</div>
@@ -424,6 +432,13 @@
 
 
 
+
+
+            // Update Balance
+            if (data.balance !== undefined) {
+                document.getElementById('balance').textContent = `$${data.balance.toFixed(2)}`;
+            }
+
             // Update P&L data
             if (data.pnl) {
                 const totalPnl = data.pnl.total;
@@ -436,6 +451,7 @@
                 document.getElementById('total-fees').textContent = `$${data.pnl.total_fees.toFixed(2)}`;
                 document.getElementById('closed-trades').textContent = data.pnl.closed_trades;
             }
+
 
 
             // Update timestamp

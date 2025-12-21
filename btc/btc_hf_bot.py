@@ -61,7 +61,7 @@ PROFIT_TARGET_PCT = 5.0
 
 # Hold for settlement - if model says NO is this likely to win, skip profit target
 # and hold for the full $1 payout instead of taking early profit
-HOLD_IF_LIKELY_WIN_PCT = 90.0  # 90% = model says very likely to win
+HOLD_IF_LIKELY_WIN_PCT = 97.0  # 90% = model says very likely to win
 
 # Kalshi trading fee rate (7% of potential payout, per Kalshi docs)
 # Fee formula: ceil(0.07 × contracts × price_cents × (1 - price_cents/100))

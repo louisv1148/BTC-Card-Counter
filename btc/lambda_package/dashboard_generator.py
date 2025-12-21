@@ -116,16 +116,21 @@ def get_fair_values(btc_price, event_ticker, vol_std, minutes_left):
     fair_values = []
     try:
         url = f"https://api.elections.kalshi.com/trade-api/v2/events/{event_ticker}"
+        print(f"[DEBUG] Fetching fair values from: {url}")
         response = requests.get(url, headers={'Accept': 'application/json'}, timeout=10)
+        print(f"[DEBUG] API status: {response.status_code}")
         
         if response.status_code == 200:
             markets = response.json().get('markets', [])
+            print(f"[DEBUG] Markets found: {len(markets)}, BTC price: ${btc_price:,.2f}")
             
+            strikes_above = 0
             for market in markets:
                 strike = market.get('floor_strike')
                 if not strike or strike <= btc_price:
                     continue
                 
+                strikes_above += 1
                 no_bid = market.get('no_bid', 0)
                 no_ask = market.get('no_ask', 0)
                 
@@ -147,10 +152,12 @@ def get_fair_values(btc_price, event_ticker, vol_std, minutes_left):
                     'bps_above': bps_above,
                     'edge': edge
                 })
+            print(f"[DEBUG] Strikes above BTC: {strikes_above}, with valid asks: {len(fair_values)}")
     except Exception as e:
         print(f"Error getting fair values: {e}")
     
     return sorted(fair_values, key=lambda x: x['strike'])[:10]
+
 
 
 def get_market_data(tickers):
@@ -251,10 +258,16 @@ def lambda_handler(event, context):
     # Get fair values
     fair_values = get_fair_values(btc_price, current_event_prefix, vol_std, minutes_to_settlement)
     
+    
+    # Calculate balance (starting balance minus current exposure)
+    starting_balance = 200.0
+    balance = starting_balance - total_exposure
+    
     # Build status data
     data = {
         'btc_price': btc_price,
         'volatility': vol_std,
+        'balance': round(balance, 2),
         'settlement_time': next_hour.strftime("%I:%M %p ET"),
         'minutes_to_settlement': minutes_to_settlement,
         'open_positions': open_positions,
@@ -262,9 +275,10 @@ def lambda_handler(event, context):
         'fair_values': fair_values,
         'hourly_summary': {'trades': 0, 'avg_edge': 0},
         'closed_trades': [],
-        'pnl': {'today': 0, 'week': 0, 'month': 0, 'all_time': 0},
+        'pnl': {'today': 0, 'week': 0, 'month': 0, 'all_time': 0, 'total': 0, 'realized': 0, 'unrealized': 0, 'total_fees': 0, 'closed_trades': 0},
         'last_updated': datetime.now(timezone.utc).isoformat()
     }
+
     
     # Upload to S3
     try:
