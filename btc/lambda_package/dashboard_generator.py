@@ -365,13 +365,14 @@ def lambda_handler(event, context):
 
 
     
-    # Upload to S3
+    # Upload to S3 with no-cache headers
     try:
         s3.put_object(
             Bucket=S3_BUCKET,
             Key=S3_KEY,
             Body=json.dumps(data, indent=2),
-            ContentType='application/json'
+            ContentType='application/json',
+            CacheControl='no-cache, no-store, must-revalidate'
         )
         print(f"✅ Uploaded status.json to s3://{S3_BUCKET}/{S3_KEY}")
     except Exception as e:

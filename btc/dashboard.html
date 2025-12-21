@@ -414,16 +414,18 @@
                 closedBody.innerHTML = '<tr><td colspan="6" class="empty-state">No closed trades</td></tr>';
             } else {
                 closedBody.innerHTML = data.closed_trades.map(trade => {
-                    const pnlClass = trade.pnl >= 0 ? 'positive' : 'negative';
-                    const pnlSign = trade.pnl >= 0 ? '+' : '';
-                    const pctSign = trade.pnl_pct >= 0 ? '+' : '';
+                    const pnl = trade.pnl || 0;
+                    const pnlPct = trade.pnl_pct || 0;
+                    const pnlClass = pnl >= 0 ? 'positive' : 'negative';
+                    const pnlSign = pnl >= 0 ? '+' : '';
+                    const pctSign = pnlPct >= 0 ? '+' : '';
                     return `
                         <tr>
                             <td>${trade.ticker}</td>
                             <td>${trade.contracts}</td>
                             <td>${trade.entry_price}¢</td>
                             <td>${trade.exit_price}¢</td>
-                            <td><span class="${pnlClass}">${pnlSign}$${trade.pnl.toFixed(2)} (${pctSign}${trade.pnl_pct.toFixed(0)}%)</span></td>
+                            <td><span class="${pnlClass}">${pnlSign}$${pnl.toFixed(2)} (${pctSign}${pnlPct.toFixed(0)}%)</span></td>
                             <td>${trade.closed}</td>
                         </tr>
                     `;
@@ -434,22 +436,29 @@
 
 
 
+
             // Update Balance
             if (data.balance !== undefined) {
+                console.log('Updating balance:', data.balance);
                 document.getElementById('balance').textContent = `$${data.balance.toFixed(2)}`;
+            } else {
+                console.warn('No balance in data');
             }
 
             // Update P&L data
             if (data.pnl) {
-                const totalPnl = data.pnl.total;
+                console.log('Updating P&L:', data.pnl);
+                const totalPnl = data.pnl.total || 0;
                 const totalPnlEl = document.getElementById('total-pnl');
                 totalPnlEl.textContent = `$${totalPnl.toFixed(2)}`;
                 totalPnlEl.className = 'card-value ' + (totalPnl >= 0 ? 'positive' : 'negative');
 
-                document.getElementById('realized-pnl').textContent = `$${data.pnl.realized.toFixed(2)}`;
-                document.getElementById('unrealized-pnl').textContent = `$${data.pnl.unrealized.toFixed(2)}`;
-                document.getElementById('total-fees').textContent = `$${data.pnl.total_fees.toFixed(2)}`;
-                document.getElementById('closed-trades').textContent = data.pnl.closed_trades;
+                document.getElementById('realized-pnl').textContent = `$${(data.pnl.realized || 0).toFixed(2)}`;
+                document.getElementById('unrealized-pnl').textContent = `$${(data.pnl.unrealized || 0).toFixed(2)}`;
+                document.getElementById('total-fees').textContent = `$${(data.pnl.total_fees || 0).toFixed(2)}`;
+                document.getElementById('closed-trades').textContent = data.pnl.closed_trades || 0;
+            } else {
+                console.warn('No pnl in data');
             }
 
 
