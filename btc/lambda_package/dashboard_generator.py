@@ -118,18 +118,27 @@ def get_trade_history():
                     'contracts': contracts,
                     'price_cents': price_cents,
                     'timestamp': timestamp,
-                    'opened_at': timestamp  # Track when position was opened
+                    'opened_at': timestamp,  # Track when position was opened
+                    'model_fair': float(item.get('model_fair', 0) or 0),
+                    'edge': float(item.get('edge_pct', 0) or 0),
+                    'vol_std': float(item.get('vol_std', 0) or 0)
                 })
             
             elif action in ['liquidate', 'expired_win']:
                 # Match with the most recent open for this ticker
                 entry_price = 0
                 opened_at = ''
+                open_model_fair = 0
+                open_edge = 0
+                open_vol_std = 0
                 if ticker in open_positions and open_positions[ticker]:
                     # Use the first open (FIFO) and remove it
                     entry = open_positions[ticker].pop(0)
                     entry_price = entry['price_cents']
                     opened_at = entry.get('opened_at', '')
+                    open_model_fair = entry.get('model_fair', 0)
+                    open_edge = entry.get('edge', 0)
+                    open_vol_std = entry.get('vol_std', 0)
                     
                     # If we used all opens, clear the list
                     if not open_positions[ticker]:
@@ -178,7 +187,10 @@ def get_trade_history():
                     'pnl_pct': round(pnl_pct, 1),
                     'opened': opened_time_display,
                     'closed': closed_time_display,
-                    'timestamp_sort': timestamp_sort
+                    'timestamp_sort': timestamp_sort,
+                    'model_fair': round(open_model_fair, 1),
+                    'open_edge': round(open_edge, 1),
+                    'vol_std': round(open_vol_std * 100, 2) if open_vol_std else 0  # Convert to percentage
                 })
     
     except Exception as e:

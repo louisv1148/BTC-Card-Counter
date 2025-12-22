@@ -238,11 +238,11 @@ def delete_position(ticker):
         print(f"Error deleting position: {e}")
 
 
-def record_trade(ticker, action, contracts, price_cents, edge, btc_price, strike, realized_pnl=None):
+def record_trade(ticker, action, contracts, price_cents, edge, btc_price, strike, realized_pnl=None, model_fair=None, vol_std=None):
     """Record trade to DynamoDB for history."""
     try:
         table = dynamodb.Table(POSITIONS_TABLE)
-        table.put_item(Item={
+        item = {
             'pk': 'HF_TRADE',
             'sk': datetime.now(timezone.utc).isoformat(),
             'ticker': ticker,
@@ -253,7 +253,13 @@ def record_trade(ticker, action, contracts, price_cents, edge, btc_price, strike
             'btc_price': Decimal(str(btc_price)),
             'strike_price': Decimal(str(strike)),
             'realized_pnl': Decimal(str(realized_pnl)) if realized_pnl is not None else None,
-        })
+        }
+        # Add open-specific fields
+        if model_fair is not None:
+            item['model_fair'] = Decimal(str(model_fair))
+        if vol_std is not None:
+            item['vol_std'] = Decimal(str(vol_std))
+        table.put_item(Item=item)
         print(f"📝 Recorded trade: {action} {ticker}")
     except Exception as e:
         print(f"Error recording trade: {e}")
@@ -512,9 +518,9 @@ def find_new_entry(markets, btc_price, vol_std, minutes_left, bankroll, existing
         
         if contracts >= 1:
             print(f"  🎯 ENTRY: {ticker} strike=${strike:,.0f} edge={edge:.1f}% contracts={contracts}")
-            return market, contracts, edge
+            return market, contracts, edge, model_fair
     
-    return None, 0, 0
+    return None, 0, 0, 0
 
 
 # =============================================================================
@@ -621,7 +627,7 @@ def lambda_handler(event, context):
         in_cutoff = minutes_left <= TRADING_CUTOFF_MINUTES
         remaining_exposure = bankroll * MAX_EXPOSURE_FRACTION - total_exposure
         if remaining_exposure > 1:  # At least $1 available
-            market, contracts, edge = find_new_entry(
+            market, contracts, edge, model_fair = find_new_entry(
                 markets, btc_price, vol_std, minutes_left, bankroll, existing_tickers,
                 late_game=in_cutoff
             )
@@ -634,7 +640,7 @@ def lambda_handler(event, context):
                 # Open new position
                 cost_basis = contracts * ask / 100
                 save_position(ticker, contracts, ask, strike, edge, cost_basis)
-                record_trade(ticker, 'open', contracts, ask, edge, btc_price, strike)
+                record_trade(ticker, 'open', contracts, ask, edge, btc_price, strike, model_fair=model_fair, vol_std=vol_std)
                 
                 # Update balance
                 cost = cost_basis + calculate_fee(contracts, ask)
