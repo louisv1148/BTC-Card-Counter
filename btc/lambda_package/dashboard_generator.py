@@ -139,6 +139,16 @@ def get_trade_history():
                     total_pnl += pnl
                     total_fees += entry_fee + exit_fee
                     
+                    # Convert UTC timestamp to Central Time
+                    closed_time = liq['timestamp']
+                    try:
+                        from zoneinfo import ZoneInfo
+                        utc_dt = datetime.fromisoformat(closed_time.replace('Z', '+00:00'))
+                        ct_dt = utc_dt.astimezone(ZoneInfo('America/Mexico_City'))
+                        closed_time = ct_dt.strftime('%H:%M:%S')
+                    except:
+                        closed_time = closed_time.split('T')[1][:8] if 'T' in closed_time else closed_time
+                    
                     closed_trades.append({
                         'ticker': ticker,
                         'contracts': contracts,
@@ -146,7 +156,7 @@ def get_trade_history():
                         'exit_price': exit_price,
                         'pnl': round(pnl, 2),
                         'pnl_pct': round(pnl_pct, 1),
-                        'closed': liq['timestamp'].split('T')[1][:8] if 'T' in liq['timestamp'] else liq['timestamp']
+                        'closed': closed_time
                     })
     
     except Exception as e:
