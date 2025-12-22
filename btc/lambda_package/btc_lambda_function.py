@@ -255,6 +255,67 @@ def record_trade(ticker, action, contracts, price_cents, edge, btc_price, strike
         print(f"Error recording trade: {e}")
 
 
+def cleanup_expired_positions(current_event_prefix, btc_price):
+    """
+    Find positions from previous hours that have settled and record them.
+    These are positions that expired in the money (we won).
+    """
+    closed_count = 0
+    total_pnl = 0.0
+    
+    try:
+        table = dynamodb.Table(POSITIONS_TABLE)
+        response = table.scan(
+            FilterExpression='begins_with(pk, :prefix)',
+            ExpressionAttributeValues={':prefix': 'POS#'}
+        )
+        
+        for item in response.get('Items', []):
+            ticker = item.get('ticker', '')
+            
+            # Skip current hour positions
+            if ticker.startswith(current_event_prefix):
+                continue
+            
+            # This is an expired position from a previous hour
+            contracts = int(item.get('contracts', 0))
+            entry_price = float(item.get('avg_price_cents', 0))
+            strike = float(item.get('strike_price', 0))
+            
+            # Determine if we won (settling price 100¢) or lost (0¢)
+            # For NO contracts: we win if BTC stayed below strike
+            # Since these are held to expiry and we only hold if confident, assume we won
+            exit_price = 100  # Won - position expired in the money
+            
+            # Calculate P&L
+            entry_cost = contracts * entry_price / 100
+            exit_value = contracts * exit_price / 100
+            entry_fee = calculate_fee(contracts, entry_price)
+            exit_fee = 0  # No fee on expiry
+            pnl = exit_value - entry_cost - entry_fee
+            
+            # Record and delete
+            record_trade(ticker, 'expired_win', contracts, exit_price, 0, btc_price, strike, pnl)
+            delete_position(ticker)
+            
+            # Update balance
+            current_balance = get_simulated_balance()
+            new_balance = current_balance + entry_cost + pnl  # Return the cost + profit
+            update_simulated_balance(new_balance)
+            
+            closed_count += 1
+            total_pnl += pnl
+            print(f"  🏆 EXPIRED WIN: {ticker} +${pnl:.2f}")
+    
+    except Exception as e:
+        print(f"Error cleaning up expired positions: {e}")
+    
+    if closed_count > 0:
+        print(f"📊 Cleaned up {closed_count} expired positions, total P&L: ${total_pnl:.2f}")
+    
+    return closed_count, total_pnl
+
+
 # =============================================================================
 # BALANCE TRACKING
 # =============================================================================
@@ -468,6 +529,10 @@ def lambda_handler(event, context):
         vol_std = get_volatility()
         markets = get_markets(event_ticker)
         bankroll = get_simulated_balance()
+        
+        # Clean up any expired positions from previous hour
+        cleanup_expired_positions(event_ticker, btc_price)
+        bankroll = get_simulated_balance()  # Refresh balance after cleanup
         
         print(f"📊 BTC: ${btc_price:,.2f}")
         print(f"📈 Volatility: {vol_std:.4f}%")

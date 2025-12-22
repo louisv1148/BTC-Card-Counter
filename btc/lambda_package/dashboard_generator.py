@@ -116,7 +116,7 @@ def get_trade_history():
             
             if action in ['open', 'add']:
                 trades_by_ticker[ticker]['opens'].append(trade_data)
-            elif action == 'liquidate':
+            elif action in ['liquidate', 'expired_win']:
                 trades_by_ticker[ticker]['liquidates'].append(trade_data)
         
         # Calculate P&L for closed positions
