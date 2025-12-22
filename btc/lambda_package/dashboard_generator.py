@@ -97,67 +97,71 @@ def get_trade_history():
             ExpressionAttributeValues={':pk': 'HF_TRADE'}
         )
         
-        # Group trades by ticker
-        trades_by_ticker = {}
-        for item in response.get('Items', []):
+        # Sort all trades chronologically
+        all_trades = sorted(response.get('Items', []), key=lambda x: x.get('sk', ''))
+        
+        # Track open positions by ticker to match with liquidates
+        open_positions = {}  # ticker -> [list of opens in order]
+        
+        for item in all_trades:
             ticker = item.get('ticker', '')
             action = item.get('action', '')
-            
-            if ticker not in trades_by_ticker:
-                trades_by_ticker[ticker] = {'opens': [], 'liquidates': []}
-            
-            trade_data = {
-                'timestamp': item.get('sk', ''),
-                'contracts': int(item.get('contracts', 0)),
-                'price_cents': int(item.get('price_cents', 0)),
-                'edge_pct': float(item.get('edge_pct', 0)),
-                'realized_pnl': float(item.get('realized_pnl', 0)) if item.get('realized_pnl') else None
-            }
+            contracts = int(item.get('contracts', 0))
+            price_cents = int(item.get('price_cents', 0))
+            timestamp = item.get('sk', '')
             
             if action in ['open', 'add']:
-                trades_by_ticker[ticker]['opens'].append(trade_data)
+                # Add to open positions for this ticker
+                if ticker not in open_positions:
+                    open_positions[ticker] = []
+                open_positions[ticker].append({
+                    'contracts': contracts,
+                    'price_cents': price_cents,
+                    'timestamp': timestamp
+                })
+            
             elif action in ['liquidate', 'expired_win']:
-                trades_by_ticker[ticker]['liquidates'].append(trade_data)
-        
-        # Calculate P&L for closed positions
-        for ticker, trades in trades_by_ticker.items():
-            if trades['liquidates']:
-                # Position was closed
-                for liq in trades['liquidates']:
-                    contracts = liq['contracts']
-                    exit_price = liq['price_cents']
-                    entry_price = trades['opens'][0]['price_cents'] if trades['opens'] else 0
+                # Match with the most recent open for this ticker
+                entry_price = 0
+                if ticker in open_positions and open_positions[ticker]:
+                    # Use the first open (FIFO) and remove it
+                    entry = open_positions[ticker].pop(0)
+                    entry_price = entry['price_cents']
                     
-                    # Calculate P&L: (exit - entry) * contracts / 100, minus fees
-                    entry_cost = contracts * entry_price / 100
-                    exit_value = contracts * exit_price / 100
-                    entry_fee = calculate_kalshi_fee(contracts, entry_price)
-                    exit_fee = calculate_kalshi_fee(contracts, exit_price)
-                    pnl = exit_value - entry_cost - entry_fee - exit_fee
-                    pnl_pct = (pnl / entry_cost) * 100 if entry_cost > 0 else 0
-                    
-                    total_pnl += pnl
-                    total_fees += entry_fee + exit_fee
-                    
-                    # Convert UTC timestamp to Central Time
-                    closed_time = liq['timestamp']
-                    try:
-                        from zoneinfo import ZoneInfo
-                        utc_dt = datetime.fromisoformat(closed_time.replace('Z', '+00:00'))
-                        ct_dt = utc_dt.astimezone(ZoneInfo('America/Mexico_City'))
-                        closed_time = ct_dt.strftime('%H:%M:%S')
-                    except:
-                        closed_time = closed_time.split('T')[1][:8] if 'T' in closed_time else closed_time
-                    
-                    closed_trades.append({
-                        'ticker': ticker,
-                        'contracts': contracts,
-                        'entry_price': entry_price,
-                        'exit_price': exit_price,
-                        'pnl': round(pnl, 2),
-                        'pnl_pct': round(pnl_pct, 1),
-                        'closed': closed_time
-                    })
+                    # If we used all opens, clear the list
+                    if not open_positions[ticker]:
+                        del open_positions[ticker]
+                
+                # Calculate P&L
+                entry_cost = contracts * entry_price / 100
+                exit_value = contracts * price_cents / 100
+                entry_fee = calculate_kalshi_fee(contracts, entry_price) if entry_price > 0 else 0
+                exit_fee = calculate_kalshi_fee(contracts, price_cents)
+                pnl = exit_value - entry_cost - entry_fee - exit_fee
+                pnl_pct = (pnl / entry_cost) * 100 if entry_cost > 0 else 0
+                
+                total_pnl += pnl
+                total_fees += entry_fee + exit_fee
+                
+                # Convert UTC timestamp to Central Time
+                closed_time = timestamp
+                try:
+                    from zoneinfo import ZoneInfo
+                    utc_dt = datetime.fromisoformat(closed_time.replace('Z', '+00:00'))
+                    ct_dt = utc_dt.astimezone(ZoneInfo('America/Mexico_City'))
+                    closed_time = ct_dt.strftime('%H:%M:%S')
+                except:
+                    closed_time = closed_time.split('T')[1][:8] if 'T' in closed_time else closed_time
+                
+                closed_trades.append({
+                    'ticker': ticker,
+                    'contracts': contracts,
+                    'entry_price': entry_price,
+                    'exit_price': price_cents,
+                    'pnl': round(pnl, 2),
+                    'pnl_pct': round(pnl_pct, 1),
+                    'closed': closed_time
+                })
     
     except Exception as e:
         print(f"Error getting trade history: {e}")
