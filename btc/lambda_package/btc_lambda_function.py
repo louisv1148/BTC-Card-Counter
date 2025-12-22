@@ -587,8 +587,13 @@ def lambda_handler(event, context):
                 print(f"  🔴 EXIT {ticker}: {reason}, P&L ${pnl:.2f}")
                 continue
             
-            # Check add conditions (only if not exiting)
-            if minutes_left > TRADING_CUTOFF_MINUTES:
+            # Check add conditions (only in late game OR if very high confidence)
+            # Calculate fair value to check if we should allow early avg down
+            model_fair = calculate_model_fair(btc_price, strike, vol_std, minutes_left)
+            in_late_game = minutes_left <= TRADING_CUTOFF_MINUTES
+            high_confidence = model_fair >= LATE_GAME_MIN_FAIR  # 98%+
+            
+            if in_late_game or high_confidence:
                 should_add, add_contracts, skip_reason = check_add_conditions(
                     pos, btc_price, vol_std, minutes_left, market_ask, bankroll
                 )
