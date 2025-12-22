@@ -320,12 +320,13 @@
                         <th>Entry</th>
                         <th>Exit</th>
                         <th>P&L</th>
+                        <th>Opened</th>
                         <th>Closed</th>
                     </tr>
                 </thead>
                 <tbody id="closed-body">
                     <tr>
-                        <td colspan="6" class="empty-state">No closed trades</td>
+                        <td colspan="7" class="empty-state">No closed trades</td>
                     </tr>
                 </tbody>
             </table>
@@ -411,7 +412,7 @@
             // Update closed trades table
             const closedBody = document.getElementById('closed-body');
             if (data.closed_trades.length === 0) {
-                closedBody.innerHTML = '<tr><td colspan="6" class="empty-state">No closed trades</td></tr>';
+                closedBody.innerHTML = '<tr><td colspan="7" class="empty-state">No closed trades</td></tr>';
             } else {
                 closedBody.innerHTML = data.closed_trades.map(trade => {
                     const pnl = trade.pnl || 0;
@@ -426,6 +427,7 @@
                             <td>${trade.entry_price}¢</td>
                             <td>${trade.exit_price}¢</td>
                             <td><span class="${pnlClass}">${pnlSign}$${pnl.toFixed(2)} (${pctSign}${pnlPct.toFixed(0)}%)</span></td>
+                            <td>${trade.opened || '-'}</td>
                             <td>${trade.closed}</td>
                         </tr>
                     `;

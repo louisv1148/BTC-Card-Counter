@@ -25,6 +25,7 @@ from zoneinfo import ZoneInfo
 # Entry parameters
 MIN_EDGE_PCT = 10.0           # Only trade if edge >= 10%
 MIN_BPS_ABOVE = 5             # Minimum basis points above current price
+MIN_FAIR_VALUE = 90.0         # Never trade if fair value < 90%
 
 # Exit parameters
 EXIT_EDGE_PCT = 2.0           # Exit when edge < 2% AND in losing position
@@ -37,11 +38,9 @@ MAX_CONTRACTS = 10            # Max contracts per trade
 MAX_EXPOSURE_FRACTION = 1.0   # 100% of bankroll max
 MAX_POSITION_FRACTION = 0.125 # 12.5% per position (half Kelly)
 
-# Averaging down
-EDGE_INCREASE_THRESHOLD = 5.0 # Add if edge increased 5pp
-AVERAGE_DOWN_MIN_EDGE = 10.0  # Only average down if edge >= 10%
-AVERAGE_DOWN_MIN_DROP = 5     # Price dropped at least 5¢
-AVERAGE_DOWN_MIN_FAIR = 95.0  # Model >= 95% likely to win
+# Averaging down (re-enabled with stricter rules)
+AVG_DOWN_MIN_FAIR = 97.0      # Only average down if fair >= 97%
+AVG_DOWN_MIN_PRICE_DROP_PCT = 5.0  # Price must have dropped 5%+ from entry
 
 # Late game strategy (inside cutoff window)
 LATE_GAME_MIN_FAIR = 98.0     # Model must be >= 98% likely to win

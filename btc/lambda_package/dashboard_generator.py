@@ -117,16 +117,19 @@ def get_trade_history():
                 open_positions[ticker].append({
                     'contracts': contracts,
                     'price_cents': price_cents,
-                    'timestamp': timestamp
+                    'timestamp': timestamp,
+                    'opened_at': timestamp  # Track when position was opened
                 })
             
             elif action in ['liquidate', 'expired_win']:
                 # Match with the most recent open for this ticker
                 entry_price = 0
+                opened_at = ''
                 if ticker in open_positions and open_positions[ticker]:
                     # Use the first open (FIFO) and remove it
                     entry = open_positions[ticker].pop(0)
                     entry_price = entry['price_cents']
+                    opened_at = entry.get('opened_at', '')
                     
                     # If we used all opens, clear the list
                     if not open_positions[ticker]:
@@ -155,6 +158,17 @@ def get_trade_history():
                 except:
                     closed_time_display = timestamp.split('T')[1][:8] if 'T' in timestamp else timestamp
                 
+                # Convert opened_at to Central Time for display
+                opened_time_display = opened_at
+                try:
+                    from zoneinfo import ZoneInfo
+                    if opened_at:
+                        utc_dt = datetime.fromisoformat(opened_at.replace('Z', '+00:00'))
+                        ct_dt = utc_dt.astimezone(ZoneInfo('America/Mexico_City'))
+                        opened_time_display = ct_dt.strftime('%H:%M:%S')
+                except:
+                    opened_time_display = opened_at.split('T')[1][:8] if 'T' in opened_at else opened_at
+                
                 closed_trades.append({
                     'ticker': ticker,
                     'contracts': contracts,
@@ -162,6 +176,7 @@ def get_trade_history():
                     'exit_price': price_cents,
                     'pnl': round(pnl, 2),
                     'pnl_pct': round(pnl_pct, 1),
+                    'opened': opened_time_display,
                     'closed': closed_time_display,
                     'timestamp_sort': timestamp_sort
                 })
