@@ -48,6 +48,11 @@ LATE_GAME_MIN_FAIR = 98.0     # Model must be >= 98% likely to win
 LATE_GAME_MIN_EDGE = 3.0      # Only need 3% edge in late game
 LATE_GAME_AVG_DOWN_DROP = 5   # Average down every 5¢ in late game
 
+# Early game volatility restriction (outside cutoff)
+# If vol >= 7%, need fair >= 90% to trade; if vol < 7%, any edge is OK
+EARLY_GAME_HIGH_VOL_THRESHOLD = 0.07  # 7% volatility threshold
+EARLY_GAME_HIGH_VOL_MIN_FAIR = 90.0   # Need 90%+ fair if vol is high
+
 # Other
 MAX_SLIPPAGE_CENTS = 3        # Skip if ask - model_fair > 3¢
 KALSHI_FEE_RATE = 0.07
@@ -478,8 +483,13 @@ def find_new_entry(markets, btc_price, vol_std, minutes_left, bankroll, existing
                 continue
             print(f"  🎯 LATE GAME: {ticker} fair={model_fair}% edge={edge:.1f}%")
         else:
-            # Normal: need higher edge threshold
+            # Normal/early game: need higher edge threshold
             if edge < MIN_EDGE_PCT:
+                continue
+            
+            # If high volatility, need higher model confidence
+            if vol_std >= EARLY_GAME_HIGH_VOL_THRESHOLD and model_fair < EARLY_GAME_HIGH_VOL_MIN_FAIR:
+                print(f"  ⏭️ {ticker}: vol {vol_std:.2%} >= 7%, needs fair >= 90% (got {model_fair}%)")
                 continue
         
         # Check slippage
