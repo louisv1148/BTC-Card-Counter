@@ -143,15 +143,17 @@ def get_trade_history():
                 total_pnl += pnl
                 total_fees += entry_fee + exit_fee
                 
-                # Convert UTC timestamp to Central Time
-                closed_time = timestamp
+                # Convert UTC timestamp to Central Time for display
+                closed_time_display = timestamp
+                timestamp_sort = timestamp  # Keep full timestamp for sorting
                 try:
                     from zoneinfo import ZoneInfo
-                    utc_dt = datetime.fromisoformat(closed_time.replace('Z', '+00:00'))
+                    utc_dt = datetime.fromisoformat(timestamp.replace('Z', '+00:00'))
                     ct_dt = utc_dt.astimezone(ZoneInfo('America/Mexico_City'))
-                    closed_time = ct_dt.strftime('%H:%M:%S')
+                    closed_time_display = ct_dt.strftime('%H:%M:%S')
+                    timestamp_sort = ct_dt.isoformat()  # Full ISO for sorting
                 except:
-                    closed_time = closed_time.split('T')[1][:8] if 'T' in closed_time else closed_time
+                    closed_time_display = timestamp.split('T')[1][:8] if 'T' in timestamp else timestamp
                 
                 closed_trades.append({
                     'ticker': ticker,
@@ -160,14 +162,20 @@ def get_trade_history():
                     'exit_price': price_cents,
                     'pnl': round(pnl, 2),
                     'pnl_pct': round(pnl_pct, 1),
-                    'closed': closed_time
+                    'closed': closed_time_display,
+                    'timestamp_sort': timestamp_sort
                 })
     
     except Exception as e:
         print(f"Error getting trade history: {e}")
     
+    # Sort by full timestamp, then remove the sort key before returning
+    sorted_trades = sorted(closed_trades, key=lambda x: x.get('timestamp_sort', ''), reverse=True)[:20]
+    for trade in sorted_trades:
+        trade.pop('timestamp_sort', None)
+    
     return {
-        'closed_trades': sorted(closed_trades, key=lambda x: x.get('closed', ''), reverse=True)[:20],
+        'closed_trades': sorted_trades,
         'total_pnl': total_pnl,
         'total_fees': total_fees,
         'trade_count': len(closed_trades)
