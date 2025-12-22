@@ -25,7 +25,7 @@ from zoneinfo import ZoneInfo
 # Entry parameters
 MIN_EDGE_PCT = 10.0           # Only trade if edge >= 10%
 MIN_BPS_ABOVE = 5             # Minimum basis points above current price
-MIN_FAIR_VALUE = 90.0         # Never trade if fair value < 90%
+MIN_FAIR_VALUE = 95.0         # Never trade if fair value < 95%
 
 # Exit parameters
 EXIT_EDGE_PCT = 2.0           # Exit when edge < 2% AND in losing position
