@@ -581,8 +581,11 @@ def lambda_handler(event, context):
                 record_trade(ticker, 'liquidate', contracts, market_bid, 
                            pos['last_edge'], btc_price, strike, pnl)
                 
-                # Update balance
-                new_balance = bankroll + pnl
+                # Update balance - add back the PROCEEDS (sale value minus exit fee)
+                # Entry cost was already deducted when opening, so we get back the full sale proceeds
+                proceeds = contracts * market_bid / 100
+                exit_fee = calculate_fee(contracts, market_bid)
+                new_balance = bankroll + proceeds - exit_fee
                 update_simulated_balance(new_balance)
                 bankroll = new_balance
                 
