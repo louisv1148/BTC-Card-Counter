@@ -477,6 +477,8 @@ def find_new_entry(markets, btc_price, vol_std, minutes_left, bankroll, existing
         if late_game:
             # Late game: need very high model confidence but lower edge threshold
             if model_fair < LATE_GAME_MIN_FAIR:
+                if edge >= 10:  # Only log notable skips
+                    print(f"  ⏭️ {ticker}: LATE GAME skip - model_fair {model_fair}% < target {LATE_GAME_MIN_FAIR}% (Edge: {edge:.1f}%)")
                 continue
             if edge < LATE_GAME_MIN_EDGE:
                 continue
