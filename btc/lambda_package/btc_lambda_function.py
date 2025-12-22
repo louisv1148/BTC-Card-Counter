@@ -603,39 +603,14 @@ def lambda_handler(event, context):
             in_late_game = minutes_left <= TRADING_CUTOFF_MINUTES
             high_confidence = model_fair >= LATE_GAME_MIN_FAIR  # 98%+
             
-            if in_late_game or high_confidence:
-                should_add, add_contracts, skip_reason = check_add_conditions(
-                    pos, btc_price, vol_std, minutes_left, market_ask, bankroll
-                )
-                
-                if should_add and add_contracts > 0:
-                    # Calculate new average
-                    old_cost = contracts * pos['avg_price_cents']
-                    add_cost = add_contracts * market_ask
-                    new_contracts = contracts + add_contracts
-                    new_avg = (old_cost + add_cost) / new_contracts
-                    new_cost_basis = pos['cost_basis'] + (add_contracts * market_ask / 100)
-                    
-                    model_fair = calculate_model_fair(btc_price, strike, vol_std, minutes_left)
-                    new_edge = calculate_edge(model_fair, market_ask)
-                    
-                    # Update position
-                    save_position(ticker, new_contracts, new_avg, strike, new_edge, new_cost_basis)
-                    record_trade(ticker, 'add', add_contracts, market_ask, new_edge, btc_price, strike)
-                    
-                    # Update balance
-                    cost = add_contracts * market_ask / 100 + calculate_fee(add_contracts, market_ask)
-                    new_balance = bankroll - cost
-                    update_simulated_balance(new_balance)
-                    bankroll = new_balance
-                    
-                    trades_made.append({
-                        'action': 'add',
-                        'ticker': ticker,
-                        'contracts': add_contracts,
-                        'price': market_ask
-                    })
-                    print(f"  ➕ ADD {add_contracts} to {ticker} @ {market_ask}¢")
+            # DISABLED: Cost averaging / adding to positions
+            # if in_late_game or high_confidence:
+            #     should_add, add_contracts, skip_reason = check_add_conditions(
+            #         pos, btc_price, vol_std, minutes_left, market_ask, bankroll
+            #     )
+            #     
+            #     if should_add and add_contracts > 0:
+            #         ... (averaging down logic disabled)
         
         # Look for new entries
         # Normal mode outside cutoff, late game mode inside cutoff (high confidence only)
