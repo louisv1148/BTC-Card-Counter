@@ -29,6 +29,13 @@ jobs:
             --content-type "text/html" \
             --cache-control "no-cache, no-store, must-revalidate"
 
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt -t btc/lambda_package/
+          # Remove binary files that might cause issues if they are platform-specific
+          find btc/lambda_package -name "*.so" -delete
+          find btc/lambda_package -name "__pycache__" -type d -exec rm -rf {} +
+
       - name: Deploy Dashboard Generator Lambda
         run: |
           cd btc/lambda_package

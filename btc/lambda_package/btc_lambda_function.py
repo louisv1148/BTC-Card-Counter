@@ -43,7 +43,7 @@ AVG_DOWN_MIN_FAIR = 97.0      # Only average down if fair >= 97%
 AVG_DOWN_MIN_PRICE_DROP_PCT = 5.0  # Price must have dropped 5%+ from entry
 
 # Late game strategy (inside cutoff window)
-LATE_GAME_MIN_FAIR = 98.0     # Model must be >= 98% likely to win
+LATE_GAME_MIN_FAIR = 96.0     # Model must be >= 96% likely to win
 LATE_GAME_MIN_EDGE = 3.0      # Only need 3% edge in late game
 LATE_GAME_AVG_DOWN_DROP = 5   # Average down every 5¢ in late game
 
