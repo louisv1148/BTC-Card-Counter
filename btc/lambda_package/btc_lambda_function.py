@@ -11,6 +11,7 @@ Full trading logic running on AWS Lambda 24/7:
 
 import json
 import math
+import os
 import boto3
 import requests
 from datetime import datetime, timedelta, timezone
@@ -56,12 +57,12 @@ EARLY_GAME_HIGH_VOL_MIN_FAIR = 90.0   # Need 90%+ fair if vol is high
 MAX_SLIPPAGE_CENTS = 3        # Skip if ask - model_fair > 3¢
 KALSHI_FEE_RATE = 0.07
 TRADING_CUTOFF_MINUTES = 15   # Normal cutoff (late game rules apply inside)
-DRY_RUN = True                # Set via environment variable
-STARTING_BALANCE = 200.0
 
-# DynamoDB tables
-POSITIONS_TABLE = "BTCHFPositions-DryRun"
-VOL_TABLE = "BTCPriceHistory"
+# Environment-driven configuration (for dry-run vs live)
+DRY_RUN = os.environ.get('DRY_RUN', 'true').lower() == 'true'
+POSITIONS_TABLE = os.environ.get('POSITIONS_TABLE', 'BTCHFPositions-DryRun')
+STARTING_BALANCE = float(os.environ.get('STARTING_BALANCE', '200.0'))
+VOL_TABLE = os.environ.get('VOL_TABLE', 'BTCPriceHistory')
 
 # AWS clients
 dynamodb = boto3.resource('dynamodb')

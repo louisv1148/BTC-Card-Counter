@@ -5,18 +5,19 @@ Replaces the local generate_status.py script.
 """
 import json
 import math
+import os
 import boto3
 import requests
 from datetime import datetime, timedelta, timezone
 from decimal import Decimal
 
-# Configuration
-S3_BUCKET = "btc-trading-dashboard-1765598917"
-S3_KEY = "status.json"
-DYNAMODB_POSITIONS_TABLE = "BTCHFPositions-DryRun"
-DYNAMODB_VOL_TABLE = "BTCPriceHistory"
+# Environment-driven configuration (for dry-run vs live)
+S3_BUCKET = os.environ.get('S3_BUCKET', 'btc-trading-dashboard-1765598917')
+S3_KEY = os.environ.get('S3_KEY', 'status.json')
+DYNAMODB_POSITIONS_TABLE = os.environ.get('POSITIONS_TABLE', 'BTCHFPositions-DryRun')
+DYNAMODB_VOL_TABLE = os.environ.get('VOL_TABLE', 'BTCPriceHistory')
 KALSHI_FEE_RATE = 0.07
-STARTING_BALANCE = 200.0
+STARTING_BALANCE = float(os.environ.get('STARTING_BALANCE', '200.0'))
 
 # Initialize AWS clients
 s3 = boto3.client('s3')
