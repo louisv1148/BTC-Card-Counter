@@ -53,6 +53,14 @@ jobs:
             --zip-file fileb://btc/live_lambda.zip \
             --region us-east-1
 
+      - name: Update Live Lambda with Kalshi credentials
+        run: |
+          aws lambda wait function-updated --function-name BTCTradingBot-Live --region us-east-1
+          aws lambda update-function-configuration \
+            --function-name BTCTradingBot-Live \
+            --environment "Variables={DRY_RUN=false,POSITIONS_TABLE=BTCHFPositions-Live,STARTING_BALANCE=100.0,KALSHI_KEY_ID=${{ secrets.KALSHI_KEY_ID }},KALSHI_PRIVATE_KEY=${{ secrets.KALSHI_PRIVATE_KEY }}}" \
+            --region us-east-1
+
       - name: Verify deployment
         run: |
           aws lambda wait function-updated --function-name BTCTradingBot-Live --region us-east-1
