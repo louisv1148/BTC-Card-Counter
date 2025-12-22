@@ -344,6 +344,27 @@ def get_simulated_balance():
     return STARTING_BALANCE
 
 
+def get_real_kalshi_balance():
+    """Get actual balance from Kalshi API."""
+    try:
+        from kalshi_client import KalshiClient
+        client = KalshiClient()
+        balance_data = client.get_balance()
+        # Kalshi returns balance in cents, convert to dollars
+        return float(balance_data.get('balance', 0)) / 100
+    except Exception as e:
+        print(f"Error getting Kalshi balance: {e}")
+        return 0.0
+
+
+def get_balance():
+    """Get balance - real from Kalshi if live, simulated if dry-run."""
+    if DRY_RUN:
+        return get_simulated_balance()
+    else:
+        return get_real_kalshi_balance()
+
+
 def update_simulated_balance(balance):
     """Update simulated balance in DynamoDB."""
     try:
@@ -546,11 +567,11 @@ def lambda_handler(event, context):
         
         vol_std = get_volatility()
         markets = get_markets(event_ticker)
-        bankroll = get_simulated_balance()
+        bankroll = get_balance()
         
         # Clean up any expired positions from previous hour
         cleanup_expired_positions(event_ticker, btc_price)
-        bankroll = get_simulated_balance()  # Refresh balance after cleanup
+        bankroll = get_balance()  # Refresh balance after cleanup
         
         print(f"📊 BTC: ${btc_price:,.2f}")
         print(f"📈 Volatility: {vol_std:.4f}%")

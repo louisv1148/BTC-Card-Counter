@@ -16,12 +16,49 @@ S3_BUCKET = os.environ.get('S3_BUCKET', 'btc-trading-dashboard-1765598917')
 S3_KEY = os.environ.get('S3_KEY', 'status.json')
 DYNAMODB_POSITIONS_TABLE = os.environ.get('POSITIONS_TABLE', 'BTCHFPositions-DryRun')
 DYNAMODB_VOL_TABLE = os.environ.get('VOL_TABLE', 'BTCPriceHistory')
+DRY_RUN = os.environ.get('DRY_RUN', 'true').lower() == 'true'
 KALSHI_FEE_RATE = 0.07
 STARTING_BALANCE = float(os.environ.get('STARTING_BALANCE', '200.0'))
 
 # Initialize AWS clients
 s3 = boto3.client('s3')
 dynamodb = boto3.resource('dynamodb')
+
+
+def get_real_kalshi_balance():
+    """Get actual balance from Kalshi API."""
+    try:
+        from kalshi_client import KalshiClient
+        client = KalshiClient()
+        balance_data = client.get_balance()
+        # Kalshi returns balance in cents, convert to dollars
+        return float(balance_data.get('balance', 0)) / 100
+    except Exception as e:
+        print(f"Error getting Kalshi balance: {e}")
+        return 0.0
+
+
+def get_real_kalshi_positions():
+    """Get actual positions from Kalshi API."""
+    try:
+        from kalshi_client import KalshiClient
+        client = KalshiClient()
+        positions_data = client.get_positions()
+        positions = []
+        for pos in positions_data.get('market_positions', []):
+            if pos.get('position', 0) != 0:  # Only include non-zero positions
+                positions.append({
+                    'ticker': pos.get('ticker', ''),
+                    'contracts': abs(pos.get('position', 0)),
+                    'avg_price_cents': pos.get('last_bought_price', 0),
+                    'strike_price': 0,  # Would need to parse from ticker
+                    'last_edge': 0,
+                    'cost_basis': abs(pos.get('position', 0)) * pos.get('last_bought_price', 0) / 100
+                })
+        return positions
+    except Exception as e:
+        print(f"Error getting Kalshi positions: {e}")
+        return []
 
 
 
@@ -392,8 +429,11 @@ def lambda_handler(event, context):
     # Calculate unrealized P&L from open positions
     unrealized_pnl = sum(p.get('unrealized_pnl', 0) for p in open_positions)
     
-    # Calculate balance (starting balance + realized P&L - current exposure)
-    balance = STARTING_BALANCE + trade_history['total_pnl'] - total_exposure
+    # Calculate balance - real from Kalshi if live, simulated if dry-run
+    if DRY_RUN:
+        balance = STARTING_BALANCE + trade_history['total_pnl'] - total_exposure
+    else:
+        balance = get_real_kalshi_balance()
     
     # Build status data
     data = {
