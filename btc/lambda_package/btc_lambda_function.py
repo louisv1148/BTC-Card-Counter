@@ -165,9 +165,11 @@ def get_volatility(minutes_to_settlement=15):
             # Calculate minute-to-minute returns
             returns = [(prices[i] - prices[i-1]) / prices[i-1] * 100 for i in range(1, len(prices))]
             if len(returns) > 1:
-                vol = statistics.stdev(returns)
-                print(f"📈 Volatility ({window}m window): {vol:.4f}%")
-                return vol
+                per_minute_vol = statistics.stdev(returns)
+                # Scale by sqrt(window) to get the N-minute expected move
+                scaled_vol = per_minute_vol * math.sqrt(window)
+                print(f"📈 Volatility ({window}m window): {scaled_vol:.4f}% (per-min: {per_minute_vol:.4f}%)")
+                return scaled_vol
         
         print(f"⚠️ Insufficient price data for {window}m volatility, using default")
         
@@ -207,16 +209,15 @@ def calculate_model_fair(btc_price, strike, vol_std, minutes_left):
     """
     Calculate model fair value for NO contract (0-100).
     
-    vol_std is the per-minute standard deviation of returns.
-    We scale by sqrt(minutes_left) to get the expected N-minute volatility.
+    vol_std is the ALREADY SCALED volatility (per-minute stdev × sqrt(window)).
+    This represents the expected 1σ move over the time window.
     """
     if minutes_left <= 0 or vol_std <= 0:
         return 100 if btc_price < strike else 0
     
-    # Scale per-minute volatility by sqrt(time) to get N-minute expected move
-    vol_scaled = vol_std * math.sqrt(minutes_left)
+    # vol_std is already scaled, use directly
     price_diff_pct = (strike - btc_price) / btc_price * 100 if btc_price > 0 else 0
-    std_devs = price_diff_pct / vol_scaled if vol_scaled > 0 else 0
+    std_devs = price_diff_pct / vol_std if vol_std > 0 else 0
     prob = norm_cdf(std_devs)
     return int(prob * 100)
 

@@ -369,16 +369,15 @@ def calculate_model_fair(btc_price, strike, vol_std, minutes_left):
     """
     Calculate model fair value for NO contract.
     
-    vol_std is the per-minute standard deviation of returns.
-    We scale by sqrt(minutes_left) to get the expected N-minute volatility.
+    vol_std is the ALREADY SCALED volatility (per-minute stdev × sqrt(window)).
+    This represents the expected 1σ move over the time window.
     """
     if minutes_left <= 0 or vol_std <= 0:
         return 100 if btc_price < strike else 0
     
-    # Scale per-minute volatility by sqrt(time) to get N-minute expected move
-    vol_scaled = vol_std * math.sqrt(minutes_left)
+    # vol_std is already scaled, use directly
     price_diff_pct = (strike - btc_price) / btc_price * 100 if btc_price > 0 else 0
-    std_devs = price_diff_pct / vol_scaled if vol_scaled > 0 else 0
+    std_devs = price_diff_pct / vol_std if vol_std > 0 else 0
     prob = norm_cdf(std_devs)
     return int(prob * 100)
 
@@ -476,7 +475,16 @@ def lambda_handler(event, context):
     
     # Gather data
     btc_price = get_btc_price()
-    vol_std = get_volatility()
+    
+    # Compute volatility by window ONCE (for chart and fair value calculations)
+    volatility_by_window = get_volatility_by_window()
+    
+    # Extract the scaled volatility for the current minutes_to_settlement
+    # Clamp to valid range (2-60)
+    vol_window = max(2, min(60, minutes_to_settlement))
+    vol_std = next((v['volatility'] for v in volatility_by_window if v['window'] == vol_window), 0.10)
+    print(f"[DEBUG] Using {vol_window}m volatility: {vol_std:.4f}%")
+    
     positions = get_open_positions(current_event_prefix)
     
     # Get market data for positions
@@ -561,7 +569,7 @@ def lambda_handler(event, context):
             'total_fees': round(trade_history['total_fees'], 2),
             'closed_trades': trade_history['trade_count']
         },
-        'volatility_by_window': get_volatility_by_window(),
+        'volatility_by_window': volatility_by_window,  # Already computed above
         'last_updated': datetime.now(timezone.utc).isoformat()
     }
 
