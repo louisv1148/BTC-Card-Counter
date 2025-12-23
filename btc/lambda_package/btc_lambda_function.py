@@ -27,6 +27,7 @@ from zoneinfo import ZoneInfo
 MIN_EDGE_PCT = 10.0           # Only trade if edge >= 10%
 MIN_BPS_ABOVE = 5             # Minimum basis points above current price
 MIN_FAIR_VALUE = 95.0         # Never trade if fair value < 95%
+MAX_VOLATILITY = 0.07         # Stop trading if volatility > 7%
 
 # Exit parameters
 EXIT_EDGE_PCT = 2.0           # Exit when edge < 2% AND in losing position
@@ -694,9 +695,13 @@ def lambda_handler(event, context):
         
         # Look for new entries
         # Normal mode outside cutoff, late game mode inside cutoff (high confidence only)
+        # SKIP if volatility is too high
         in_cutoff = minutes_left <= TRADING_CUTOFF_MINUTES
         remaining_exposure = bankroll * MAX_EXPOSURE_FRACTION - total_exposure
-        if remaining_exposure > 1:  # At least $1 available
+        
+        if vol_std > MAX_VOLATILITY:
+            print(f"⚠️ VOLATILITY TOO HIGH ({vol_std:.4f}% > {MAX_VOLATILITY:.2f}%) - Skipping new entries")
+        elif remaining_exposure > 1:  # At least $1 available
             market, contracts, edge, model_fair = find_new_entry(
                 markets, btc_price, vol_std, minutes_left, bankroll, existing_tickers,
                 late_game=in_cutoff
