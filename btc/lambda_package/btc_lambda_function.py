@@ -115,17 +115,65 @@ def get_btc_price():
     return None
 
 
-def get_volatility():
-    """Fetch volatility from DynamoDB."""
+def get_volatility(minutes_to_settlement=15):
+    """
+    Calculate volatility for the given time window.
+    
+    Uses the volatility over the same number of minutes as time remaining to settlement.
+    E.g., at XX:50 (10 min left), uses 10-min volatility.
+    At XX:10 (50 min left), uses 50-min volatility.
+    """
+    import statistics
+    import boto3.dynamodb.conditions as conditions
+    
+    # Clamp to valid range (2-60 minutes)
+    window = max(2, min(60, minutes_to_settlement))
+    
     try:
         table = dynamodb.Table(VOL_TABLE)
-        response = table.get_item(Key={'pk': 'VOL', 'sk': 'LATEST'})
-        item = response.get('Item')
-        if item:
-            return float(item.get('vol_15m_std', 0.02))
+        now = datetime.now(timezone.utc)
+        start_time = now - timedelta(minutes=window)
+        
+        # Query prices for this window
+        today_pk = f"PRICE#{now.strftime('%Y%m%d')}"
+        today_start_sk = start_time.strftime('%H:%M:%S') if start_time.date() == now.date() else "00:00:00"
+        
+        prices = []
+        response = table.query(
+            KeyConditionExpression=conditions.Key('pk').eq(today_pk) & 
+                                  conditions.Key('sk').gte(today_start_sk)
+        )
+        
+        for item in response.get('Items', []):
+            prices.append(float(item['price']))
+        
+        # If we need data from yesterday
+        if start_time.date() < now.date():
+            yesterday_pk = f"PRICE#{start_time.strftime('%Y%m%d')}"
+            yesterday_start_sk = start_time.strftime('%H:%M:%S')
+            
+            response = table.query(
+                KeyConditionExpression=conditions.Key('pk').eq(yesterday_pk) & 
+                                      conditions.Key('sk').gte(yesterday_start_sk)
+            )
+            
+            for item in response.get('Items', []):
+                prices.append(float(item['price']))
+        
+        if len(prices) >= 2:
+            # Calculate minute-to-minute returns
+            returns = [(prices[i] - prices[i-1]) / prices[i-1] * 100 for i in range(1, len(prices))]
+            if len(returns) > 1:
+                vol = statistics.stdev(returns)
+                print(f"📈 Volatility ({window}m window): {vol:.4f}%")
+                return vol
+        
+        print(f"⚠️ Insufficient price data for {window}m volatility, using default")
+        
     except Exception as e:
         print(f"Error getting volatility: {e}")
-    return 0.02
+    
+    return 0.02  # Default fallback
 
 
 def get_markets(event_ticker):
@@ -565,7 +613,7 @@ def lambda_handler(event, context):
         if not btc_price:
             return {'statusCode': 500, 'body': json.dumps({'error': 'No BTC price'})}
         
-        vol_std = get_volatility()
+        vol_std = get_volatility(minutes_left)  # Use volatility matching time to settlement
         markets = get_markets(event_ticker)
         bankroll = get_balance()
         

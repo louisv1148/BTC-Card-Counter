@@ -489,13 +489,14 @@
             // Update timestamp
             document.getElementById('last-update').textContent = new Date().toLocaleTimeString();
 
-            // Update volatility chart
+            // Update volatility chart - highlight the window matching minutes to settlement
             if (data.volatility_by_window && data.volatility_by_window.length > 0) {
-                renderVolatilityChart(data.volatility_by_window, data.volatility || 0);
+                const activeWindow = data.minutes_to_settlement || 15;
+                renderVolatilityChart(data.volatility_by_window, activeWindow);
             }
         }
 
-        function renderVolatilityChart(volData, currentVol) {
+        function renderVolatilityChart(volData, activeWindow) {
             const canvas = document.getElementById('volatility-chart');
             if (!canvas) return;
 
@@ -523,13 +524,14 @@
             const chartWidth = width - padding.left - padding.right;
             const chartHeight = height - padding.top - padding.bottom;
 
-            // Find the 15-minute window data point for highlighting
-            const window15Data = volData.find(d => d.window === 15);
+            // Find the active window data point for highlighting
+            const clampedWindow = Math.max(2, Math.min(60, activeWindow));
+            const activeData = volData.find(d => d.window === clampedWindow);
 
-            // Update label
+            // Update label with active window
             const label = document.getElementById('current-window-label');
-            if (label && window15Data) {
-                label.textContent = `Using 15m: ${(window15Data.volatility).toFixed(3)}%`;
+            if (label && activeData) {
+                label.textContent = `Using ${clampedWindow}m: ${(activeData.volatility).toFixed(3)}%`;
             }
 
             // Draw grid lines
@@ -567,16 +569,16 @@
                 // Y position: scaled to chart height
                 const y = padding.top + chartHeight - ((d.volatility - minVol) / volRange) * chartHeight;
 
-                // Check if this is the 15m window
-                const is15m = d.window === 15;
+                // Check if this is the active window
+                const isActive = d.window === clampedWindow;
 
                 ctx.beginPath();
-                ctx.arc(x, y, is15m ? 6 : 3, 0, Math.PI * 2);
-                ctx.fillStyle = is15m ? '#00ff88' : '#ff9500';
+                ctx.arc(x, y, isActive ? 6 : 3, 0, Math.PI * 2);
+                ctx.fillStyle = isActive ? '#00ff88' : '#ff9500';
                 ctx.fill();
 
-                // Add glow effect for 15m point
-                if (is15m) {
+                // Add glow effect for active point
+                if (isActive) {
                     ctx.beginPath();
                     ctx.arc(x, y, 10, 0, Math.PI * 2);
                     ctx.fillStyle = 'rgba(0, 255, 136, 0.2)';
