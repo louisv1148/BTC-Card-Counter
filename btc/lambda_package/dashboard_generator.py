@@ -170,11 +170,13 @@ def get_volatility_by_window():
         
         if len(window_prices) >= 2:
             # Calculate minute-to-minute returns (percent)
+            # Calculate minute-to-minute returns (percent)
             returns = []
             for i in range(1, len(window_prices)):
                 ret = (window_prices[i]['price'] - window_prices[i-1]['price']) / window_prices[i-1]['price'] * 100
                 returns.append(ret)
             
+            if len(returns) > 1:
                 per_minute_vol = statistics.stdev(returns)
                 # Scale by sqrt of time period for chart display (Total Expected Move)
                 scaled_vol = per_minute_vol * math.sqrt(window)
