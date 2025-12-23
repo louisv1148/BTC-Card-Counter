@@ -144,6 +144,7 @@ def get_recent_prices(minutes):
 def get_volatility_by_window():
     """Calculate volatility (std dev of returns) for each window from 2 to 60 minutes."""
     import statistics
+    import math
     
     # Fetch last 60 minutes of prices
     prices = get_recent_prices(60)
@@ -167,12 +168,17 @@ def get_volatility_by_window():
                 ret = (window_prices[i]['price'] - window_prices[i-1]['price']) / window_prices[i-1]['price'] * 100
                 returns.append(ret)
             
-            # Calculate std dev
-            std_dev = statistics.stdev(returns) if len(returns) > 1 else 0
+            # Calculate std dev and scale by sqrt(window) for time-scaled 1σ
+            if len(returns) > 1:
+                std_dev = statistics.stdev(returns)
+                # Scale by sqrt of time period for proper volatility scaling
+                scaled_vol = std_dev * math.sqrt(window)
+            else:
+                scaled_vol = 0
             
             volatility_data.append({
                 'window': window,
-                'volatility': round(std_dev, 4)
+                'volatility': round(scaled_vol, 4)
             })
     
     return volatility_data
