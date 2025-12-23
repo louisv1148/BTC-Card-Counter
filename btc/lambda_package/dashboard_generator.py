@@ -405,7 +405,7 @@ def get_fair_values(btc_price, event_ticker, vol_std, minutes_left):
                 edge = (model_prob - market_prob) * 100
                 
                 fair_values.append({
-                    'strike': strike,
+                    'strike': strike + 0.01,  # Add $0.01 to match Kalshi display
                     'no_bid': no_bid,
                     'no_ask': no_ask,
                     'model_fair': model_fair,
