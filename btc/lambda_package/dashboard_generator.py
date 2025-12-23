@@ -97,11 +97,15 @@ def get_recent_prices(minutes):
     today_pk = f"PRICE#{now.strftime('%Y%m%d')}"
     today_start_sk = start_time.strftime('%H:%M:%S') if start_time.date() == now.date() else "00:00:00"
     
+    print(f"[VOL DEBUG] Querying {minutes}m of prices: pk={today_pk}, sk >= {today_start_sk}")
+    
     try:
         response = table.query(
             KeyConditionExpression=conditions.Key('pk').eq(today_pk) & 
                                   conditions.Key('sk').gte(today_start_sk)
         )
+        
+        print(f"[VOL DEBUG] Query returned {len(response.get('Items', []))} items")
         
         for item in response.get('Items', []):
             prices.append({
@@ -119,6 +123,8 @@ def get_recent_prices(minutes):
                                       conditions.Key('sk').gte(yesterday_start_sk)
             )
             
+            print(f"[VOL DEBUG] Yesterday query returned {len(response.get('Items', []))} items")
+            
             for item in response.get('Items', []):
                 prices.append({
                     'timestamp': item['timestamp_utc'],
@@ -131,6 +137,7 @@ def get_recent_prices(minutes):
     except Exception as e:
         print(f"Error getting recent prices: {e}")
     
+    print(f"[VOL DEBUG] Total prices found: {len(prices)}")
     return prices
 
 
