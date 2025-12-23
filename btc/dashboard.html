@@ -310,6 +310,18 @@
             </table>
         </div>
 
+        <div class="table-container" style="padding: 20px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                <h2 style="font-size: 18px; margin: 0;">Realized Volatility (1σ) by Window</h2>
+                <span id="current-window-label" style="color: #00ff88; font-size: 14px; font-weight: bold;">Using 15m:
+                    0.00%</span>
+            </div>
+            <div
+                style="position: relative; height: 200px; background: rgba(0,0,0,0.3); border-radius: 8px; padding: 20px;">
+                <canvas id="volatility-chart" style="width: 100%; height: 100%;"></canvas>
+            </div>
+        </div>
+
         <div class="table-container">
             <h2 style="margin-bottom: 16px; font-size: 18px;">🔴 Closed Trades (Last Hour)</h2>
             <table id="closed-table">
@@ -476,6 +488,101 @@
 
             // Update timestamp
             document.getElementById('last-update').textContent = new Date().toLocaleTimeString();
+
+            // Update volatility chart
+            if (data.volatility_by_window && data.volatility_by_window.length > 0) {
+                renderVolatilityChart(data.volatility_by_window, data.volatility || 0);
+            }
+        }
+
+        function renderVolatilityChart(volData, currentVol) {
+            const canvas = document.getElementById('volatility-chart');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            const container = canvas.parentElement;
+
+            // Set canvas size to match container
+            canvas.width = container.clientWidth - 40;
+            canvas.height = container.clientHeight - 10;
+
+            const width = canvas.width;
+            const height = canvas.height;
+            const padding = { left: 50, right: 20, top: 10, bottom: 30 };
+
+            // Clear canvas
+            ctx.clearRect(0, 0, width, height);
+
+            // Get min/max values
+            const volatilities = volData.map(d => d.volatility);
+            const minVol = Math.min(...volatilities);
+            const maxVol = Math.max(...volatilities);
+            const volRange = maxVol - minVol || 0.01;
+
+            // Chart area dimensions
+            const chartWidth = width - padding.left - padding.right;
+            const chartHeight = height - padding.top - padding.bottom;
+
+            // Find the 15-minute window data point for highlighting
+            const window15Data = volData.find(d => d.window === 15);
+
+            // Update label
+            const label = document.getElementById('current-window-label');
+            if (label && window15Data) {
+                label.textContent = `Using 15m: ${(window15Data.volatility).toFixed(3)}%`;
+            }
+
+            // Draw grid lines
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+            ctx.lineWidth = 1;
+
+            // Vertical grid lines at 60m, 40m, 20m
+            [60, 40, 20].forEach(window => {
+                const x = padding.left + ((60 - window) / 58) * chartWidth;
+                ctx.beginPath();
+                ctx.moveTo(x, padding.top);
+                ctx.lineTo(x, height - padding.bottom);
+                ctx.stroke();
+            });
+
+            // Draw Y-axis labels
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+            ctx.font = '11px Inter, sans-serif';
+            ctx.textAlign = 'right';
+
+            ctx.fillText(`${maxVol.toFixed(3)}%`, padding.left - 5, padding.top + 10);
+            ctx.fillText(`${minVol.toFixed(3)}%`, padding.left - 5, height - padding.bottom);
+
+            // Draw X-axis labels
+            ctx.textAlign = 'center';
+            [60, 40, 20].forEach(window => {
+                const x = padding.left + ((60 - window) / 58) * chartWidth;
+                ctx.fillText(`${window}m`, x, height - 5);
+            });
+
+            // Draw data points as orange dots
+            volData.forEach((d, i) => {
+                // X position: reversed (60m on left, 2m on right)
+                const x = padding.left + ((60 - d.window) / 58) * chartWidth;
+                // Y position: scaled to chart height
+                const y = padding.top + chartHeight - ((d.volatility - minVol) / volRange) * chartHeight;
+
+                // Check if this is the 15m window
+                const is15m = d.window === 15;
+
+                ctx.beginPath();
+                ctx.arc(x, y, is15m ? 6 : 3, 0, Math.PI * 2);
+                ctx.fillStyle = is15m ? '#00ff88' : '#ff9500';
+                ctx.fill();
+
+                // Add glow effect for 15m point
+                if (is15m) {
+                    ctx.beginPath();
+                    ctx.arc(x, y, 10, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(0, 255, 136, 0.2)';
+                    ctx.fill();
+                }
+            });
         }
 
 

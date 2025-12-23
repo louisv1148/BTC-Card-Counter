@@ -83,6 +83,94 @@ def get_volatility():
     return 0.02
 
 
+def get_recent_prices(minutes):
+    """Get prices from the last N minutes from DynamoDB."""
+    import boto3.dynamodb.conditions as conditions
+    
+    table = dynamodb.Table(DYNAMODB_VOL_TABLE)
+    now = datetime.now(timezone.utc)
+    start_time = now - timedelta(minutes=minutes)
+    
+    prices = []
+    
+    # Query today's prices
+    today_pk = f"PRICE#{now.strftime('%Y%m%d')}"
+    today_start_sk = start_time.strftime('%H:%M:%S') if start_time.date() == now.date() else "00:00:00"
+    
+    try:
+        response = table.query(
+            KeyConditionExpression=conditions.Key('pk').eq(today_pk) & 
+                                  conditions.Key('sk').gte(today_start_sk)
+        )
+        
+        for item in response.get('Items', []):
+            prices.append({
+                'timestamp': item['timestamp_utc'],
+                'price': float(item['price'])
+            })
+        
+        # If we need data from yesterday (e.g., it's 00:05 and we need 60 min of data)
+        if start_time.date() < now.date():
+            yesterday_pk = f"PRICE#{start_time.strftime('%Y%m%d')}"
+            yesterday_start_sk = start_time.strftime('%H:%M:%S')
+            
+            response = table.query(
+                KeyConditionExpression=conditions.Key('pk').eq(yesterday_pk) & 
+                                      conditions.Key('sk').gte(yesterday_start_sk)
+            )
+            
+            for item in response.get('Items', []):
+                prices.append({
+                    'timestamp': item['timestamp_utc'],
+                    'price': float(item['price'])
+                })
+        
+        # Sort by timestamp
+        prices.sort(key=lambda x: x['timestamp'])
+        
+    except Exception as e:
+        print(f"Error getting recent prices: {e}")
+    
+    return prices
+
+
+def get_volatility_by_window():
+    """Calculate volatility (std dev of returns) for each window from 2 to 60 minutes."""
+    import statistics
+    
+    # Fetch last 60 minutes of prices
+    prices = get_recent_prices(60)
+    
+    if len(prices) < 2:
+        return []
+    
+    volatility_data = []
+    
+    for window in range(2, 61):
+        # Take the last 'window' prices
+        if len(prices) >= window:
+            window_prices = prices[-window:]
+        else:
+            window_prices = prices
+        
+        if len(window_prices) >= 2:
+            # Calculate minute-to-minute returns (percent)
+            returns = []
+            for i in range(1, len(window_prices)):
+                ret = (window_prices[i]['price'] - window_prices[i-1]['price']) / window_prices[i-1]['price'] * 100
+                returns.append(ret)
+            
+            # Calculate std dev
+            std_dev = statistics.stdev(returns) if len(returns) > 1 else 0
+            
+            volatility_data.append({
+                'window': window,
+                'volatility': round(std_dev, 4)
+            })
+    
+    return volatility_data
+
+
 def get_btc_price():
     """Fetch current BTC price from Coinbase."""
     try:
@@ -454,6 +542,7 @@ def lambda_handler(event, context):
             'total_fees': round(trade_history['total_fees'], 2),
             'closed_trades': trade_history['trade_count']
         },
+        'volatility_by_window': get_volatility_by_window(),
         'last_updated': datetime.now(timezone.utc).isoformat()
     }
 
