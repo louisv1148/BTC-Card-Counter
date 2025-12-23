@@ -175,18 +175,21 @@ def get_volatility_by_window():
                 ret = (window_prices[i]['price'] - window_prices[i-1]['price']) / window_prices[i-1]['price'] * 100
                 returns.append(ret)
             
-            if len(returns) > 1:
                 per_minute_vol = statistics.stdev(returns)
-                # Scale by sqrt of time period for chart display
+                # Scale by sqrt of time period for chart display (Total Expected Move)
                 scaled_vol = per_minute_vol * math.sqrt(window)
+                # Normalize to 60m for 'Homogenized' comparison (Intensity)
+                hourly_vol = per_minute_vol * math.sqrt(60)
             else:
                 per_minute_vol = 0
                 scaled_vol = 0
+                hourly_vol = 0
             
             volatility_data.append({
                 'window': window,
-                'volatility': round(scaled_vol, 4),  # For chart display
-                'per_minute_vol': round(per_minute_vol, 4)  # For fair value calc
+                'volatility': round(scaled_vol, 4),      # Expected move (grows with time)
+                'hourly_volatility': round(hourly_vol, 4), # Normalized intensity (comparable)
+                'per_minute_vol': round(per_minute_vol, 4)
             })
     
     return volatility_data

@@ -514,8 +514,8 @@
             // Clear canvas
             ctx.clearRect(0, 0, width, height);
 
-            // Get min/max values
-            const volatilities = volData.map(d => d.volatility);
+            // Get min/max values - use HOURLY NORMALIZED VOLATILITY
+            const volatilities = volData.map(d => d.hourly_volatility || d.volatility);  
             const minVol = Math.min(...volatilities);
             const maxVol = Math.max(...volatilities);
             const volRange = maxVol - minVol || 0.01;
@@ -528,10 +528,12 @@
             const clampedWindow = Math.max(2, Math.min(60, activeWindow));
             const activeData = volData.find(d => d.window === clampedWindow);
 
-            // Update label with active window
+            // Update label with active window and its hourly equivalent
             const label = document.getElementById('current-window-label');
             if (label && activeData) {
-                label.textContent = `Using ${clampedWindow}m: ${(activeData.volatility).toFixed(3)}%`;
+                const hourlyVol = activeData.hourly_volatility || activeData.volatility;
+                // Show both normalized AND actual used
+                label.textContent = `Using ${clampedWindow}m: ${(activeData.volatility).toFixed(3)}% (1h norm: ${hourlyVol.toFixed(3)}%)`;
             }
 
             // Draw grid lines
@@ -564,10 +566,12 @@
 
             // Draw data points as orange dots
             volData.forEach((d, i) => {
+                const val = d.hourly_volatility || d.volatility;
+
                 // X position: reversed (60m on left, 2m on right)
                 const x = padding.left + ((60 - d.window) / 58) * chartWidth;
                 // Y position: scaled to chart height
-                const y = padding.top + chartHeight - ((d.volatility - minVol) / volRange) * chartHeight;
+                const y = padding.top + chartHeight - ((val - minVol) / volRange) * chartHeight;
 
                 // Check if this is the active window
                 const isActive = d.window === clampedWindow;
