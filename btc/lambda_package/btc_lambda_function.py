@@ -166,10 +166,10 @@ def get_volatility(minutes_to_settlement=15):
             returns = [(prices[i] - prices[i-1]) / prices[i-1] * 100 for i in range(1, len(prices))]
             if len(returns) > 1:
                 per_minute_vol = statistics.stdev(returns)
-                # Scale by sqrt(window) to get the N-minute expected move
                 scaled_vol = per_minute_vol * math.sqrt(window)
-                print(f"📈 Volatility ({window}m window): {scaled_vol:.4f}% (per-min: {per_minute_vol:.4f}%)")
-                return scaled_vol
+                print(f"📈 Volatility ({window}m window): per-min {per_minute_vol:.4f}%, scaled {scaled_vol:.4f}%")
+                # Return PER-MINUTE volatility for fair value calculations
+                return per_minute_vol
         
         print(f"⚠️ Insufficient price data for {window}m volatility, using default")
         

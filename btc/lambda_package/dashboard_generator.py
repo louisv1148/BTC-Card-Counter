@@ -142,7 +142,14 @@ def get_recent_prices(minutes):
 
 
 def get_volatility_by_window():
-    """Calculate volatility (std dev of returns) for each window from 2 to 60 minutes."""
+    """
+    Calculate volatility for each window from 2 to 60 minutes.
+    
+    Returns list with:
+    - window: the time window in minutes
+    - volatility: scaled volatility (stdev × sqrt(window)) for chart display
+    - per_minute_vol: per-minute stdev for fair value calculations
+    """
     import statistics
     import math
     
@@ -168,17 +175,18 @@ def get_volatility_by_window():
                 ret = (window_prices[i]['price'] - window_prices[i-1]['price']) / window_prices[i-1]['price'] * 100
                 returns.append(ret)
             
-            # Calculate std dev and scale by sqrt(window) for time-scaled 1σ
             if len(returns) > 1:
-                std_dev = statistics.stdev(returns)
-                # Scale by sqrt of time period for proper volatility scaling
-                scaled_vol = std_dev * math.sqrt(window)
+                per_minute_vol = statistics.stdev(returns)
+                # Scale by sqrt of time period for chart display
+                scaled_vol = per_minute_vol * math.sqrt(window)
             else:
+                per_minute_vol = 0
                 scaled_vol = 0
             
             volatility_data.append({
                 'window': window,
-                'volatility': round(scaled_vol, 4)
+                'volatility': round(scaled_vol, 4),  # For chart display
+                'per_minute_vol': round(per_minute_vol, 4)  # For fair value calc
             })
     
     return volatility_data
@@ -479,11 +487,13 @@ def lambda_handler(event, context):
     # Compute volatility by window ONCE (for chart and fair value calculations)
     volatility_by_window = get_volatility_by_window()
     
-    # Extract the scaled volatility for the current minutes_to_settlement
-    # Clamp to valid range (2-60)
+    # Extract the PER-MINUTE volatility for fair value calculations
+    # (Chart uses scaled volatility, but fair value uses per-minute stdev)
     vol_window = max(2, min(60, minutes_to_settlement))
-    vol_std = next((v['volatility'] for v in volatility_by_window if v['window'] == vol_window), 0.10)
-    print(f"[DEBUG] Using {vol_window}m volatility: {vol_std:.4f}%")
+    vol_data = next((v for v in volatility_by_window if v['window'] == vol_window), None)
+    vol_std = vol_data['per_minute_vol'] if vol_data else 0.02
+    vol_scaled = vol_data['volatility'] if vol_data else 0.10
+    print(f"[DEBUG] Using {vol_window}m per-minute vol: {vol_std:.4f}%, scaled: {vol_scaled:.4f}%")
     
     positions = get_open_positions(current_event_prefix)
     
@@ -553,7 +563,8 @@ def lambda_handler(event, context):
     # Build status data
     data = {
         'btc_price': btc_price,
-        'volatility': vol_std,
+        'volatility': vol_scaled,  # Scaled volatility for chart display
+        'volatility_per_minute': vol_std,  # Per-minute vol for reference
         'balance': round(balance, 2),
         'settlement_time': next_hour.strftime("%I:%M %p ET"),
         'minutes_to_settlement': minutes_to_settlement,
