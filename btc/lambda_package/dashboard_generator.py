@@ -366,11 +366,17 @@ def norm_cdf(z):
 
 
 def calculate_model_fair(btc_price, strike, vol_std, minutes_left):
-    """Calculate model fair value for NO contract."""
+    """
+    Calculate model fair value for NO contract.
+    
+    vol_std is the per-minute standard deviation of returns.
+    We scale by sqrt(minutes_left) to get the expected N-minute volatility.
+    """
     if minutes_left <= 0 or vol_std <= 0:
         return 100 if btc_price < strike else 0
     
-    vol_scaled = vol_std * math.sqrt(minutes_left / 15)
+    # Scale per-minute volatility by sqrt(time) to get N-minute expected move
+    vol_scaled = vol_std * math.sqrt(minutes_left)
     price_diff_pct = (strike - btc_price) / btc_price * 100 if btc_price > 0 else 0
     std_devs = price_diff_pct / vol_scaled if vol_scaled > 0 else 0
     prob = norm_cdf(std_devs)
